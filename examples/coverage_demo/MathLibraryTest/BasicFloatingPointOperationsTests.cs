@@ -1,4 +1,3 @@
-using MathLibrary;
 using Xunit.Abstractions;
 
 namespace MathLibraryTest;
@@ -6,6 +5,7 @@ namespace MathLibraryTest;
 public class BasicFloatingPointOperationsTests(
     ITestOutputHelper testOutputHelper)
 {
+    public ITestOutputHelper TestOutputHelper { get; } = testOutputHelper;
     //aaa test pattern - arrange, act, assert
     //https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80
 
@@ -25,6 +25,37 @@ public class BasicFloatingPointOperationsTests(
         
         // Assert
         Assert.Equal(expected, result, Precision);
+    }
+    
+    [Fact]
+    public void Equals_Should_MatchTwoFloatingPointNumbers()
+    {
+        // Arrange
+        var a = 1.5002;
+        var b = 1.5001;
+        
+        // Act
+        var result = _sut.Equals(a, b);
+        
+        // Assert
+        Assert.True(result);
+    }
+    
+    [Theory]
+    [InlineData(1.50020001, 1.5001, false)]
+    [InlineData(1.5002, 1.5001, true)]
+    [InlineData(1.5001, 1.5001, true)]
+    [InlineData(-1.5001, -1.5001, true)]
+    public void Equals_Should_MatchTwoFloatingPointNumbers_Theory(double a, double b, bool isEqual )
+    {
+        // Arrange
+        
+        // Act
+        var result = _sut.Equals(a, b);
+        TestOutputHelper.WriteLine($"{a} == {b} is {result}");
+        
+        // Assert
+        Assert.True(result == isEqual);
     }
     
     [Fact]

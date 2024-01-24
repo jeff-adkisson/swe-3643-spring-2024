@@ -64,7 +64,9 @@ public class BasicFloatingPointOperations(int precision = 8)
     public bool Equals(double a, double b)
     {
         var tolerance = Math.Pow(10, -_precision);
-        return Math.Abs(a - b) < tolerance;
+        var absoluteValueOfDiff = Math.Abs(a - b);
+        var isWithinTolerance = absoluteValueOfDiff <= tolerance;
+        return isWithinTolerance;
     }
 
     /// <summary>
