@@ -70,9 +70,19 @@ Your choice of languages, server architectures, and test runners includes:
 
 Every framework listed has huge communities of developers who have posted outstanding tutorials on the web and on sites like YouTube. You will have no trouble finding resources. You must make the time to try the tutorials and learn the basics of what you choose. This is exactly how professional engineers operate when they are assigned a new project. I often purchase a cheap course from Udemy when learning a new technology. They have excellent material and the cost is often less than $20.
 
-#### I Know React/Angular/Vue/etc. Can I Use That?
+#### Are You Going to Teach Me Everything I Need to Know?
 
-You must use a server framework that renders HTML on the server. SPA development is prohibited due to complexity and higher risk of overall project failure.
+No. Your First Year instruction gave you the programming basics you need to execute this project. You also have some experience with projects and working in teams from Software Engineering 1.
+
+You will have to watch some YouTube videos and do some independent research. This is how the real world works. Your future employer is not going to take you by the hand with every new project.
+
+No one can teach you how to program. The only way to be a good programmer is to do the work. Sometimes that will mean long, frustrating nights at your computer working out problems and endlessly researching obscure compiler errors. Everyone in this field has had those days and nights.
+
+You can do this. Be confident in yourself and budget your time wisely. I am here to help you, but you must do the work.
+
+#### I Know React/Angular/Vue/otherSPAFrameworkHere. Can I Use That?
+
+No. You must use a server framework that renders HTML on the server. SPA development is prohibited due to complexity and higher risk of overall project failure.
 
 ### Source Control
 
@@ -97,15 +107,25 @@ Project documentation will include a README.md file in the root directory of you
 
 Writing Markdown is easy. I highly recommend writing Markdown using an IDE with a Markdown plugin (all JetBrains IDEs support this), Visual Studio Code with a Markdown extension, or Typora.
 
-I am a big fan of Typora. It is cross platform, visually clean, and has strong spell checking (unlike Markdown editors found in IDEs and editorsI. recommend giving it a try. I use it for all of my work. It is a licensed tool, but the cost is low ($15!).
+I am a big fan of [Typora](https://becomeawritertoday.com/typora-review/). It is cross platform, visually clean, and has strong spell checking (a curiously unique feature in the Markdown world). I recommend giving it a try. I use it for all of my work. It is a licensed tool, but the cost is very low ($15!).
 
-Markdown is not tool specific, so whether you use Typora, an IDE, VS Code, or even write it by hand, the output will operate identically.
+Markdown is not tool specific, so whether you use Typora, an IDE, VS Code, or even write it by hand, the output will (generally) operate identically.
+
+Great engineers are great communicators. We have to reliably communicate very complex ideas to a large number of people. Learn to write effectively and get the best writing tools you can afford. Be opinionated and passionate about the tools you use... they say a lot about you (I always ask what tools people love in interviews).
+
+#### The KSU Writing Center
+
+Do not forget that you get extra credit for visiting the [KSU Writing Center](https://writingcenter.kennesaw.edu/) up to two times. This will help you learn to be a better writer and communicator. Towards the end of the semester after you have pounded out your project documentation, go to the KSU Writing Center and have them help you polish your work. The best documentation is thorough, concise, well-organized, and targeted at a specific audience. I recommend taking advantage of this free resource, both for the expertise you might gain and the extra credit you might want if you find yourself with a borderline grade.
 
 ### Final Video Presentation
 
 Your completed project will include a 5 to 8 minute video presentation that demonstrates your running application, executing your unit tests and playwright tests from a terminal/command line, and demonstrating 100% code coverage from your IDE.
 
 Your presentation can be hosted on a public link at YouTube or Vimeo or you can check in the video file to your team GitHub repository.
+
+Avoid producing a terrible, dull, hard to understand video. I have to watch dozens of these, so have pity. 
+
+Put some effort into this to make it organized, succinct, and interesting. Consider writing a script and perhaps use a PowerPoint presentation to frame each section of your video. Every semester someone does a video that just blows me away. It's a good skill to develop because it really helps you showcase your work and promote yourself.
 
 ### Submission Schedule
 
