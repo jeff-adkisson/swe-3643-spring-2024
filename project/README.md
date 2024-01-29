@@ -23,17 +23,23 @@ The project includes:
 
 Your web application will perform simple calculations on one or two operands. The [browser interface](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view?ui=0) will look like the following:
 
-[![image-20240128213029827](README.assets/image-20240128213029827.png)](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view?ui=0)
+[![image-20240129063708596](README.assets/image-20240129063708596.png)](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view?ui=0)
 
-When valid input is available in one or both of the input fields and you click an operator button in a browser, the application will compute the value on the server and display the calculation and result in the top highlighted box as follows:
+When valid input is available in one or both of the input fields and you click an operator button in a browser, the application will compute the value on the server and display the calculation and result in the highlighted result box as follows:
 
-[![image-20240128213231112](README.assets/image-20240128213231112.png)](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view?ui=0)
+[![image-20240129063758115](README.assets/image-20240129063758115.png)](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view?ui=0)
 
-If you enter invalid data, such as attempting to divide by 0, the box will turn red and display Not a Number:
+If you enter invalid data, such as attempting to divide by 0, the result box will turn red and display **Not a Number**:
 
-[![image-20240128213345699](README.assets/image-20240128213345699.png)](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view?ui=0)
+[![image-20240129063816332](README.assets/image-20240129063816332.png)](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view?ui=0)
 
-Clicking the Clear button will reset the result box, and the input boxes to their default state.
+If you enter text in one of the input boxes, the result box will turn red and display **Invalid Input, Numbers Only**:
+
+[![image-20240129064025364](README.assets/image-20240129064025364.png)](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view?ui=0)
+
+Clicking the **Clear** button will reset the result box, and the input boxes to their default state.
+
+[Please review the prototype user interface at this link.](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view?ui=0) You can move through the interface examples by clicking anywhere on the pages.
 
 ### Architecture
 
@@ -169,7 +175,7 @@ AI tools such as ChatGPT cannot help you much with this project. But even if the
 
 # Detailed Instructions
 
-Coming Soon
+**Coming Soon**
 
 -  How to sign up your team (Google Spreadsheet) and report the URL of your team Github repository
 -  How to structure the project (generally - this will vary by language and framework)
@@ -181,7 +187,7 @@ Coming Soon
 
 # Grading Rubric
 
-Coming Soon
+**Coming Soon**
 
 -  Did the README explain exactly how to configure the environment and execute the project?
 -  Is the code structured in a way that separates logic from presentation to facilitate unit testing?
