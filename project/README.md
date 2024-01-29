@@ -32,7 +32,7 @@ Your team information spreadsheet includes your team GitHub repo, team size (1 o
 
 [![image-20240129105813819](README.assets/image-20240129105813819.png)](https://docs.google.com/spreadsheets/d/1j31OuRBPvU4Lo9lRFAemO7iI38zD6t43fZxSJn1K-Nw/edit?usp=sharing)
 
-## The Application
+## Your Web Application
 
 ### Browser Interface
 
@@ -112,15 +112,29 @@ Your choice of languages, server architectures, and test runners includes:
 
 Every framework listed has huge communities of developers who have posted outstanding tutorials on the web and on sites like YouTube. You will have no trouble finding resources. You must make the time to try the tutorials and learn the basics of what you choose. This is exactly how professional engineers operate when they are assigned a new project. I often purchase a cheap course from Udemy when learning a new technology. They have excellent material and the cost is often less than $20.
 
+For best results, stick with the language you know best unless your teammate (if you have one) is even more confident in another language. Do not pick what looks the most cool or what you think will look best on your resume... pick what you have the best chance of performing well on the project. I have seen several students start with something ambitious and fail when they should have picked something more reasonable and succeeded. The goal of our profession is working software... customers do not care how cool the framework is or how beautiful your code is if it does not meet their requirements. *Never forget this.*
+
+If you are not confident in any of the options above, pick C# and Blazor Server. I am most proficient with C# and have a lot of experience with Blazor Server, so I can provide the most help and advice with those choices.
+
 #### Are You Going to Teach Me Everything I Need to Know?
 
-No. Your First Year instruction gave you the programming basics you need to execute this project. You also have some experience with projects and working in teams from Software Engineering 1.
+No. Your First Year instruction gave you the programming basics you need to execute this project. You also have some experience with projects and working in teams from Software Engineering 1. Finally, you have been learning problem solving approaches your entire academic career.
 
-You will have to watch some YouTube videos and do some independent research. This is how the real world works. Your future employer is not going to take you by the hand with every new project.
+You will have to watch some YouTube videos, read some blog posts, visit the manufacturer's sites, and do some independent research. This is how the real world works. Your future employer is not going to take you by the hand with every new project.
 
-No one can teach you how to program. The only way to be a good programmer is to do the work. Sometimes that will mean long, frustrating nights at your computer working out problems and endlessly researching obscure compiler errors. Everyone in this field has had those days and nights.
+*No one can teach you how to program but yourself.* The only way to be a good programmer is to do the work. Sometimes that will mean long, frustrating nights at your computer working out problems and endlessly researching obscure compiler errors. Everyone in this field has had those days and nights.
 
-You can do this. Be confident in yourself and budget your time wisely. I am here to help you, but you must do the work.
+You can do this. Be confident in yourself and budget your time wisely. I am here to help you but you must do the work. Do *not* wait until the last minute to engage this project.
+
+#### This is a Testing Class. Why Are We Writing a Web Application?
+
+1.  You need practice building applications, learning new frameworks in short timeframes, and building the confidence that you can tackle problems like this one.
+2.  You need source control experience.
+3.  You need experience presenting your work.
+4.  You need to experience how to separate UI concerns from logic. Most of your work today has likely tightly coupled logic and user interface code.
+5.  You to need experience writing unit tests for logic you create. You will see that there are certain approaches that work better than others to effectively automate your testing.
+6.  You need to experience writing end-to-end tests. That is easiest to do with web frameworks. Scripting end-to-end testing for UI frameworks such as JavaFX, Winforms, or TKinter can be very arcane.
+7.  One of the most pervasive problems in our field is that the development process is considered separate from the test process. If you learn the Test Driven Design process, you will write better code that is durable and easier to maintain/refactor over time. Your unit tests will help document how your application works simply by showing how the components and methods work are called, work together, and what they return. Therefore, you need to write tests *as you develop* an application.
 
 #### I Know React/Angular/Vue/otherSPAFrameworkHere. Can I Use That?
 
@@ -195,8 +209,8 @@ Your finished project will include:
 
 -  A public team GitHub repository.
 -  Working source code for your Calculator web application. Your source code will include *all assets necessary* to compile and execute your project. Every semester someone submits a single class or is missing large blocks of essential code or that is full of compiler errors. Do not be that person. Working code is what software engineers produce.
--  Working unit tests providing 100% coverage of all Calculator logic (some methods require multiple tests to test all requirements, such as division to check both the division function and detecting division by zero). All unit tests will be written using the AAA pattern and follow the `UnitOfWork_StateUnderTest_ExpectedBehavior` naming convention.
--  Working end-to-end Playwright tests testing various Calculator user interface functions including several single and double operand functions, the clear function, not a number conditions, and invalid input. All end to end tests will be written using the AAA pattern and follow the `UnitOfWork_StateUnderTest_ExpectedBehavior` naming convention.
+-  Working unit tests providing 100% coverage of all Calculator logic (some methods require multiple tests to test all requirements, such as division to check both the division function and detecting division by zero). All unit tests will be written using the [AAA pattern](https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80) and follow the [`UnitOfWork_StateUnderTest_ExpectedBehavior` naming convention](https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html).
+-  Working end-to-end Playwright tests testing various Calculator user interface functions including several single and double operand functions, the clear function, not a number conditions, and invalid input. All end to end tests will be written using the [AAA pattern](https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80) and follow the [`UnitOfWork_StateUnderTest_ExpectedBehavior` naming convention](https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html).
 -  A detailed README.md that explains the environment configuration and how execute your Calculator web application and tests from the command line. This file will also include a link to your final video presentation.
 -  A video presentation checked into your team GitHub repository or hosted on YouTube/Vimeo that  demonstrates your completed application, unit tests, and 100% coverage in your IDE.
 
@@ -227,9 +241,9 @@ AI tools such as ChatGPT cannot help you much with this project. But even if the
 -  How to sign up your team (Google Spreadsheet) and report the URL of your team Github repository
 -  How to structure the project (generally - this will vary by language and framework)
 -  What the UI logic will do
--  What/how many unit tests I expect and how to write them<br/>https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html
+-  What/how many unit tests I expect and how to write them
 -  What/how many Playwright tests I expect and how to write them
--  What should be in the project README
+-  What must be in the project README
 -  What I expect in the video presentation
 
 # Grading Rubric
