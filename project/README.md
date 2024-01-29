@@ -87,12 +87,12 @@ The calculator interface and logic will support the following operations:
 | Raise to Power      | A ^ B    | A, B   | A raised to the power of B                               | 2 ^ 3 = 8, <br />5 ^ 2 = 25,<br />5 ^ -3 = 0.008             |                                                              |
 | Logarithm of number | A log B  | A, B   | Exponent of logarithm A at base B                        | 8 log 2 = 3,<br />25 log 5 = 2                               | The following values return **Not a Number**:<br />- Values of A less than or equal to 0<br />- Values of B equal to 0 |
 | Root of number      | A root B | A, B   | Bth root of A                                            | 8 root 3 = 2,<br />25 root 2 = 5                             | The following values return **Not a Number**:<br />- Values of B equal to 0 |
-| Factorial of number | A !      | A      | A * (A-1) * (A - ...)                                    | 5 = 120,<br />12 = 479001600                                 | TODO                                                         |
-| Sine of A           |          |        |                                                          |                                                              | TODO                                                         |
-| Cosine of A         |          |        |                                                          |                                                              | TODO                                                         |
-| Tangent of A        |          |        |                                                          |                                                              | TODO                                                         |
-| Reciprocal of A     |          |        |                                                          |                                                              | TODO                                                         |
-| Clear               |          |        |                                                          |                                                              | TODO                                                         |
+| Factorial of number | A !      | A      | A * (A-1) * (A - ...) * 2 * 1                            | 5 = 120,<br />-5 = -120<br />0 = 1                           | By convention, 0 returns 1.                                  |
+| Sine of A           | sin A    | A      | sin(A)                                                   | 360 = 0<br />-360 = 0<br />0 = 0,<br />1 = 0.0174524         |                                                              |
+| Cosine of A         | cos A    | A      | cos(A)                                                   | 360 = 1<br /><br />-360 = 1<br />1= 0.99985                  |                                                              |
+| Tangent of A        | tan A    | A      |                                                          | 360 = 0<br />-360 = 0<br />1=0.0174551                       |                                                              |
+| Reciprocal of A     | 1 / A    | A      | 1 divided by A                                           | 8 = 0.125<br />-4 = -0.25                                    | The following values return **Not a Number**:<br />- Values of A equal to 0 |
+| Clear               | Clear    |        | Enter value(s) below and select an operation.            |                                                              | Set the highlight color to pale yellow.                      |
 
 ### Languages, Web Server Architectures, and Test Runners
 
@@ -197,11 +197,11 @@ To help you stay on schedule, you will submit two progress reports on the follow
 
 -  Project Submission - Friday 4/26 at 11:59 PM
 
-   Late submissions follow the penalties outlined in the Syllabus.
+   Late submissions receive the penalties outlined in the Syllabus.
 
 Each progress report is 1.5% of your overall project score. You will submit them via a D2L dropbox. These are obviously very easy points towards your project.
 
-You do not have to be on the schedule I recommend, but you should do your best to be close. Waiting until the last minute to do this project will likely result in a very poor grade. The last four lecture periods are dedicated work days and I will be available to assist you at that time, but if you are starting from zero at that point, there will not be much I can do to help you. I am available to help you with problems - not help you build your application at the last minute.
+You do not have to be on the schedule I recommend, but you should do your best to be close. Waiting until the last minute to do this project will likely result in a very poor grade (and remember - your semester grade cannot be higher than one letter grade higher than your project score). The last four lecture periods are dedicated work days and I will be available to assist you at that time, but if you are starting from zero at that point, there will not be much I can do to help you. I am available to help you with problems - not help you build your application at the last minute.
 
 ### Submission
 
