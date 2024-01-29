@@ -9,13 +9,28 @@ The project includes:
    -  Add, subtract, multiply, divide, equals, power, log, root, and factorial
    -  Reciprocal, sin, cosine, and tangent
 
-   Your web-based calculator can be built in Java, C#, or Python. You will follow the [Test Driven Development (TDD) methodology](https://testdriven.io/test-driven-development/) to create your calculator logic and unit test it independent from the UI/web interface. To facilitate unit testing, your calculator logic will be *referenced* by the web-based UI - not tightly coupled into your UI code.
+   Your web-based calculator can be built in Java, C#, or Python. You will follow the [Test Driven Development (TDD) methodology](https://testdriven.io/test-driven-development/) to create your calculator logic and unit test it independent from the UI/web interface. To facilitate unit testing, your calculator logic will be *referenced* by the web-based UI - not tightly coupled into your UI code. All of your unit tests will be written using the [industry-standard AAA pattern (arrange, act, assert)](https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80) and [follow the `UnitOfWork_StateUnderTest_ExpectedBehavior` naming convention](https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html).
 
 -  Adding unit tests to the calculator classes (the classes that perform the calculations) to achieve 100% coverage of the calculation methods.
 
 -  Perform automated end-to-end testing on your web-based UI using [Playwright](https://playwright.dev/) scripts.
 
 -  Produce a 5 to 8 minute video demonstrating your completed application, a demonstration of running your unit tests and Playwright scripts from the command line, and show that you reached 100% coverage of your calculator logic using your IDE.
+
+## Your Team
+
+You will execute the project either alone as a **Team of 1** or with a single partner as a **Team of 2**.
+
+-  Team of 1<br/>You will execute the entire project alone. This is a good option if you are confident in your abilities, prefer to work alone, like to have high levels of control over your projects, or have a hard time scheduling with another person. **If you work alone, you are responsible for all of the work.** This was always my preferred choice when I was a student because it left me in 100% control of my success.
+-  Team of 2<br/>You and a teammate will execute the entire project and share the same grade. This is a good option if you find someone who is a good complement to your abilities or shares a similar schedule as you. **Remember - you will share the same grade, so choose wisely.** Sometimes teammates let you down and you have to shoulder the burden to ensure your own personal success is not impacted. The possibility exists that your teammate will drop the course. You must be ready to deliver if your teammate does not deliver.
+
+[You will enter your team information into the spreadsheet at this link](https://docs.google.com/spreadsheets/d/1j31OuRBPvU4Lo9lRFAemO7iI38zD6t43fZxSJn1K-Nw/edit?usp=sharing) by Thursday, February 8th. Your first project grade is a short submission in D2L confirming that your team information is in the spreadsheet.
+
+**Your team cannot change after Thursday, February 8th. Choose carefully. Choose wisely.**
+
+Your team information spreadsheet includes your team GitHub repo, team size (1 or 2), and team contact information.
+
+[![image-20240129105813819](README.assets/image-20240129105813819.png)](https://docs.google.com/spreadsheets/d/1j31OuRBPvU4Lo9lRFAemO7iI38zD6t43fZxSJn1K-Nw/edit?usp=sharing)
 
 ## The Application
 
@@ -174,6 +189,17 @@ Each progress report is 1.5% of your overall project score. You will submit them
 
 You do not have to be on the schedule I recommend, but you should do your best to be close. Waiting until the last minute to do this project will likely result in a very poor grade. The last four lecture periods are dedicated work days and I will be available to assist you at that time, but if you are starting from zero at that point, there will not be much I can do to help you. I am available to help you with problems - not help you build your application at the last minute.
 
+### Submission
+
+Your finished project will include:
+
+-  A public team GitHub repository.
+-  Working source code for your Calculator web application. Your source code will include *all assets necessary* to compile and execute your project. Every semester someone submits a single class or is missing large blocks of essential code or that is full of compiler errors. Do not be that person. Working code is what software engineers produce.
+-  Working unit tests providing 100% coverage of all Calculator logic (some methods require multiple tests to test all requirements, such as division to check both the division function and detecting division by zero). All unit tests will be written using the AAA pattern and follow the `UnitOfWork_StateUnderTest_ExpectedBehavior` naming convention.
+-  Working end-to-end Playwright tests testing various Calculator user interface functions including several single and double operand functions, the clear function, not a number conditions, and invalid input. All end to end tests will be written using the AAA pattern and follow the `UnitOfWork_StateUnderTest_ExpectedBehavior` naming convention.
+-  A detailed README.md that explains the environment configuration and how execute your Calculator web application and tests from the command line. This file will also include a link to your final video presentation.
+-  A video presentation checked into your team GitHub repository or hosted on YouTube/Vimeo that  demonstrates your completed application, unit tests, and 100% coverage in your IDE.
+
 ### Grading
 
 I will grade your project between the submission date and the day final grades are due. This will be a significant effort, so please do not submit late if you can avoid it (plus your grade will suffer as well).
@@ -201,7 +227,7 @@ AI tools such as ChatGPT cannot help you much with this project. But even if the
 -  How to sign up your team (Google Spreadsheet) and report the URL of your team Github repository
 -  How to structure the project (generally - this will vary by language and framework)
 -  What the UI logic will do
--  What/how man unit tests I expect and how to write them<br/>https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html
+-  What/how many unit tests I expect and how to write them<br/>https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html
 -  What/how many Playwright tests I expect and how to write them
 -  What should be in the project README
 -  What I expect in the video presentation
