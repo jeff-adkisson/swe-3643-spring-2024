@@ -15,6 +15,6 @@ This repository contains project information and code samples for KSU SWE 3643: 
 #### Contents
 
 1.  **Semester Project Documentation**
-    -  Coming soon!
-2.  Examples
+    -  [Overview](project/README.md)
+2.  **Examples**
     -  [Test Coverage Demo](examples/coverage_demo/README.md): Wed Jan 24, 2024
