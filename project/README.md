@@ -70,11 +70,19 @@ Your choice of languages, server architectures, and test runners includes:
 
 Every framework listed has huge communities of developers who have posted outstanding tutorials on the web and on sites like YouTube. You will have no trouble finding resources. You must make the time to try the tutorials and learn the basics of what you choose. This is exactly how professional engineers operate when they are assigned a new project. I often purchase a cheap course from Udemy when learning a new technology. They have excellent material and the cost is often less than $20.
 
+#### I Know React/Angular/Vue/etc. Can I Use That?
+
+You must use a server framework that renders HTML on the server. SPA development is prohibited due to complexity and higher risk of overall project failure.
+
 ### Source Control
 
 Your project will be hosted on a public GitHub repository. Each team will have a separate GitHub repository created by the team member(s).
 
 If you have never used source control, watch some videos on `git` and create a free GitHub account. If you are uncomfortable working with command line tools, install GitHub Desktop or GitKraken (my personal preference) to give you a friendly interface.
+
+`git` is *essential* for all software engineers regardless of industry and skill level. Do not graduate without expertise in source control, including proficiency in branching, merging, and pull requests. Note that these more advanced topics are not taught by KSU, so you need to make this a personal goal. Use this project to get started learning `git` and carry your knowledge forward after the course ends.
+
+The best developers *always use source control even when working alone*. It is an essential skill you must develop.
 
 ### Documentation
 
@@ -119,14 +127,50 @@ Each progress report is 1.5% of your overall project score. You will submit them
 
 You do not have to be on the schedule I recommend, but you should do your best to be close. Waiting until the last minute to do this project will likely result in a very poor grade. The last four lecture periods are dedicated work days and I will be available to assist you at that time, but if you are starting from zero at that point, there will not be much I can do to help you. I am available to help you with problems - not help you build your application at the last minute.
 
+### Grading
+
+I will grade your project between the submission date and the day final grades are due. This will be a significant effort, so please do not submit late if you can avoid it (plus your grade will suffer as well).
+
+This project is 25% of your semester grade, so it is essential that you give it appropriate time and effort.
+
+I also will remind you that your final grade can only be one letter grade higher than your project, so if you do poorly on the project, you will do poorly overall.
+
+My recommendation is to focus on doing an outstanding project and do not worry about the grade. If your project meets the requirements in this document, not only will you receive a top score, but you will have earned valuable expertise and enhanced your GitHub repository with a great looking project.
+
+### Collaboration
+
+You can collaborate with your teammate, but not with other teams. Each team's work must be their own.
+
+If you choose to work alone, you are committing to that decision for the duration of the project. You cannot change your mind later.
+
+Do not consider outsourcing your project to a homework help site like Chegg. I have had that happen before. I am pretty good at spotting unusual work and I will be reading your code. If I suspect your work is not your own, I will ask you to join me on a video call and explain your work line by line. If I remain unconvinced the work is yours, I will ask my KSU colleagues to do additional reviews.
+
+AI tools such as ChatGPT cannot help you much with this project. But even if they can, you are cheating yourself of valuable experience you will need after you graduate. Do your own work and be a top engineer. AI is going to continue to reshape our profession, but the top engineers will remain the ones who know how to prompt an AI and recognize when it is making a mistake.
+
 # Detailed Instructions
 
 Coming Soon
+
+-  How to sign up your team (Google Spreadsheet) and report the URL of your team Github repository
+-  How to structure the project (generally - this will vary by language and framework)
+-  What the UI logic will do
+-  What/how man unit tests I expect and how to write them<br/>https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html
+-  What/how many Playwright tests I expect and how to write them
+-  What should be in the project README
+-  What I expect in the video presentation
 
 # Grading Rubric
 
 Coming Soon
 
-# Unit Test Naming Conventions
+-  Did the README explain exactly how to configure the environment and execute the project?
+-  Is the code structured in a way that separates logic from presentation to facilitate unit testing?
+-  Does the project run from the command line?
+-  Do the unit tests run from the command line?
+-  Do the end-to-end tests run from the command line?
+-  Did the project meet the UI requirements?
+-  Did the project meet the unit test requirements?
+-  Did the project reach 100% unit test coverage of the calculator logic?
+-  Did the project meet the end to end Playwright testing requirements?
+-  Was the presentation well organized and professionally executed?
 
-https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html
