@@ -21,7 +21,7 @@ The project includes:
 
 ### Browser Interface
 
-Your web application will perform simple calculations on one or two operands. The [browser interface](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view?ui=0) will look like the following:
+Your web application will perform simple calculations on one or two operands. The default state of the [browser interface](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view?ui=0) will look like the following when started (and following clicking the **Clear button**):
 
 [![image-20240129063708596](README.assets/image-20240129063708596.png)](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view?ui=0)
 
@@ -57,6 +57,27 @@ You will note:
 You must carefully layout your code to achieve this architecture. In particular, you cannot closely couple the calculator logic with the calculator UI. For example, if you actually perform a calculation in the Web Server App, you are doing it wrong. The Web Server App requests calculations from the Calculator Engine classes.
 
 Without a logical separation of the Calculator Engine from the Web Server App, you will have a very challenging time writing unit tests that only focus on the Calculator Engine. Remember - unit tests focus on classes and methods. Higher level forms of tests such as integration tests and end-to-end tests combine multiple modules and systems together. To write effective unit tests, you cannot mix web server routing and rendering logic with your domain logic.
+
+### Calculator Operations
+
+The calculator interface and logic will support the following operations:
+
+| Operation           | Button   | Inputs | Returns                                                  | Example                                                      | Notes                                                        |
+| ------------------- | -------- | ------ | -------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Add                 | A + B    | A, B   | A plus B                                                 | 5.5 + -3.15 = 2.35                                           |                                                              |
+| Subtraction         | A - B    | A, B   | A minus B                                                | 27.93 - 4 = 23.93                                            |                                                              |
+| Multiplication      | A * B    | A, B   | A times B                                                | 5 * 7.1 = 35.5                                               |                                                              |
+| Division            | A / B    | A, B   | A divided by B                                           | 3.0 / 9.0 = .33333333                                        | The following values return **Not a Number**:<br />- B (denominator) equal to 0 |
+| Equals              | A == B   | A, B   | 1 when equivalent to 8 points of precision. 0 otherwise. | 0.333333== 0.333333 = 1,<br />0.33333333== 0.33333334 = 0,<br />0.333333331== 0.333333332 = 1 | Comparison is to 8 decimal points. Thus, 0.333333331 and 0.333333332 are considered equal. |
+| Raise to Power      | A ^ B    | A, B   | A raised to the power of B                               | 2 ^ 3 = 8, <br />5 ^ 2 = 25,<br />5 ^ -3 = 0.008             |                                                              |
+| Logarithm of number | A log B  | A, B   | Exponent of logarithm A at base B                        | 8 log 2 = 3,<br />25 log 5 = 2                               | The following values return **Not a Number**:<br />- Values of A less than or equal to 0<br />- Values of B equal to 0 |
+| Root of number      | A root B | A, B   | Bth root of A                                            | 8 root 3 = 2,<br />25 root 2 = 5                             | The following values return **Not a Number**:<br />- Values of B equal to 0 |
+| Factorial of number | A !      | A      | A * (A-1) * (A - ...)                                    | 5 = 120,<br />12 = 479001600                                 | TODO                                                         |
+| Sine of A           |          |        |                                                          |                                                              | TODO                                                         |
+| Cosine of A         |          |        |                                                          |                                                              | TODO                                                         |
+| Tangent of A        |          |        |                                                          |                                                              | TODO                                                         |
+| Reciprocal of A     |          |        |                                                          |                                                              | TODO                                                         |
+| Clear               |          |        |                                                          |                                                              | TODO                                                         |
 
 ### Languages, Web Server Architectures, and Test Runners
 
