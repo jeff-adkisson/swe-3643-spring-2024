@@ -13,9 +13,9 @@ The project includes:
 
 -  Adding unit tests to the calculator classes (the classes that perform the calculations) to achieve 100% coverage of the calculation methods.
 
--  Perform automated end-to-end testing on your web-based UI using [Playwright](https://playwright.dev/) scripts.
+-  Performing automated end-to-end testing on your web-based UI using [Playwright](https://playwright.dev/) scripts.
 
--  Produce a 5 to 8 minute video demonstrating your completed application, a demonstration of running your unit tests and Playwright scripts from the command line, and show that you reached 100% coverage of your calculator logic using your IDE.
+-  Producing a 5 to 8 minute video demonstrating your completed application, a demonstration of running your unit tests and Playwright scripts from the command line, and show that you reached 100% coverage of your calculator logic using your IDE.
 
 ### Introductory Presentation
 
@@ -27,12 +27,12 @@ The material in this document is more specific than the presentation. Consider t
 
 You will execute the project either alone as a **Team of 1** or with a single partner as a **Team of 2**.
 
--  Team of 1<br/>You will execute the entire project alone. This is a good option if you are confident in your abilities, prefer to work alone, like to have high levels of control over your projects, or have a hard time scheduling with another person. **If you work alone, you are responsible for all the work.** This was always my preferred choice when I was a student because it left me in 100% control of my success.
--  Team of 2<br/>You and a teammate will execute the entire project and share the same grade. This is a good option if you find someone who is a good complement to your abilities or shares a similar schedule as you. **Remember - you will share the same grade, so choose wisely.** Sometimes teammates let you down and you must shoulder the burden to ensure your own personal success is not impacted. The possibility exists that your teammate will drop the course. You must be ready to deliver if your teammate does not deliver.
+-  **Team of 1: Work Alone**<br/>You will execute the entire project alone. This is a good option if you are confident in your abilities, prefer to work alone, like to have high levels of control over your projects, or have a hard time scheduling with another person. **If you work alone, you are responsible for all the work.** This was always my preferred choice when I was a student because it left me in 100% control of my success.
+-  **Team of 2: Work with a Partner**<br/>You and a teammate will execute the entire project and share the same grade. This is a good option if you find someone who is a good complement to your abilities or shares a similar schedule as you. **Remember - you will share the same grade, so choose wisely.** Sometimes teammates let you down and you must shoulder the burden to ensure your own personal success is not impacted. The possibility exists that your teammate will drop the course. You must be ready to deliver if your teammate does not deliver.
 
 [You will enter your team information into the spreadsheet at this link](https://docs.google.com/spreadsheets/d/1j31OuRBPvU4Lo9lRFAemO7iI38zD6t43fZxSJn1K-Nw/edit?usp=sharing) by Thursday, February 8th. Your first project grade is a short submission in D2L confirming that your team information is in the spreadsheet.
 
-**Your team cannot change after Thursday, February 8th. Choose carefully. Choose wisely.**
+**Your team cannot change after Thursday, February 8th. Choose carefully.**
 
 Your team information spreadsheet includes your team GitHub repo, team size (1 or 2), and team contact information.
 
