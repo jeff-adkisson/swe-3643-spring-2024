@@ -9,7 +9,7 @@ The project includes:
    -  Add, subtract, multiply, divide, equals, power, log, root, and factorial
    -  Reciprocal, sin, cosine, and tangent
 
-   Your web-based calculator can be built in Java, C#, or Python. You will follow the [Test Driven Development (TDD) methodology](https://testdriven.io/test-driven-development/) to create your calculator logic and unit test it independent from the UI/web interface. To facilitate unit testing, your calculator logic will be *referenced* by the web-based UI - not tightly coupled into your UI code. All of your unit tests will be written using the [industry-standard AAA pattern (arrange, act, assert)](https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80) and [follow the `UnitOfWork_StateUnderTest_ExpectedBehavior` naming convention](https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html).
+   Your web-based calculator can be built in Java, C#, or Python. You will follow the [Test Driven Development (TDD) methodology](https://testdriven.io/test-driven-development/) to create your calculator logic and unit test it independent from the UI/web interface. To facilitate unit testing, your calculator logic will be *referenced* by the web-based UI - not tightly coupled into your UI code. All your unit tests will be written using the [industry-standard AAA pattern (arrange, act, assert)](https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80) and [follow the `UnitOfWork_StateUnderTest_ExpectedBehavior` naming convention](https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html).
 
 -  Adding unit tests to the calculator classes (the classes that perform the calculations) to achieve 100% coverage of the calculation methods.
 
@@ -17,12 +17,18 @@ The project includes:
 
 -  Produce a 5 to 8 minute video demonstrating your completed application, a demonstration of running your unit tests and Playwright scripts from the command line, and show that you reached 100% coverage of your calculator logic using your IDE.
 
+### Introductory Presentation
+
+[There is a PowerPoint presentation](presentation.pptx) that summarizes this document [(there is also a PDF version)](presentation.pdf).
+
+The material in this document is more specific than the presentation. Consider this document the canonical set of requirements for your project.
+
 ## Your Team
 
 You will execute the project either alone as a **Team of 1** or with a single partner as a **Team of 2**.
 
--  Team of 1<br/>You will execute the entire project alone. This is a good option if you are confident in your abilities, prefer to work alone, like to have high levels of control over your projects, or have a hard time scheduling with another person. **If you work alone, you are responsible for all of the work.** This was always my preferred choice when I was a student because it left me in 100% control of my success.
--  Team of 2<br/>You and a teammate will execute the entire project and share the same grade. This is a good option if you find someone who is a good complement to your abilities or shares a similar schedule as you. **Remember - you will share the same grade, so choose wisely.** Sometimes teammates let you down and you have to shoulder the burden to ensure your own personal success is not impacted. The possibility exists that your teammate will drop the course. You must be ready to deliver if your teammate does not deliver.
+-  Team of 1<br/>You will execute the entire project alone. This is a good option if you are confident in your abilities, prefer to work alone, like to have high levels of control over your projects, or have a hard time scheduling with another person. **If you work alone, you are responsible for all the work.** This was always my preferred choice when I was a student because it left me in 100% control of my success.
+-  Team of 2<br/>You and a teammate will execute the entire project and share the same grade. This is a good option if you find someone who is a good complement to your abilities or shares a similar schedule as you. **Remember - you will share the same grade, so choose wisely.** Sometimes teammates let you down and you must shoulder the burden to ensure your own personal success is not impacted. The possibility exists that your teammate will drop the course. You must be ready to deliver if your teammate does not deliver.
 
 [You will enter your team information into the spreadsheet at this link](https://docs.google.com/spreadsheets/d/1j31OuRBPvU4Lo9lRFAemO7iI38zD6t43fZxSJn1K-Nw/edit?usp=sharing) by Thursday, February 8th. Your first project grade is a short submission in D2L confirming that your team information is in the spreadsheet.
 
@@ -64,7 +70,7 @@ Your application will separate calculation logic from web logic. This will simpl
 
 You will note:
 
--  The Calculator Engine performs the actual logic and returns floating point values.
+-  The Calculator Engine performs the calculation logic and returns floating point values.
 -  The Calculator Web Server App references the Calculator Engine. The Web Server App generates the user interface, calls the Calculator Engine, and returns results to the user's browser.
 -  The Calculator Engine Unit Tests reference the Calculator Engine and do not test the Web Server App.
 -  The Calculator End-to-End Tests connect to your Web Server App and test the user interface end-to-end (which includes calling the Calculator Engine).
@@ -108,7 +114,7 @@ Your choice of languages, server architectures, and test runners includes:
 -  Python
    -  Flask + Pytest + Playwright
 
-#### I'm Freaking Out! I've Never Done Web Development! What Should I Pick?
+#### I Am Freaking Out! I Have Not Done Web Development! What Should I Pick?
 
 Every framework listed has huge communities of developers who have posted outstanding tutorials on the web and on sites like YouTube. You will have no trouble finding resources. You must make the time to try the tutorials and learn the basics of what you choose. This is exactly how professional engineers operate when they are assigned a new project. I often purchase a cheap course from Udemy when learning a new technology. They have excellent material and the cost is often less than $20.
 
@@ -118,7 +124,9 @@ If you are not confident in any of the options above, pick C# and Blazor Server.
 
 #### Are You Going to Teach Me Everything I Need to Know?
 
-No. Your First Year instruction gave you the programming basics you need to execute this project. You also have some experience with projects and working in teams from Software Engineering 1. Finally, you have been learning problem solving approaches your entire academic career.
+No, but I will show you the way to success.
+
+Your First Year instruction gave you the programming basics you need to execute this project. You also have some experience with projects and working in teams from Software Engineering 1. Finally, you have been learning problem solving approaches your entire academic career.
 
 You will have to watch some YouTube videos, read some blog posts, visit the manufacturer's sites, and do some independent research. This is how the real world works. Your future employer is not going to take you by the hand with every new project.
 
@@ -126,31 +134,41 @@ You will have to watch some YouTube videos, read some blog posts, visit the manu
 
 You can do this. Be confident in yourself and budget your time wisely. I am here to help you but you must do the work. Do *not* wait until the last minute to engage this project.
 
+#### I Still Feel Very Nervous
+
+You must learn some things on your own, but you are not alone.
+
+I am going to help you when you get stuck.
+
+We are dedicating the last four lecture periods of the class to project work. I will be in the classroom to help people who need advice, additional resources, etc.
+
+Every semester I see nervous students achieve great things when given a bit of a push and a lot of support. **You can do this.**
+
 #### This is a Testing Class. Why Are We Writing a Web Application?
 
 1.  You need practice building applications, learning new frameworks in short timeframes, and building the confidence that you can tackle problems like this one.
 2.  You need source control experience.
 3.  You need experience presenting your work.
-4.  You need to experience how to separate UI concerns from logic. Most of your work today has likely tightly coupled logic and user interface code.
+4.  You need to experience how to separate UI concerns from logic. Most of your student work so far has tightly coupled logic and user interface code.
 5.  You to need experience writing unit tests for logic you create. You will see that there are certain approaches that work better than others to effectively automate your testing.
 6.  You need to experience writing end-to-end tests. That is easiest to do with web frameworks. Scripting end-to-end testing for UI frameworks such as JavaFX, Winforms, or TKinter can be very arcane.
-7.  One of the most pervasive problems in our field is that the development process is considered separate from the test process. If you learn the Test Driven Design process, you will write better code that is durable and easier to maintain/refactor over time. Your unit tests will help document how your application works simply by showing how the components and methods work are called, work together, and what they return. Therefore, you need to write tests *as you develop* an application.
+7.  One of the most pervasive problems in our field is that the development process is often separate from the test process. The Test Driven Design (TDD) process will help you write better code that is durable and easier to maintain/refactor over time. Your unit tests will help document how your application works simply by showing how the components and methods work are called, work together, and what they return. Therefore, you need to write tests *as you develop* an application.
 
 #### I Know React/Angular/Vue/otherSPAFrameworkHere. Can I Use That?
 
 No. You must use a server framework that renders HTML on the server. SPA development is prohibited due to complexity and higher risk of overall project failure.
 
-### Source Control
+### Source Control via Git and GitHub
 
-Your project will be hosted on a public GitHub repository. Each team will have a separate GitHub repository created by the team member(s).
+Your project will be hosted on a [public GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories). Each team will have a separate GitHub repository created by the team member(s).
 
-If you have never used source control, watch some videos on `git` and create a free GitHub account. If you are uncomfortable working with command line tools, install GitHub Desktop or GitKraken (my personal preference) to give you a friendly interface.
+If you have never used source control, [watch some videos on `git`](https://www.youtube.com/results?search_query=git+for+beginners) and create a free GitHub account. If you are uncomfortable working with command line tools, install GitHub Desktop or GitKraken (my personal preference) to give you a friendly interface.
 
 `git` is *essential* for all software engineers regardless of industry and skill level. Do not graduate without expertise in source control, including proficiency in branching, merging, and pull requests. Note that these more advanced topics are not taught by KSU, so you need to make this a personal goal. Use this project to get started learning `git` and carry your knowledge forward after the course ends.
 
-The best developers *always use source control even when working alone*. It is an essential skill you must develop.
+[The best developers *always use source control even when working alone*.](https://dev.to/nash4253/why-source-control-is-important-for-developers--5d8j) It is an essential skill you must develop.
 
-### Documentation
+### Documentation Written in Markdown
 
 All documentation will be written in [Markdown](https://www.markdownguide.org/) and checked into your team GitHub repository.
 
@@ -161,13 +179,13 @@ Project documentation will include a README.md file in the root directory of you
 -  Instructions how to execute the unit tests and Playwright tests from the command line.
 -  A link to your Final Video Presentation.
 
-Writing Markdown is easy. I highly recommend writing Markdown using an IDE with a Markdown plugin (all JetBrains IDEs support this), Visual Studio Code with a Markdown extension, or Typora.
+Writing Markdown is easy. I highly recommend writing Markdown using an IDE with a Markdown plugin (all JetBrains IDEs support this), Visual Studio Code with a Markdown extension, or a dedicated Markdown editor such as Typora.
 
-I am a big fan of [Typora](https://becomeawritertoday.com/typora-review/). It is cross platform, visually clean, and has strong spell checking (a curiously unique feature in the Markdown world). I recommend giving it a try. I use it for all of my work. It is a licensed tool, but the cost is very low ($15!).
+*I am a big fan of [Typora](https://becomeawritertoday.com/typora-review/).* It is cross platform, visually clean, and has strong spell checking (a curiously unique feature in the Markdown world). I recommend giving it a try. I use it for all my work. It is a licensed tool, but the cost is very low ($15!).
 
 Markdown is not tool specific, so whether you use Typora, an IDE, VS Code, or even write it by hand, the output will (generally) operate identically.
 
-Great engineers are great communicators. We have to reliably communicate very complex ideas to a large number of people. Learn to write effectively and get the best writing tools you can afford. Be opinionated and passionate about the tools you use... they say a lot about you (I always ask what tools people love in interviews).
+Great engineers are great communicators. We must reliably communicate very complex ideas to many people. Learn to write effectively and get the best writing tools you can afford. Be opinionated and passionate about the tools you use... they say a lot about you (I always ask what tools people love in interviews).
 
 #### The KSU Writing Center
 
@@ -175,13 +193,21 @@ Do not forget that you get extra credit for visiting the [KSU Writing Center](ht
 
 ### Final Video Presentation
 
-Your completed project will include a 5 to 8 minute video presentation that demonstrates your running application, executing your unit tests and playwright tests from a terminal/command line, and demonstrating 100% code coverage from your IDE.
+Your completed project will include a 5-to-8 minute video presentation.
+
+Your video will demonstrate:
+
+-  starting your application from the command line and using it from a web browser, and
+
+-  executing your unit tests and playwright tests from a terminal/command line, and
+
+-  showing 100% code coverage from your IDE.
 
 Your presentation can be hosted on a public link at YouTube or Vimeo or you can check in the video file to your team GitHub repository.
 
-Avoid producing a terrible, dull, hard to understand video. I have to watch dozens of these, so have pity. 
+Avoid producing a terrible, dull, hard to understand video. I must watch dozens of these, so have pity. 
 
-Put some effort into this to make it organized, succinct, and interesting. Consider writing a script and perhaps use a PowerPoint presentation to frame each section of your video. Every semester someone does a video that just blows me away. It's a good skill to develop because it really helps you showcase your work and promote yourself.
+Put some effort into this to make it organized, succinct, and interesting. Consider writing a script and perhaps use a PowerPoint presentation to frame each section of your video. Every semester someone does a video that just blows me away. This is a good skill to develop; it helps you showcase your work and promote yourself.
 
 ### Submission Schedule
 
@@ -207,22 +233,24 @@ You do not have to be on the schedule I recommend, but you should do your best t
 
 Your finished project will include:
 
--  A public team GitHub repository.
--  Working source code for your Calculator web application. Your source code will include *all assets necessary* to compile and execute your project. Every semester someone submits a single class or is missing large blocks of essential code or that is full of compiler errors. Do not be that person. Working code is what software engineers produce.
+-  A URL to your public team GitHub repository.
+-  Working source code for your Calculator web application checked into your public team GitHub repository. Your source code will include *all assets necessary* to compile and execute your project. Every semester someone submits a single class or is missing large blocks of essential code or that is full of compiler errors. Do not be that person. Working code is what software engineers produce.
+
+   IMPORTANT: Code that will not compile will automatically reduce your project score by 25% or more (depending on severity).
 -  Working unit tests providing 100% coverage of all Calculator logic (some methods require multiple tests to test all requirements, such as division to check both the division function and detecting division by zero). All unit tests will be written using the [AAA pattern](https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80) and follow the [`UnitOfWork_StateUnderTest_ExpectedBehavior` naming convention](https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html).
--  Working end-to-end Playwright tests testing various Calculator user interface functions including several single and double operand functions, the clear function, not a number conditions, and invalid input. All end to end tests will be written using the [AAA pattern](https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80) and follow the [`UnitOfWork_StateUnderTest_ExpectedBehavior` naming convention](https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html).
--  A detailed README.md that explains the environment configuration and how execute your Calculator web application and tests from the command line. This file will also include a link to your final video presentation.
+-  Working end-to-end Playwright tests testing various Calculator user interface functions including several single and double operand functions, the clear function, "not a number" conditions, and invalid input. All end to end tests will be written using the [AAA pattern](https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80) and follow the [`UnitOfWork_StateUnderTest_ExpectedBehavior` naming convention](https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html).
+-  A detailed README.md written in Markdown that explains the environment configuration and steps to execute your Calculator web application and tests from the command line. This file will also include a link to your final video presentation.
 -  A video presentation checked into your team GitHub repository or hosted on YouTube/Vimeo that  demonstrates your completed application, unit tests, and 100% coverage in your IDE.
 
 ### Grading
 
 I will grade your project between the submission date and the day final grades are due. This will be a significant effort, so please do not submit late if you can avoid it (plus your grade will suffer as well).
 
-This project is 25% of your semester grade, so it is essential that you give it appropriate time and effort.
+This project is 25% of your semester grade, so it is essential that you yourself enough time to complete it.
 
-I also will remind you that your final grade can only be one letter grade higher than your project, so if you do poorly on the project, you will do poorly overall.
+Your final grade can only be one letter grade higher than your project. If you do poorly on the project, you will do poorly overall.
 
-My recommendation is to focus on doing an outstanding project and do not worry about the grade. If your project meets the requirements in this document, not only will you receive a top score, but you will have earned valuable expertise and enhanced your GitHub repository with a great looking project.
+If your project meets the requirements in this document, not only will you receive a top score, but you will have earned valuable expertise and enhanced your GitHub repository with a great looking project.
 
 ### Collaboration
 
@@ -230,9 +258,27 @@ You can collaborate with your teammate, but not with other teams. Each team's wo
 
 If you choose to work alone, you are committing to that decision for the duration of the project. You cannot change your mind later.
 
+When you are stuck, you are welcome to ask for advice from classmates or visit the KSU computer lab to get you moving again, *but* *your work must be your own.*
+
 Do not consider outsourcing your project to a homework help site like Chegg. I have had that happen before. I am pretty good at spotting unusual work and I will be reading your code. If I suspect your work is not your own, I will ask you to join me on a video call and explain your work line by line. If I remain unconvinced the work is yours, I will ask my KSU colleagues to do additional reviews.
 
-AI tools such as ChatGPT cannot help you much with this project. But even if they can, you are cheating yourself of valuable experience you will need after you graduate. Do your own work and be a top engineer. AI is going to continue to reshape our profession, but the top engineers will remain the ones who know how to prompt an AI and recognize when it is making a mistake.
+AI tools such as ChatGPT cannot help you much with this project. But even if they can, you are cheating yourself of valuable experience you will need after you graduate.  AI is going to continue to reshape our profession, but the top engineers will remain the ones who know how to prompt an AI and recognize when it is making a mistake.
+
+## When You Need Help
+
+**I will try to assist you, but I will not write your code.**
+
+-  Come to some or all of the project workdays at the end of the semester for help. See the Syllabus for the dates. Last minute frantic emails just before the project is due are unlikely to get a helpful response.
+-  When you are stuck, you are welcome to ask for advice from classmates or visit the KSU computer lab to get you moving again, *but your work must be your own.*
+-  I am not a miracle worker. You need to do your best to solve your problem (or at least understand it) before asking for help.
+-  I am most proficient with C#, so consider picking that language if you anticipate needing a lot of help.
+
+When you ask me for coding assistance:
+
+-  Be very specific. If you are vague, I cannot help you. ”It’s not working.” is not specific.
+-  Always include your team’s GitHub repository URL.
+-  Check the offending code into your GitHub repository so I can look at it and possibly run it. If your code is not in your GitHub repository, I will not attempt to compile or run it. [Also consider creating a separate source branch](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) before sharing problematic code with me to avoid breaking operational code in your main code trunk.
+-  To compile and run your code, your **README.md** must have the environment configuration instructions and execution steps. Keep those accurate and up-to-date.
 
 # Detailed Instructions
 
