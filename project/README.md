@@ -224,9 +224,9 @@ If the Writing Center does not do it for you, do not give up on becoming a bette
 
 -  [**On Writing** by Stephen King](https://www.fcusd.org/cms/lib/CA01001934/Centricity/Domain/3762/Stephen%20King%20On%20Writing.pdf)<br/>*This is such an entertaining book. **I am serious.** You will never look at adverbs the same way again.*
 
--  **[Elements of Style** by W. Struck, Jr. & E.B. White](https://faculty.washington.edu/heagerty/Courses/b572/public/StrunkWhite.pdf)
+-  [**Elements of Style** by W. Struck, Jr. & E.B. White](https://faculty.washington.edu/heagerty/Courses/b572/public/StrunkWhite.pdf)
 
-   *This book is packed with wisdom. Some of the grammar ideas presented are not as relevant today as when it was produced, but overall it is a gem. Following is a favorite quote from the text that I think applies to damn near everything we do in our professional lives:*
+   *This book is packed with wisdom. Some of the grammar ideas presented are not as relevant today as when it was produced, but overall it is a gem. Following is a favorite quote from the text that I think applies to almost everything we do in our professional lives:*
 
    ```html
    It is an old observation that the best writers sometimes
@@ -251,7 +251,7 @@ To help you stay on schedule, you will submit two progress reports on the follow
 
    I recommend having your web application fully operational by this point.
 
--  **Progress Report 2 - Monday 4/15<br/>**I recommend having 100% unit test coverage by this point.
+-  **Progress Report 2 - Monday 4/15**<br/>I recommend having 100% unit test coverage by this point.
 
 Each progress report is 1.5% of your overall project score. You will submit them via a D2L dropbox. These are obviously very easy points towards your project.
 
