@@ -74,14 +74,14 @@ Your application will separate calculation logic from web logic. This will simpl
 
 You will note:
 
--  The Calculator Engine performs the calculation logic and returns floating point values.
--  The Calculator Web Server App references the Calculator Engine. The Web Server App generates the user interface, calls the Calculator Engine, and returns results to the user's browser.
--  The Calculator Engine Unit Tests reference the Calculator Engine and do not test the Web Server App.
--  The Calculator End-to-End Tests connect to your Web Server App and test the user interface end-to-end (which includes calling the Calculator Engine).
+-  The **Calculator Engine** accepts values from the web server, performs the calculation logic, and returns floating point values.
+-  The **Calculator Web Server App** references the **Calculator Engine**. The **Calculator Web Server App** generally follows the [MVC pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) to generate the user interface (Views), calls the Calculator Engine (via the Controller), and returns results to the user's browser (by combining a Model into a View for transformation into HTML).
+-  The **Calculator Engine Unit Tests** only reference the **Calculator Engine**. The unit tests do not test the **Calculator Web Server App** in this project.
+-  The **Calculator End-to-End Tests** connect to your **Calculator Web Server App** and test the user interface end-to-end (which includes calling the Calculator Engine from the web server's controller).
 
-You must carefully layout your code to achieve this architecture. In particular, you cannot closely couple the calculator logic with the calculator UI. For example, if you actually perform a calculation in the Web Server App, you are doing it wrong. The Web Server App requests calculations from the Calculator Engine classes.
+You must carefully layout your code to achieve this architecture. In particular, you cannot closely couple the calculator logic with the calculator UI. For example, if you actually perform a calculation in the Calculator Web Server App, you are doing it wrong. The controller class in the Calculator Web Server App requests calculations from the Calculator Engine classes.
 
-Without a logical separation of the Calculator Engine from the Web Server App, you will have a very challenging time writing unit tests that only focus on the Calculator Engine. Remember - unit tests focus on classes and methods. Higher level forms of tests such as integration tests and end-to-end tests combine multiple modules and systems together. To write effective unit tests, you cannot mix web server routing and rendering logic with your domain logic.
+Without a logical separation of the Calculator Engine from the Calculator Web Server App, you will have a very challenging time writing unit tests that only focus on the Calculator Engine. Remember - unit tests focus on classes and methods. Higher level forms of tests such as integration tests and end-to-end tests combine multiple modules and systems together. To write effective unit tests, you cannot mix web server routing and rendering logic with your domain logic.
 
 ### Calculator Operations
 
