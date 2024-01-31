@@ -229,7 +229,16 @@ If the Writing Center does not do it for you, do not give up on becoming a bette
    *This book is packed with wisdom. Some of the grammar ideas presented are not as relevant today as when it was produced, but overall it is a gem. Following is a favorite quote from the text that I think applies to damn near everything we do in our professional lives:*
 
    ```html
-   It is an old observation that the best writers sometimes disregard the rules of rhetoric. When they do so, however, the reader will usually find in the sentence some compensating merit, attained at the cost of the violation. Unless he is certain of doing as well, he will probably do best to follow the rules. After he has learned, by their guidance, to write plain English adequate for everyday uses, let him look, for the secrets of style, to the study of the masters of literature.
+   It is an old observation that the best writers sometimes
+   disregard the rules of rhetoric. When they do so,
+   however, the reader will usually find in the sentence
+   some compensating merit, attained at the cost of the
+   violation. Unless he is certain of doing as well, he
+   will probably do best to follow the rules. After he has
+   learned, by their guidance, to write plain English 
+   adequate for everyday uses, let him look, for the 
+   secrets of style, to the study of the masters of 
+   literature.
    ```
 
 ## Submission Schedule
