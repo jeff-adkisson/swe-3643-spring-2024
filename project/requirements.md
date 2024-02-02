@@ -36,7 +36,7 @@ How to (generally) structure the project (this will vary by language and framewo
 
 ## Test Plan
 
--  Unit test plan including coverage requirement
+-  Unit test plan, including coverage requirement
 -  End-to-end test plan
 
 ## Final Presentation

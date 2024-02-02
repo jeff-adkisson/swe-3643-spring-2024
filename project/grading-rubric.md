@@ -6,7 +6,7 @@
 
 INCOMPLETE
 
-1.  Did the README explain exactly how to configure the environment and execute the project?
+1.  Did the README precisely explain configuring the environment and executing the project?
 2.  Is the code structured in a way that separates logic from presentation to facilitate unit testing?
 3.  Does the project run from the command line?
 4.  Do the unit tests run from the command line?
