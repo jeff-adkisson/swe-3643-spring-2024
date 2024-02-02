@@ -1,4 +1,12 @@
-# KSU SWE 3643:<br/>Software Testing and Quality Assurance<br/>Semester Project
+#### KSU SWE 3643:<br/>Software Testing and Quality Assurance<br/>Semester Project
+
+# Table of Contents
+
+-  [Project Overview](#project-overview)
+-  [Requirements and Designs](requirements.md)
+-  [Grading Rubric](grading-rubric.md)
+
+# Project Overview
 
 You will execute a semester project to help reinforce some of the testing concepts covered this semester and gain valuable coding practice and source control usage along the way.
 
@@ -21,7 +29,7 @@ The project includes:
 
 -  Checking all of your source code, tests, and documentation into GitHub.
 
-### Introductory Presentation
+## Summary Presentation
 
 [There is a PowerPoint presentation](presentation.pptx) that summarizes this document [(there is also a PDF version)](presentation.pdf).
 
@@ -319,38 +327,4 @@ When you ask me for coding assistance:
 -  Always include your team’s GitHub repository URL.
 -  Check the offending code into your GitHub repository so I can look at it and possibly run it. If your code is not in your GitHub repository, I will not attempt to compile or run it. [Also consider creating a separate source branch](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) before sharing problematic code with me to avoid breaking operational code in your main code trunk.
 -  To compile and run your code, your **README.md** must have the environment configuration instructions and execution steps. Keep those accurate and up-to-date.
-
-# Detailed Instructions
-
-**Final Details Coming Soon**
-
--  Requirements (numbered for easy traceability):  
-   -  Numbered application requirements, 
-   -  Unit testing requirements
-   -  Unit testing coverage requirements
-   -  End-to-end testing requirements
-   -  Documentation requirements
-   -  Final presentation requirements.
-
--  Technical Design
-   -  How to (generally) structure the project (this will vary by language and framework) and some helpful resources
-
--  Visual Design
-   -  [UI mockup](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view/page/ac244bb80?ui=0)
-
-
-# Grading Rubric
-
-**Final Details Coming Soon**
-
--  Did the README explain exactly how to configure the environment and execute the project?
--  Is the code structured in a way that separates logic from presentation to facilitate unit testing?
--  Does the project run from the command line?
--  Do the unit tests run from the command line?
--  Do the end-to-end tests run from the command line?
--  Did the project meet the UI requirements?
--  Did the project meet the unit test requirements?
--  Did the project reach 100% unit test coverage of the calculator logic?
--  Did the project meet the end-to-end Playwright testing requirements?
--  Was the presentation well organized and professionally executed?
 
