@@ -227,7 +227,7 @@ The **Calculator Engine** module accepts values from the web server, performs th
 
 **preq-TECHNICAL-DESIGN-2**
 
-The **Calculator Web Server App** module references the **Calculator Engine ** module. The **Calculator Web Server App** generally follows the [MVC pattern](https://www.geeksforgeeks.org/mvc-framework-introduction/) to generate the user interface (Views), calls the Calculator Engine (via the Controller), and returns results to the user's browser (by combining a Model into a View for transformation into HTML):
+The **Calculator Web Server App** module references the **Calculator Engine** module. The **Calculator Web Server App** generally follows the [MVC pattern](https://www.geeksforgeeks.org/mvc-framework-introduction/) to generate the user interface (Views), calls the Calculator Engine (via the Controller), and returns results to the user's browser (by combining a Model into a View for transformation into HTML):
 
 ![MVC Pattern, Geeks for Geeks](https://media.geeksforgeeks.org/wp-content/uploads/20220224160807/Model1.png)
 
@@ -350,7 +350,7 @@ Your Python project will follow this application structure:
 
 **preq-ENGINE-1**
 
-All calculator logic will be in its own folder, module, or namespace. See [Application Architecture Requirements](#application-architecture-requirements) for specific instructions how to structure your overall project. The calculator logic module will not contain *any* user interface logic.
+All calculator logic will be in its own folder, module, or namespace. See [Application Architecture Requirements](#application-architecture-requirements) for specific instructions how to structure your overall project. The calculator logic module will not contain *any* user interface logic.
 
 | Requirement #  | Operation           | Button   | Inputs | Returns                                               | Example                                                      | Notes                                                        |
 | -------------- | ------------------- | -------- | ------ | ----------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -374,7 +374,7 @@ All calculator logic will be in its own folder, module, or namespace. See [Appli
 
 Your web application will implement the Visual Design demonstrated by [this UI mockup](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view/page/ac244bb80?ui=0). Follow the layout, color, and style conventions demonstrated by the UI mockup. Do not add any additional functions or UI elements.
 
-I recommend using a friendly [CSS framework for layout](https://getbootstrap.com/docs/5.3/layout/grid/) such as [Bootstrap](https://www.w3schools.com/bootstrap/bootstrap_forms.asp) to help create your user interface, but that is your decision. If you do not use a CSS grid, your layout will need to use [HTML tables](https://www.w3schools.com/html/html_tables.asp).
+I recommend using a friendly [CSS framework for layout](https://getbootstrap.com/docs/5.3/layout/grid/) such as [Bootstrap](https://www.w3schools.com/bootstrap/bootstrap_forms.asp) to help create your user interface, but that is your decision. If you do not use a CSS grid, your layout will need to use [HTML tables](https://www.w3schools.com/html/html_tables.asp).
 
 **preq-WEB-APPLICATION-2**
 
@@ -653,7 +653,7 @@ Watch at least one short tutorial how to make good programming videos. For examp
 
 Briefly review your GitHub team repository including the structure/where everything is located.
 
-**preq-PRESENTATION-3 ** Web app demo
+**preq-PRESENTATION-3** Web app demo
 
 Execute your web server application from the command line/terminal (not from your IDE), then switch to a web browser and demonstrate the following:
 
@@ -731,7 +731,7 @@ I suggest implementing your semester project in this order.
 
 8.  Update all of your README.md documentation to match your environment, command-line execution statements, etc.
 
-9.  Search this document for every `preq-` requirement. Validate that you met every requirement. If you missed a requirement, implement it.
+9.  Search this document for every `preq-` requirement. Validate that you met every requirement. If you missed a requirement, implement it.
 
 10.  Record your final video presentation. Check the link into your README.md file.
 
