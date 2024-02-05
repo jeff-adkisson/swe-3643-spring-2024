@@ -189,9 +189,9 @@ List all of the sections in your document execept the introduction and Table of 
 - [Executing the Web Application](#executing-the-web-application)
 ```
 
-All of your links will be [*relative*](https://github.blog/2013-01-31-relative-links-in-markup-files/). If you find yourself writing links that include GitHub's address them, you are very likely not writing relative links.
+All of your links will be [*relative*](https://github.blog/2013-01-31-relative-links-in-markup-files/). If you find yourself writing links that include GitHub's address, you are likely not writing relative links. Clone this repository if you need an example: the relationship of README.md to requirements.md demonstrates relative linking.
 
-To create an [anchor link (a link that jumps somewhere within the current document)](https://github.blog/2013-01-31-relative-links-in-markup-files/), prefix the title of the section with a # symbol, then write the title lowercase and place a dash in place of all spaces. Always test your anchor links after checking your work into GitHub to verify that they work properly (particularly if you use Typora, which is more forgiving than GitHub).
+To create an [anchor link (a link that jumps somewhere within the current document)](https://github.blog/2013-01-31-relative-links-in-markup-files/), prefix the section's title with a # symbol, then write the title lowercase and place a dash in place of all spaces. Always test your anchor links after checking your work into GitHub to verify that they work correctly (particularly if you use Typora, which is more forgiving than GitHub).
 
 **preq-DOCUMENTATION-5**: Team Members
 
@@ -426,21 +426,25 @@ Your Python project will follow this application structure:
 
 All calculator logic will be in its own folder, module, or namespace. See [Application Architecture Requirements](#application-architecture-requirements) for specific instructions how to structure your overall project. The calculator logic module will not contain *any* user interface logic.
 
+**preq-ENGINE-2**
+
+All operations will use floating point math - *not integers*. Input A, Input B, and the calculation result will be floating point values. In C# and Java, use the `double` type.
+
 | Requirement #  | Operation           | Button   | Inputs | Returns                                               | Example                                                      | Notes                                                        |
 | -------------- | ------------------- | -------- | ------ | ----------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| preq-ENGINE-2  | Add                 | A + B    | A, B   | A plus B                                              | 5.5 + -3.15 = 2.35                                           |                                                              |
-| preq-ENGINE-3  | Subtraction         | A - B    | A, B   | A minus B                                             | 27.93 - 4 = 23.93                                            |                                                              |
-| preq-ENGINE-4  | Multiplication      | A * B    | A, B   | A times B                                             | 5 * 7.1 = 35.5                                               |                                                              |
-| preq-ENGINE-5  | Division            | A / B    | A, B   | A divided by B                                        | 3.0 / 9.0 = .33333333                                        | The following values return return an error:<br />- B (denominator) equal to 0 |
-| preq-ENGINE-6  | Equals              | A == B   | A, B   | 1 when equivalent to 8 precision points. 0 otherwise. | 0.333333== 0.333333 = 1,<br />0.33333333== 0.33333334 = 0,<br />0.333333331== 0.333333332 = 1 | Comparison is to 8 decimal points. Thus, 0.333333331 and 0.333333332 are considered equal. See the Equals method in the [Coverage Demo](https://github.com/jeff-adkisson/swe-3643-spring-2024/blob/master/examples/coverage_demo/MathLibrary/BasicFloatingPointOperations.cs) from Module 2 for an example how to properly perform an equality operation on floating point values. |
-| preq-ENGINE-7  | Raise to Power      | A ^ B    | A, B   | A raised to the power of B                            | 2 ^ 3 = 8, <br />5 ^ 2 = 25,<br />5 ^ -3 = 0.008             |                                                              |
-| preq-ENGINE-8  | Logarithm of number | A log B  | A, B   | Exponent of logarithm A at base B                     | 8 log 2 = 3,<br />25 log 5 = 2                               | The following values return return an error:<br />- Values of A less than or equal to 0<br />- Values of B equal to 0 |
-| preq-ENGINE-9  | Root of number      | A root B | A, B   | Bth root of A                                         | 8 root 3 = 2,<br />25 root 2 = 5                             | The following values return return an error:<br />- Values of B equal to 0 |
-| preq-ENGINE-10 | Factorial of number | A !      | A      | A * (A-1) * (A - ...) * 2 * 1                         | 5 = 120,<br />-5 = -120<br />0 = 1                           | By convention, 0 returns 1.                                  |
-| preq-ENGINE-11 | Sine of A           | sin A    | A      | sin(A)                                                | 360 = 0<br />-360 = 0<br />0 = 0,<br />1 = 0.0174524         |                                                              |
-| preq-ENGINE-12 | Cosine of A         | cos A    | A      | cos(A)                                                | 360 = 1<br /><br />-360 = 1<br />1= 0.99985                  |                                                              |
-| preq-ENGINE-13 | Tangent of A        | tan A    | A      |                                                       | 360 = 0<br />-360 = 0<br />1=0.0174551                       |                                                              |
-| preq-ENGINE-14 | Reciprocal of A     | 1 / A    | A      | 1 divided by A                                        | 1 / 8 = 0.125<br />1/ -4 = -0.25                             | The following values return return an error:<br />- Values of A equal to 0 |
+| preq-ENGINE-3  | Add                 | A + B    | A, B   | A plus B                                              | 5.5 + -3.15 = 2.35                                           |                                                              |
+| preq-ENGINE-4  | Subtraction         | A - B    | A, B   | A minus B                                             | 27.93 - 4 = 23.93                                            |                                                              |
+| preq-ENGINE-5  | Multiplication      | A * B    | A, B   | A times B                                             | 5 * 7.1 = 35.5                                               |                                                              |
+| preq-ENGINE-7  | Division            | A / B    | A, B   | A divided by B                                        | 3.0 / 9.0 = .33333333                                        | The following values return return an error:<br />- B (denominator) equal to 0 |
+| preq-ENGINE-8  | Equals              | A == B   | A, B   | 1 when equivalent to 8 precision points. 0 otherwise. | 0.333333== 0.333333 = 1,<br />0.33333333== 0.33333334 = 0,<br />0.333333331== 0.333333332 = 1 | Comparison is to 8 decimal points. Thus, 0.333333331 and 0.333333332 are considered equal. See the Equals method in the [Coverage Demo](https://github.com/jeff-adkisson/swe-3643-spring-2024/blob/master/examples/coverage_demo/MathLibrary/BasicFloatingPointOperations.cs) from Module 2 for an example how to properly perform an equality operation on floating point values. |
+| preq-ENGINE-9  | Raise to Power      | A ^ B    | A, B   | A raised to the power of B                            | 2 ^ 3 = 8, <br />5 ^ 2 = 25,<br />5 ^ -3 = 0.008             |                                                              |
+| preq-ENGINE-10 | Logarithm of number | A log B  | A, B   | Exponent of logarithm A at base B                     | 8 log 2 = 3,<br />25 log 5 = 2                               | The following values return return an error:<br />- Values of A less than or equal to 0<br />- Values of B equal to 0 |
+| preq-ENGINE-11 | Root of number      | A root B | A, B   | Bth root of A                                         | 8 root 3 = 2,<br />25 root 2 = 5                             | The following values return return an error:<br />- Values of B equal to 0 |
+| preq-ENGINE-12 | Factorial of number | A !      | A      | A * (A-1) * (A - ...) * 2 * 1                         | 5 = 120,<br />-5 = -120<br />0 = 1                           | By convention, 0 returns 1.                                  |
+| preq-ENGINE-13 | Sine of A           | sin A    | A      | sin(A)                                                | 360 = 0<br />-360 = 0<br />0 = 0,<br />1 = 0.0174524         |                                                              |
+| preq-ENGINE-14 | Cosine of A         | cos A    | A      | cos(A)                                                | 360 = 1<br /><br />-360 = 1<br />1= 0.99985                  |                                                              |
+| preq-ENGINE-15 | Tangent of A        | tan A    | A      |                                                       | 360 = 0<br />-360 = 0<br />1=0.0174551                       |                                                              |
+| preq-ENGINE-16 | Reciprocal of A     | 1 / A    | A      | 1 divided by A                                        | 1 / 8 = 0.125<br />1/ -4 = -0.25                             | The following values return return an error:<br />- Values of A equal to 0 |
 
 #### Notes
 
