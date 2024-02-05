@@ -454,6 +454,8 @@ All calculator logic will be in its own folder, module, or namespace. See [Appli
 
 2.  Review the [Suggested Implementation Order](#suggested-implementation-order) section before implementing all of your math methods. It contains some suggested approaches for structuring how you return the results of a math operation, plus writing unit tests alongside your math methods using the [Test Driven Development methodology](https://testdriven.io/test-driven-development/).
 
+3.  Detecting division by zero and other calculation errors is language-specific. For example, C# and Java return `double.Infinity` when division by zero occurs while Python throws an exception. Carefully research how to detect and handle these conditions.![image-20240205135410281](requirements.assets/image-20240205135410281.png)
+
 ## Web Application Requirements
 
 **preq-WEB-APPLICATION-1**
