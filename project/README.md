@@ -12,12 +12,12 @@ You will execute a semester project to help reinforce some of the testing concep
 
 The project includes:
 
--  Creating a simple web-based calculator that performs basic floating point calculations on single and double operands, including:
+-  Creating a simple web-based calculator that performs basic floating point calculations on double and single operands, including:
 
-   -  Add, subtract, multiply, divide, equal, power, log, and root, and
+   -  Add, subtract, multiply, divide, equal, power, log, root, and
    -  Reciprocal, sin, cosine, tangent, and factorial.
 
-   You can build your web-based calculator in Java, C#, or Python. You will follow the [Test Driven Development (TDD) methodology](https://testdriven.io/test-driven-development/) to create your calculator logic and unit test it independently from the UI/web interface. To facilitate unit testing, the web-based UI will *reference* your calculator logic rather than tightly couple the logic into your UI code. You will write your unit tests using the [industry-standard AAA pattern (arrange, act, assert)](https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80) and [follow the `UnitOfWork_StateUnderTest_ExpectedBehavior` naming convention](https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html).
+   You can build your web-based calculator in Java, C#, or Python. You will create your calculator logic and unit test it independently from the UI/web interface. To facilitate unit testing, the web-based UI will *reference* your calculator logic rather than tightly couple the logic into your UI code. You will write your unit tests using the [industry-standard AAA pattern (arrange, act, assert)](https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80) and [follow the `UnitOfWork_StateUnderTest_ExpectedBehavior` naming convention](https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html).
 
 -  Adding unit tests to the calculator classes (the classes that perform the calculations) to achieve 100% coverage of the calculation methods.
 

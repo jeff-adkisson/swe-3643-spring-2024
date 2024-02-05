@@ -288,9 +288,11 @@ You will use the latest version of your language of choice:
 -  [Java - Java JDK 21](https://www.oracle.com/java/technologies/downloads/#java21)
 -  [Python - Python 3.12 or higher](https://www.python.org/downloads/)
 
-*Do nu* 
+*Do not use an antique version of your language. If you already have the language installed, verify that the version is up-to-date. When you start new projects, you (generally) do not want to be on an old version.*
 
-**preq-APPLICATION-STRUCTURE-3.C#**
+**IMPORTANT: These are the language versions my machine will have installed when I test your projects.**
+
+**preq-APPLICATION-STRUCTURE-3.C#** 
 
 Your C# project will follow this application structure:
 
