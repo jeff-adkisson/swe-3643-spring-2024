@@ -452,7 +452,7 @@ All calculator logic will be in its own folder, module, or namespace. See [Appli
 
     -  [Python math](https://docs.python.org/3/library/math.html)
 
-2.  Review the [Suggested Implementation Order](#suggested-implementation-order) section before implementing all of your math methods. It contains some suggested approaches for structuring how you return the results of a math operation, plus writing unit tests alongside your math methods using the [Test Driven Development methodology](https://testdriven.io/test-driven-development/).
+2.  Review the [Suggested Implementation Order](#suggested-implementation-order) section before implementing all of your math methods. It contains some suggested approaches for structuring how you return the results of a math operation, plus writing unit tests alongside your math methods using the [Test Driven Development methodology](https://testdriven.io/test-driven-development/).
 
 ## Web Application Requirements
 
@@ -857,7 +857,7 @@ I suggest implementing your semester project in this order to achieve the highes
 
 6.  Now that you are able to call the CalculatorEngine from your web app, implement the entire web interface.
 
-7.  Once your web application is fully operation, write your end-to-end Playwright tests.
+7.  Once your web application is fully operational, write your end-to-end Playwright tests.
 
 8.  Update all of your README.md documentation to match your environment, command-line execution statements, etc.
 
@@ -869,5 +869,4 @@ I suggest implementing your semester project in this order to achieve the highes
 
 12.  Open a browser and visit your GitHub repository. Navigate to your README.md file and verify it is appropriately formatted. Look for Markdown that is improperly formatted. Click every link in the README.md file. Do they all work? Did you break an anchor link? Did GitHub interpret your Markdown a little differently than Typora or VS Code suggested it would look? These are common issues that must be corrected to ensure your work is highly polished. If you find an issue, correct the file on your machine, then check in the fix and validate again. You can see this activity in my own GitHub check-in history:![image-20240205105410682](requirements.assets/image-20240205105410682.png)
      
-
 13.  Each team member should review your GitHub submission if you are in a Team of Two. Make sure you both agree that the project is ready. In a prior semester, a team of four was upset that their team grade was lower than expected because the team member who handled the submission could have done a better job. Never let a teammate's lack of motivation or capability impact your success, even if that means you must do more work than you consider fair.
