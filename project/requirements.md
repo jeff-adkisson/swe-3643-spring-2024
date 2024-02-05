@@ -2,47 +2,741 @@
 
 [**Back to Project Overview**](README.md)
 
-# Requirements and Designs
-
-INCOMPLETE
+# Requirements
 
 #### Table of Contents
 
--  [Coding Standards](#coding-standards)
--  [Application Requirements](#application-requirements)
--  [Visual Design](#visual-design)
--  [Technical Design](#technical-design)
--  [Test Plan](#test-plan)
--  [Final Presentation](#final-presentation)
--  [Submission Checklist](#submission-checklist)
+-  [Using This Document](#using-this-document)
+-  [Coding Standard Requirements](#coding-standard-requirements)
+-  [Source Control Requirements](#source-control-requirements)
+-  [Documentation Requirements](#documentation-requirements)
+-  [Project Architecture Requirements](#project-architecture-requirements)
+-  [Package Management Requirements](#package-management-requirements)
+-  [Application Structure Requirements](#application-structure-requirements)
+-  [Calculator Engine Requirements](#calculator-engine-requirements)
+-  [Web Application Requirements](#web-application-requirements)
+-  [Visual Design Requirements](#visual-design-requirements) 
+-  [Unit Test Plan and Coverage Requirements](#unit-test-plan-and-coverage-requirements)
+-  [Final Presentation Requirements](#final-presentation-requirements)
+-  [Suggested Implementation Order](#suggested-implementation-order)
 
-## Coding Standards
+## Using This Document
 
--  GitHub
--  Follow language conventions, etc.
+All requirements in this document follow this naming convention:
 
-## Application Requirements
+​	`preq-NAME-#`
 
--  Application
--  README.md
+If a requirement is language-specific, it will be suffixed by the language name. For example:
 
-## Visual Design
+​	`preq-NAME-#.C#`
 
-[UI mockup](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view/page/ac244bb80?ui=0)
+Before submitting your semester project, search for all `preq-` lines in this document and verify you have met every requirement.
 
-## Technical Design
+The `preq` prefix means "Project Requirement". It is simple convention to help you find all of the requirements.
 
-How to (generally) structure the project (this will vary by language and framework) and some helpful resources
+## Coding Standard Requirements
 
-## Test Plan
+Coding standards vary by language. It is a common mistake to apply naming conventions, capitalization, and organization standards from one language to another. For example, the following shows the different naming conventions followed by C#, Java, and Python for method naming:
 
--  Unit test plan, including coverage requirement
--  End-to-end test plan
+-  C#<br>`public string MakeFullName(string firstName, string lastName)`<br>*Method names following the **SentenceCase** naming convention.
+-  Java<br>`public String makeFullName(String firstName, String lastName)`<br>*Method names follow the **pascalCase** naming convention.*
+-  Python<br>`def make_full_name(first_name, last_name):`<br>*Method names follow the **snake_case** naming convention.*
 
-## Final Presentation
+Avoid this mistake by becoming conversant in the coding standards followed by each language. These conventions are published by the language's creator. Following these standards demonstrates your expertise with the language and makes it easier for you to understand code written by others that follows correct conventions.
 
-https://realpython.com/how-to-make-programming-videos/
+**preq-CODING-STANDARDS-1.C#**
 
-## Submission Checklist
+Your C# code will follow the language's published coding standards.
 
-1.  Does code work? LOL
+-  https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions
+-  https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names
+-  https://www.dofactory.com/csharp-coding-standards
+
+**preq-CODING-STANDARDS-1.Java**
+
+Your Java code will follow the language's published coding standards.
+
+-  https://google.github.io/styleguide/javaguide.html
+-  https://www.oracle.com/technetwork/java/codeconventions-150003.pdf
+
+**preq-CODING-STANDARDS-1.Python**
+
+Your Python code will follow the language's published coding standards.
+
+-  https://peps.python.org/pep-0008/
+-  https://google.github.io/styleguide/pyguide.html
+
+## Source Control Requirements
+
+**preq-SOURCE-1**
+
+You will check all source code, documentation, unit tests, and end-to-end tests in a public git repository hosted by GitHub.com. This is called your *Team Repository* in this document.
+
+**preq-SOURCE-2**
+
+You will place a `README.md` file in the root folder of your Team Repository. This file will be written using the industry-standard [Markdown](https://www.markdownguide.org/getting-started/) markup language.
+
+**preq-SOURCE-3**
+
+Your Team Repository will implement the following folder structure:
+
+-  **REPOSITORY ROOT**<br>`README.md` and files associated with your documentation, such as screenshots, videos, etc.
+   -  **src**<br>All source code and tests will be located under `/src` following the specific requirements in the [Application Structure](#application-structure) section.
+
+## Documentation Requirements
+
+**preq-DOCUMENTATION-1**
+
+Your project will contain a README.md file written using Markdown in the root of your Team Repository.
+
+**preq-DOCUMENTATION-2**
+
+Your project's README.md file will contain the following sections:
+
+-  Introduction
+-  Table of Contents
+-  Environment
+-  Executing the Web Application
+-  Executing Unit Tests
+-  Reviewing Unit Test Coverage
+-  Executing End-To-End Tests
+-  Final Video Presentation
+
+**preq-DOCUMENTATION-3**: Introduction
+
+Your Introduction section will be titled "KSU SWE 3643 Software Testing and Quality Assurance Semester Project: Web-Based Calculator" rather than "Introduction". Set this section to an H1 (\# KSU SWE...).
+
+Following the title, write a short (2-3 sentence) description of what the repository contains.
+
+**preq-DOCUMENTATION-4**: Table of Contents
+
+Create an H2 section named *Table of Contents* (#\# Table of... ). List the sections starting with Environment as bullets.
+
+List all of the sections in your document execept the introduction and Table of Contents. Create a hyperlink to each section. Your hyperlink will look like the following example:
+
+```text
+## Table of Contents
+
+- [Environment](#environment)
+- [Executing the Web Application](#executing-the-web-application)
+```
+
+All of your links will be [*relative*](https://github.blog/2013-01-31-relative-links-in-markup-files/). If you find yourself writing links that include GitHub's address them, you are very likely not writing relative links.
+
+To create an [anchor link (a link that jumps somewhere within the current document)](https://github.blog/2013-01-31-relative-links-in-markup-files/), prefix the title of the section with a # symbol, then write the title lowercase and place a dash in place of all spaces. Always test your anchor links after checking your work into GitHub to verify that they work properly.
+
+**preq-DOCUMENTATION-5**: Environment
+
+Explain how to configure the environment to execute your web application, unit tests, and end-to-end tests. For example:
+
+```html
+This is a cross-platform application and should work in Windows 10+, Mac OSx Ventura+, and Linux environments. Note that the application has only been carefully tested in Windows 11.
+
+To prepare your environment to execute this application:
+ 1. [Install the latest Java runtime for your system.](https://www.java.com/en/download/manual.jsp)
+ 2. ...
+
+To configure Playwright for end-to-end testing:
+  1. ...
+```
+
+If you are writing something that *should* be cross-platform, but you have only tested on a single platform (such as Windows or Linux), note where you have tested it specifically.
+
+If your environment setup includes terminal commands, use single primes for inline commands (such as `git` ) or triple primes for blocks:
+
+```bash
+This is a code block.
+It can contain multiple lines.
+```
+
+**preq-DOCUMENTATION-6**: Executing the Web Application
+
+Create an H2 section called *Executing the Web Application*. 
+
+Describe the detailed steps to build and execute your web application *from the command line (terminal / console)*. Your user may not have an IDE installed. 
+
+Your last step will describe how to connect to the running web application from a browser on the same machine. This often requires a port. For example, `6. After the application starts, launch a browser and connect to http://localhost:60012`.
+
+Include sample output from building and executing the web application. For example:
+
+```bash
+$ dotnet run
+info: Extensions.Hosting.AsyncInitialization.RootInitializer[0]
+      Starting async initialization
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:60012
+```
+
+If you find certain errors popping up when you run the application (such as port in use), note these common problems and how to fix them. You want your user to have little or no trouble getting your application running. For example:
+
+-  If you see the following error, something is already running on the application's HTTP port. Free up the port, then try again:<br>`Unhandled IO exception: Failed to bind to https://127.0.0.1:60012: address already in use.`
+   
+
+**preq-DOCUMENTATION-7**: Executing Unit Tests
+
+Create an H2 section called *Executing Unit Tests*. 
+
+Describe the detailed steps to build and execute all of your unit tests *from the command line (terminal / console)*. Your user may not have an IDE installed.
+
+Finally, include sample output in a code block. For example:
+
+```bash
+$ dotnet test
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:   132, Skipped:     0, Total:   132, Duration: 39 ms - HighMatch.Compass.UnitTest.Extensions.dll (net7.0)
+```
+
+**preq-DOCUMENTATION-8**: Executing End-To-End Tests
+
+Create an H2 section called *Executing End-To-End Tests*. 
+
+Describe the detailed steps to build and execute all of your end-to-end unit tests *from the command line (terminal / console)*. Your user may not have an IDE installed.
+
+Finally, include sample output in a code block. For example:
+
+```bash
+$ dotnet test
+
+TODO / Copy Playwright output here
+```
+
+**preq-DOCUMENTATION-9**: Final Video Presentation
+
+Create an H2 section called *Final Video Presentation*. 
+
+Include a link to your final video presentation. If the file is checked into your Team Repository, this will be a relative link. Otherwise, it will be a fully-qualified link to YouTube or Vimeo. For example:
+
+**[Please view our project's presentation here on YouTube](https://www.youtube.com/watch?v=zqLEO5tIuYs).**
+
+## Project Architecture Requirements
+
+Your application will separate calculation logic from web logic. This will simplify unit testing, help your code achieve the single responsibility principle, and decouple the logic engine from the user interface. The following high-level component layout shows the modules you will implement and their relationship to one another.
+
+[![image-20240128222116749](requirements.assets/image-20240128222116749.png)](https://www.plantuml.com/plantuml/uml/VL9DQzj04BthLmp99IQnstCf9R9II0fnJAsabq9Oxqxa9QDTiHzMGyb_hwQAy1fRteFNmxptTkOzNViWN8WrPOB8jhN-eqsLPOsGhw92E2i4oKWYM0VVJQKDmlAZzGaMeaRV8V4CpabNcx2cYDdV3BeZINWFE_O7kM_okOHSgOiNiYA0DaqC-HKarNpILmd-8MpGbQrzQD09e-unRApo5xFPR98bi9KsUx8ZGXsi8ZocnQ3tB7i_wSAZqG5AzC73LWlumVKLBFeBWvmDdhmX-ygkZ7Z2b5weD-Vo0F7SEULpOTJy-IU6w8nVnVfYCeQ-qLkjy3_Xyq1Os90lOhr6npnU3quCCfr-E-YE6l8Brx12jqK7UTCSVWhzrlTM8VbT_QInJSh2ck0i4JhFewKrJpF03nk3RjePMM0qK3KjxRIxaZoN9DvQnulivmZ7SrIbvPyanRrW7k-I26-qRpfrNrZdK8OdGH4vb8Ga0Z5fFyc1bqPvzAc2j7pr1Q5mNVmUWxyp0TsBaBWB7qRdP-zIBx_0RLak6KvipMy3joWKeVSmTxRrwDXPIJOgE4zSscY58BMJXBrd2G66V_3rn7EiUur6nPh-0G00)
+
+You must carefully organize your code to achieve this architecture. In particular, you *cannot* [closely couple the calculator logic with the calculator UI logic](https://uxdesign.cc/separating-business-and-ui-logic-the-proper-way-a58a64529333). For example, if you perform a calculation in the Calculator Web Server App's controllers, models, or views, you are doing it wrong. The controller class in the Calculator Web Server App requests calculations from the Calculator Engine classes.
+
+**preq-TECHNICAL-DESIGN-1**
+
+The **Calculator Engine** module accepts values from the web server, performs the calculation logic, and returns floating-point values. This module does not perform any user interface functions.
+
+**preq-TECHNICAL-DESIGN-2**
+
+The **Calculator Web Server App** module references the **Calculator Engine ** module. The **Calculator Web Server App** generally follows the [MVC pattern](https://www.geeksforgeeks.org/mvc-framework-introduction/) to generate the user interface (Views), calls the Calculator Engine (via the Controller), and returns results to the user's browser (by combining a Model into a View for transformation into HTML):
+
+![MVC Pattern, Geeks for Geeks](https://media.geeksforgeeks.org/wp-content/uploads/20220224160807/Model1.png)
+
+**preq-TECHNICAL-DESIGN-3**
+
+The **Calculator Engine Unit Tests** only reference the **Calculator Engine** module. Your unit tests *will not not test this project's Calculator Web Server App*. You will use NUnit (C#), JUnit (Java), or `pytest` (Python) to write your unit tests.
+
+**preq-TECHNICAL-DESIGN-4**
+
+The **Calculator End-to-End Tests** connect to your **Calculator Web Server App** and test the user interface end-to-end (which includes calling the Calculator Engine via the web server's controller). You will use [Playwright](https://playwright.dev/) to write your end-to-end (also called e2e) tests.
+
+## Package Management Requirements
+
+Package managers simplify sharing code. Almost all languages implement one or more package management tools.
+
+**preq-PACKAGES-1.C#**
+
+You will use the Nuget package manager to install the NUnit and Playwright testing frameworks, plus any other dependencies your C# web application requires.
+
+-  Nuget and `.csproj`<br>https://www.jetbrains.com/help/rider/Using_NuGet.html
+   -  Nuget packages you will reference include (but are not limited to) NUnit and Playwright.
+
+**preq-PACKAGES-1.Java**
+
+You will use the Maven package manager to install the JUnit and Playwright testing frameworks, plus any other dependencies your Java web application requires.
+
+-  Maven and `POM.xml`<br>https://www.jetbrains.com/help/idea/maven-support.html
+   -  Maven packages you will reference include (but are not limited to) JUnit and Playwright.
+
+**preq-PACKAGES-1.Python**
+
+You will use the PIP package manager to install the `pytest` and Playwright testing frameworks, plus any other dependencies your Python web application requires.
+
+-  Python: PIP plus a `requirements.txt` file in the root of your `src` directory.<br>Installing your Python packages will occur in a Terminal with this command:<br>`$/src/$ pip install -r requirements.txt`<br>[See here for more information](https://note.nkmk.me/en/python-pip-install-requirements/ )
+   -  PIP packages you will reference include (but are not limited to) `pytest` and `pytest-playwright`.
+
+## Application Structure Requirements
+
+**preq-APPLICATION-STRUCTURE-1**
+
+You will choose one of the following languages, server architectures, and test runners:
+
+-  **C#**
+   -  ASP.NET MVC + NUnit + Playwright
+   -  ASP.NET Blazor Server + NUnit + Playwright
+-  **Java**
+   -  Spring MVC + JUnit + Playwright
+   -  Struts + JUnit + Playwright
+   -  Grails + JUnit + Playwright
+-  **Python**
+   -  Flask + Pytest + Playwright
+
+**preq-APPLICATION-STRUCTURE-2**
+
+You will use the latest version of your language of choice:
+
+-  [C# - .NET 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+-  [Java - Java JDK 21](https://www.oracle.com/java/technologies/downloads/#java21)
+-  [Python - Python 3.12 or higher](https://www.python.org/downloads/)
+
+*Do nu* 
+
+**preq-APPLICATION-STRUCTURE-3.C#**
+
+Your C# project will follow this application structure:
+
+-  **REPOSITORY ROOT**<br>Your `README.md` file is here.
+   -  **src**<br>Name your solution `Calculator.sln` and place it in the `src` folder.
+      -  **CalculatorWebServerApp** project<br>This is your web server application. It will reference the **CalculatorEngine.csproj** project.
+      -  **CalculatorEngine** project<br>This is the calculator logic project. It does not contain any user interface logic. It is referenced by your `CalculatorWebServerApp.csproj` web server app project.
+      -  **CalculatorEngineUnitTests** project <br>This is your NUnit unit test project. It references your **CalculatorEngine.csproj** project. All clear box unit tests to achieve 100% coverage of **CalculatorEngine** will be in this project.
+      -  **CalculatorEndToEndTests** project<br>This is your Playwright test project. It references the NUnit and Playwright Nuget packages. All end-to-end tests will be in this project. This project will use Playwright and a headless browser to test your web interface.
+
+**preq-APPLICATION-STRUCTURE-3.Java**
+
+Your Java project will follow this application structure using [Maven and `pom.xml` for references and package management](https://stackoverflow.com/a/11241131):
+
+-  **REPOSITORY ROOT**<br>Your `README.md` file is here.
+
+   -  **src**<br>Place your root Maven `pom.xml` file here. Each subfolder will also need a `pom.xml` file.
+
+      -  **web**<br>Your calculator web server app goes here. It references the `calculator-engine` module.
+         -  **src**
+            -  **main**
+               -  **java**
+      -  **calculator-engine**<br>Your calculator logic goes here. It does not contain any user interface logic. It is referenced by your web server module.
+         -  **src**
+            -  **main**
+               -  **java**
+               -  **resources**
+               -  **webapp**
+                  -  **WEB-INF**
+                     -  [web.xml](https://cloud.google.com/appengine/docs/legacy/standard/java/config/webxml)
+      -  **tests**<br>This is your JUnit unit test package. It references the `calculator-engine` module. All clear box unit tests to achieve 100% coverage of `calculator-engine` will be in this  module.
+         -  **src**
+            -  **main**
+               -  **java**
+
+      -  **e2e**<br>This is your Playwright test module. It references the JUnit and Playwright Maven packages. All end-to-end tests will be in this package. This module will use Playwright and a headless browser to test your web interface.
+         -  **src**
+            -  **main**
+               -  **java**
+
+**preq-APPLICATION-STRUCTURE-3.Python**
+
+Your Python project will follow this application structure:
+
+-  **REPOSITORY ROOT**<br>Your `README.md` file is here.
+   -  **src**<br>Place your `requirements.txt` file in `src` to install your application dependencies, such as Flask, pytest, and Playwright.
+      -  **web**<br>Contains your Flask web server app. [Follow the Flask conventions for structuring this directory](https://flask.palletsprojects.com/en/2.3.x/tutorial/layout/).
+      -  **calcuator_engine**<br>This folder contains your calculator logic. It does not contain any user interface logic. It is referenced by your web app.
+      -  **tests**<br>This folder will use `pytest` and reference `calculator-engine` to reach 100% clear box unit test coverage.
+         -  `__init__.py`
+         -  `pytest` unit test files
+      -  **e2e**<br>This folder will use Playwright and a headless browser to test your web interface.
+         -  `__init__.py`
+         -  Playwright test files. 
+
+## Calculator Engine Requirements
+
+**preq-ENGINE-1**
+
+All calculator logic will be in its own folder, module, or namespace. See [Application Architecture Requirements](#application-architecture-requirements) for specific instructions how to structure your overall project. The calculator logic module will not contain *any* user interface logic.
+
+| Requirement #  | Operation           | Button   | Inputs | Returns                                               | Example                                                      | Notes                                                        |
+| -------------- | ------------------- | -------- | ------ | ----------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| preq-ENGINE-2  | Add                 | A + B    | A, B   | A plus B                                              | 5.5 + -3.15 = 2.35                                           |                                                              |
+| preq-ENGINE-3  | Subtraction         | A - B    | A, B   | A minus B                                             | 27.93 - 4 = 23.93                                            |                                                              |
+| preq-ENGINE-4  | Multiplication      | A * B    | A, B   | A times B                                             | 5 * 7.1 = 35.5                                               |                                                              |
+| preq-ENGINE-5  | Division            | A / B    | A, B   | A divided by B                                        | 3.0 / 9.0 = .33333333                                        | The following values return return an error:<br />- B (denominator) equal to 0 |
+| preq-ENGINE-6  | Equals              | A == B   | A, B   | 1 when equivalent to 8 precision points. 0 otherwise. | 0.333333== 0.333333 = 1,<br />0.33333333== 0.33333334 = 0,<br />0.333333331== 0.333333332 = 1 | Comparison is to 8 decimal points. Thus, 0.333333331 and 0.333333332 are considered equal. See the [Coverage Demo](https://github.com/jeff-adkisson/swe-3643-spring-2024/tree/master/examples/coverage_demo) from Module 2 for an example how to properly perform precision-based-equals on floating point values. |
+| preq-ENGINE-7  | Raise to Power      | A ^ B    | A, B   | A raised to the power of B                            | 2 ^ 3 = 8, <br />5 ^ 2 = 25,<br />5 ^ -3 = 0.008             |                                                              |
+| preq-ENGINE-8  | Logarithm of number | A log B  | A, B   | Exponent of logarithm A at base B                     | 8 log 2 = 3,<br />25 log 5 = 2                               | The following values return return an error:<br />- Values of A less than or equal to 0<br />- Values of B equal to 0 |
+| preq-ENGINE-9  | Root of number      | A root B | A, B   | Bth root of A                                         | 8 root 3 = 2,<br />25 root 2 = 5                             | The following values return return an error:<br />- Values of B equal to 0 |
+| preq-ENGINE-10 | Factorial of number | A !      | A      | A * (A-1) * (A - ...) * 2 * 1                         | 5 = 120,<br />-5 = -120<br />0 = 1                           | By convention, 0 returns 1.                                  |
+| preq-ENGINE-11 | Sine of A           | sin A    | A      | sin(A)                                                | 360 = 0<br />-360 = 0<br />0 = 0,<br />1 = 0.0174524         |                                                              |
+| preq-ENGINE-12 | Cosine of A         | cos A    | A      | cos(A)                                                | 360 = 1<br /><br />-360 = 1<br />1= 0.99985                  |                                                              |
+| preq-ENGINE-13 | Tangent of A        | tan A    | A      |                                                       | 360 = 0<br />-360 = 0<br />1=0.0174551                       |                                                              |
+| preq-ENGINE-14 | Reciprocal of A     | 1 / A    | A      | 1 divided by A                                        | 1 / 8 = 0.125<br />1/ -4 = -0.25                             | The following values return return an error:<br />- Values of A equal to 0 |
+
+## Web Application Requirements
+
+**preq-WEB-APPLICATION-1**
+
+Your web application will implement the Visual Design demonstrated by [this UI mockup](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view/page/ac244bb80?ui=0). Follow the layout, color, and style conventions demonstrated by the UI mockup. Do not add any additional functions or UI elements.
+
+I recommend using a friendly [CSS framework for layout](https://getbootstrap.com/docs/5.3/layout/grid/) such as [Bootstrap](https://www.w3schools.com/bootstrap/bootstrap_forms.asp) to help create your user interface, but that is your decision. If you do not use a CSS grid, your layout will need to use [HTML tables](https://www.w3schools.com/html/html_tables.asp).
+
+**preq-WEB-APPLICATION-2**
+
+Your web application's user interface will provide a button and call to every logic operation in the [Calculator Engine](#calculator-engine-requirements) project/module. Your web application will handle both valid and error responses from the calculator logic. 
+
+**preq-WEB-APPLICATION-3**
+
+When your web application starts, it will show the following default values. This is called the Start/Default State:
+
+-  The result box does not indicate an error condition and says, "Enter a value(s) below and select an operation."
+-  Input A and Input B contain `0`.
+
+**preq-WEB-APPLICATION-4**
+
+When the user clicks the Clear button, it will return the interface to the Start/Default state.
+
+<img src="requirements.assets/image-20240204133405055.png" alt="image-20240204133405055" style="zoom:25%;" />
+
+**preq-WEB-APPLICATION-5**
+
+Your web application will detect and handle invalid (non-numeric ) input (Error State). Input errors will display "Invalid Input, Numbers Only" to the user. See the [UI mockup](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view/page/ac244bb80?ui=0) for the expected response to invalid input. For example, if the user puts `25` into Input A and `five` into Input B, the result will look like the following:
+
+```html
+25 / five =
+Invalid Input, Numbers Only
+```
+
+**preq-WEB-APPLICATION-6**
+
+Your web application will detect and handle numeric input that creates an error condition such as division by zero (Error State). Numeric errors will display `Not a Number` to the user. See the [UI mockup](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view/page/ac244bb80?ui=0) for the expected response to numeric error conditions. For example, if the user puts `25` into Input A and `0` into Input B, the result will look like the following:
+
+```html
+25 / 0 =
+Not a Number
+```
+
+**preq-WEB-APPLICATION-7**
+
+Your web application will display the operation and result on two lines.  See the [UI mockup](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view/page/ac244bb80?ui=0) for the expected response. For example, if the user puts `123.55` into  Input A and `-15.9` into Input B and clicks `A * B`, the result will look like the following:
+
+```html
+123.55 * -15.9 =
+-1,964.445
+```
+
+**preq-WEB-APPLICATION-8**
+
+I recommend using a friendly [CSS framework for layout](https://getbootstrap.com/docs/5.3/layout/grid/) such as [Bootstrap](https://www.w3schools.com/bootstrap/bootstrap_forms.asp), but that is your decision. At a minimum, your layout will need to use [HTML tables](https://www.w3schools.com/html/html_tables.asp).
+
+## Visual Design Requirements
+
+**preq-VISUAL-DESIGN-1**
+
+Your web application will implement the Visual Design demonstrated by [this UI mockup](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view/page/ac244bb80?ui=0). Follow the layout, color, and style conventions demonstrated by the UI mockup. Do not add any additional functions or UI elements.
+
+**preq-VISUAL-DESIGN-2**
+
+Set the result box to the following colors when there is an error (Error State
+
+-  Background: #B70F0A
+-  Foreground (text): #FFFFFF
+
+<img src="requirements.assets/image-20240204131231248.png" alt="image-20240204131231248" style="zoom:25%;" />
+
+**preq-VISUAL-DESIGN-3**
+
+Set the result box to the following colors when the application starts, there is a valid result, or the user clicks the Clear button (Start/Default State)
+
+-  Background: #FFECD7
+-  Foreground (text): #000000
+
+<img src="requirements.assets/image-20240204131758677.png" alt="image-20240204131758677" style="zoom:25%;" />
+
+**preq-VISUAL-DESIGN-4**
+
+Set all buttons to the following colors:
+
+-  Background: #EBEBEB
+-  Foreground (text): #000000
+
+<img src="requirements.assets/image-20240204132021997.png" alt="image-20240204132021997" style="zoom:25%;" />
+
+**preq-VISUAL-DESIGN-5**
+
+Set the operation's table header to the following colors:
+
+-  Background: #EBEBEB
+-  Foreground (text): #000000
+
+<img src="requirements.assets/image-20240204132107798.png" alt="image-20240204132107798" style="zoom:25%;" />
+
+**preq-VISUAL-DESIGN-5**
+
+Make the "Calculator" an H1 HTML tag.
+
+<img src="requirements.assets/image-20240204132208368.png" alt="image-20240204132208368" style="zoom:25%;" />
+
+**preq-VISUAL-DESIGN-6**
+
+[Set the browser's page title/tab name to "Calculator".](https://www.w3schools.com/html/html_head.asp)
+
+<img src="requirements.assets/image-20240204132413739.png" alt="image-20240204132413739" style="zoom:25%;" />
+
+## Unit Test Plan and Coverage Requirements
+
+**preq-UNIT-TEST-1**
+
+All unit tests will be in their own folder, module, or namespace. See [Application Architecture Requirements](#application-architecture-requirements) for specific instructions how to structure your overall project.
+
+**preq-UNIT-TEST-2**
+
+You will use one of the following unit testing frameworks, depending on your language of choice:
+
+-  [C# - NUnit](https://nunit.org/)
+-  [Java - JUnit](https://junit.org/junit5/)
+-  [Python - `pytest`](https://docs.pytest.org/en/8.0.x/)
+
+#### Unit Test List
+
+You will implement the following unit tests of your calculator logic to reach 100% statement *and* path coverage (that is why there are multiple tests for some operations).
+
+| Requirement #     | Operation                      | Button   | Inputs            | Returns                                               | Example                                                      |
+| ----------------- | ------------------------------ | -------- | ----------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
+| preq-UNIT-TEST-2  | Add                            | A + B    | A, B              | A plus B                                              | 5.5 + -3.15 = 2.35                                           |
+| preq-UNIT-TEST-3  | Subtraction                    | A - B    | A, B              | A minus B                                             | 27.93 - 4 = 23.93                                            |
+| preq-UNIT-TEST-4  | Multiplication                 | A * B    | A, B              | A times B                                             | 5 * 7.1 = 35.5                                               |
+| preq-UNIT-TEST-5  | Division                       | A / B    | A, B              | A divided by B                                        | 3.0 / 9.0 = .33333333                                        |
+| preq-UNIT-TEST-6  | Division ERROR                 | A / B    | A, B              | Error                                                 | 3.0 / 0.0 = error                                            |
+| preq-UNIT-TEST-7  | Equals                         | A == B   | A, B              | 1 when equivalent to 8 precision points. 0 otherwise. | 0.333333== 0.333333 = 1,<br />0.33333333== 0.33333334 = 0,<br />0.333333331== 0.333333332 = 1 |
+| preq-UNIT-TEST-8  | Raise to Power                 | A ^ B    | A, B              | A raised to the power of B                            | 2 ^ 3 = 8, <br />5 ^ 2 = 25,<br />5 ^ -3 = 0.008             |
+| preq-UNIT-TEST-9  | Logarithm of number            | A log B  | A, B              | Exponent of logarithm A at base B                     | 8 log 2 = 3,<br />25 log 5 = 2                               |
+| preq-UNIT-TEST-10 | Logarithm of number ERROR 1    | A log B  | A, B where A <= 0 | Error                                                 | 0 log 2 = error,<br />-2 log 2 = error                       |
+| preq-UNIT-TEST-11 | Logarithm of number ERROR 2    | A log B  | A, B where B = 0  | Exponent of logarithm A at base B                     | 8 log 0 = error                                              |
+| preq-UNIT-TEST-12 | Root of number                 | A root B | A, B              | Bth root of A                                         | 8 root 3 = 2,<br />25 root 2 = 5                             |
+| preq-UNIT-TEST-13 | Root of number ERROR           | A root B | A, B where B = 0  | Bth root of A                                         | 8 root 0 = error                                             |
+| preq-UNIT-TEST-14 | Factorial of number            | A !      | A                 | A * (A-1) * (A - ...) * 2 * 1                         | 5 = 120,<br />-5 = -120<br />0 = 1                           |
+| preq-UNIT-TEST-15 | Factorial of number CONVENTION | A !      | A                 | A * (A-1) * (A - ...) * 2 * 1                         | 0 = 1<br>By convention, 0 returns 1.                         |
+| preq-UNIT-TEST-16 | Sine of A                      | sin A    | A                 | sin(A)                                                | 360 = 0<br />-360 = 0<br />0 = 0,<br />1 = 0.0174524         |
+| preq-UNIT-TEST-17 | Cosine of A                    | cos A    | A                 | cos(A)                                                | 360 = 1<br /><br />-360 = 1<br />1= 0.99985                  |
+| preq-UNIT-TEST-18 | Tangent of A                   | tan A    | A                 |                                                       | 360 = 0<br />-360 = 0<br />1=0.0174551                       |
+| preq-UNIT-TEST-19 | Reciprocal of A                | 1 / A    | A                 | 1 divided by A                                        | 1 / 8 = 0.125<br />1 / -4 = -0.25                            |
+| preq-UNIT-TEST-20 | Reciprocal of A ERROR          | 1 / A    | A                 | 1 divided by A where A = 0                            | 1/ 0 = ERRROR                                                |
+
+#### 100% Unit Test Coverage of CalculatorEngine
+
+**preq-UNIT-TEST-21**
+
+Your CalculatorEngine module must have 100% unit test coverage of all methods and paths.
+
+You can calculate coverage statistics in Intellij, Rider, or Pycharm.
+
+Coverage statistics look similar to the following example:
+
+<img src="requirements.assets/image-20240204220021325.png" alt="image-20240204220021325" style="zoom: 50%;" />
+
+Anywhere you see something in your CalculatorEngine with less than 100% coverage, write a unit test.
+
+#### Unit Test Naming Conventions and Structure
+
+**preq-UNIT-TEST-22*
+
+You will name all unit tests following this pattern:
+
+`MethodName_StateUnderTest_ExpectedBehavior`
+
+-  Method Name = The name of the method being tested. For example, `Add`.
+-  State Under Test = The state of the method you are testing. For example, `TwoFloatingPointValues`.
+-  Expected Behavior = What you expect to happen. For example, `ReturnsSumOfValues`.
+
+The best naming conventions express a requirement. This is one of many that are used by the industry.
+
+Here are some more examples:
+
+-  `Division_FloatingPointValueAndZero_ReturnsError`
+-  `Reciprocal_Zero_ReturnsError`
+
+**preq-UNIT-TEST-23**
+
+You will structure your unit tests using the industry-standard [Arrange-Act-Assert (AAA) pattern](https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80).
+
+-  Arrange<br>Setup the criteria, instances, mocks, etc. necessary for your test.
+-  Act<br>Invoke the method being tested.
+-  Assert<br>Check whether your expectations met the actual output of the method under test.
+
+For example:
+
+```C#
+[Test]
+public void Add_TwoFloatingPointValues_ReturnsSum()
+{
+    // Arrange
+    const double a = 1.5;
+    const double b = 2.75;
+    const double expected = 4.25;
+
+    // Act
+    var result = CalculatorEngine.Add(a, b);
+
+    // Assert
+    Assert.Equal(expected, result, 8); //where 8 = points of precision
+}
+```
+
+## End-To-End Test Plan and Requirements
+
+**preq-E2E-TEST-1**
+
+All end-to-end Playwright tests will be in their own folder, module, or namespace. See [Application Architecture Requirements](#application-architecture-requirements) for specific instructions how to structure your overall project.
+
+**preq-E2E-TEST-2**
+
+You will use one of the following unit testing frameworks, depending on your language of choice:
+
+-  [C# : NUnit + Playwright](https://playwright.dev/dotnet/docs/intro)
+-  [Java : JUnit + Playwright](https://playwright.dev/java/docs/intro)
+-  [Python : `pytest` + Playwright](https://playwright.dev/python/docs/intro)
+
+#### End-To-End Test List
+
+You will implement the following end-to-end tests of your calculator user interface via the Playwright testing framework.
+
+| Requirement #   | Test                                                         |
+| --------------- | ------------------------------------------------------------ |
+| preq-E2E-TEST-3 | Verify the page title is "Calculator".                       |
+| preq-E2E-TEST-4 | From the application's default state, put two numeric values into Inputs A and B, then call the Add operation. Verify the sum displayed in the calculator UI matches Input A plus Input B. |
+| preq-E2E-TEST-5 | From the application's default state, put a value into Input A and a zero (0) into Input B, then call the Divide operation. Verify the result is an error state in the calculator UI including a result box containing **"Not a Number"**. |
+| preq-E2E-TEST-6 | From the application's default state, put a numeric values into Input A and a text value (such as `fifteen`) into Input B, then call the Add operation. Verify the result is an error state in the calculator UI including a result box containing **"Invalid Input, Numbers Only"**. Note that your CalculatorEngine methods only accept floating point values, so this error condition will be caught in your web server logic (either in a controller or a model, depending on implementation) - not in your CalculatorEngine. |
+| preq-E2E-TEST-7 | From the application's default state, put two numeric values into Inputs A and B, then call the Add operation. Next, click the Clear button. Verify the application has returned to the default state including a result box containing **"Enter a value(s) below and select an operation."** and a 0 in the Input A and Input B boxes. |
+
+#### Unit Test Naming Conventions and Structure
+
+**preq-E2E-TEST-8**
+
+You will name all end-to-end tests following this pattern:
+
+`MethodName_StateUnderTest_ExpectedBehavior`
+
+-  Method Name = The name of the method being tested. For example, `CalculatorUi`.
+-  State Under Test = The state of the method you are testing. For example, `AddTwoFloatingPointValues`.
+-  Expected Behavior = What you expect to happen. For example, `ReturnsSumOfValues`.
+
+The best naming conventions express a requirement. This is one of many that are used by the industry.
+
+Here are some more examples:
+
+-  `CalculatorWebUi_DivideFloatingPointValueAndZero_ReturnsNotANumberError`
+-  `CalculatorWebUi_TextInInputBox_ReturnsInvalidInputError`
+
+**preq-E2E-TEST-9**
+
+Your end-to-end tests do not have to strictly follow the AAA pattern like your unit tests because end-to-end testing is often a linear set of steps and every step or two is doing an assertion. Try to organize your end-to-end tests to be as readable.
+
+For example:
+
+```C#
+[Test]
+public void CalculatorWebUi_PageTitle_IsCalculator()
+{
+    const string pageTitle = "Calculator";
+
+    await Page.GotoAsync("http://localhost:5001");
+
+    await Expect(Page).ToHaveTitleAsync(new Regex(pageTitle));
+}
+```
+
+## Final Presentation Requirements
+
+**preq-PRESENTATION-1**
+
+Watch at least one short tutorial how to make good programming videos. For example:
+
+-  https://realpython.com/how-to-make-programming-videos/
+
+**preq-PRESENTATION-2** Repository overview and structure
+
+Briefly review your GitHub team repository including the structure/where everything is located.
+
+**preq-PRESENTATION-3 ** Web app demo
+
+Execute your web server application from the command line/terminal (not from your IDE), then switch to a web browser and demonstrate the following:
+
+-  A double-operand operation.
+-  A single-operand operation.
+-  A double-operand operation that creates a **Not a Number** condition.
+-  A single-operand operation that creates a **Not a Number** condition.
+-  Any operation that creates an **Invalid Input** condition.
+-  Resetting the UI to the default state after an operation by clicking Clear.
+
+**preq-PRESENTATION-4** Execute unit tests
+
+Switch to your command line/terminal and execute your unit tests (not from your IDE). All unit tests should succeed. 
+
+**preq-PRESENTATION-5** Unit test structure
+
+Switch to your IDE and briefly discuss the structure of two unit tests:
+
+-  A unit test that tests checks for a valid condition, such as a successful Add operation.
+-  A unit test that checks for an error condition, such as division by zero.
+
+**preq-PRESENTATION-6** 100% unit test coverage
+
+Switch to your IDE and demonstrate generating code coverage statistics for your CalculatorEngine project. Your coverage should be 100%. It will look similar to the following example:
+
+<img src="requirements.assets/image-20240204220021325.png" alt="image-20240204220021325" style="zoom: 50%;" />
+
+**preq-PRESENTATION-7** Execute end-to-end tests
+
+Switch to your command line/terminal and execute your end-to-end tests  (not from your IDE). All end-to-end tests should succeed. 
+
+**preq-PRESENTATION-8** End-to-end test structure
+
+Switch to your IDE and briefly discuss the structure of two end-to-end tests:
+
+-  An end-to-end test verifying the page title is "Calculator"
+-  An end-to-end test testing for an error condion, such as division by zero.
+
+**preq-PRESENTATION-9**
+
+Keep your recorded presentation to 5-to-8 minutes in length.
+
+**preq-PRESENTATION-10**
+
+Check your video into your GitHub repository (you will likely have to compress it) or host it on YouTube or Vimeo (one of these usually works best for most students since GitHub does not allow giant video files). Link to the video in your README.md file.
+
+## Suggested Implementation Order
+
+I suggest implementing your semester project in this order.
+
+1.  Create your CalculatorEngine module and the Divide method.
+
+2.  Create your unit test module and implement the unit tests for Divide. This will help you structure how to return both valid conditions and error conditions. For example, instead of just returning a floating point result, you might return an object with multiple properties, such as:
+
+    ```c#
+    public class CalculationResult {
+    	public double Result { get; set;} = 0.0;
+      public bool IsSuccess { get; set; }
+      public string Operation { get; set; } // for example, "1.25 + 3.8 ="
+      public string Error { get; set; } // for example, "" or "Not A Number"
+    }
+    ```
+
+    *If this approach interests you (and it should), do some reading on [Primitive Obsession](https://hackernoon.com/what-is-primitive-obsession-and-how-can-we-fix-it-wh2f33ki). It will change the way you plan how to return data from a method.*
+
+3.  Next, complete all CalculatorEngine methods and unit tests.
+
+4.  Create your web server app and reference the CalculatorEngine module.
+
+5.  Create a basic controller, model, and view that renders two input boxes, a button, and an output area. Hook these input boxes and button to one of the CalculatorEngine's two-operand methods and get the input/output showing in the web browser.
+
+6.  Now that you are able to call the CalculatorEngine from your web app, implement the entire web interface.
+
+7.  Once your web application is fully operation, write your end-to-end Playwright tests.
+
+8.  Update all of your README.md documentation to match your environment, command-line execution statements, etc.
+
+9.  Search this document for every `preq-` requirement. Validate that you met every requirement. If you missed a requirement, implement it.
+
+10.  Record your final video presentation. Check the link into your README.md file.
+
+11.  Clone your GitHub team repository to an entirely new directory on your computer (or better, a fresh computer such as a friend's machine). Follow the steps to configure the environment and execute the web app and tests. Does everything work? Is anything missing? If not, then you are done. If something was missing, then figure out what was not checked into your repository or you did not document properly in your README.md, then try it again. Repeat until your project is easy to clone and execute with minimal effort.
+
+12.  Open a browser and visit your GitHub repository. Open the README.md file and verify it is formatted properly. Click every link in README.md file. Do they all work? Did you break an anchor link? Did GitHub interpret your Markdown a little different than Typora or VS Code suggested it would look? These are all common issues that need to be corrected to make sure your work is highly polished.
+
+13.  If you have a teammate, have your teammate review your GitHub submission. Make sure both of you agree that the project is ready. Last semester a team of four got very upset that their grade was lower than expected because the team member they assigned to handle the submission did a poor job and no one checked the work. Teams succeed and fail together. Never let a teammate's lack of motivation, capability, or detail-orientation impact your success, even if that means you have to perhaps do a bit more than you might consider fair.
