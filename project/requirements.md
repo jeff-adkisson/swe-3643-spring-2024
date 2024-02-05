@@ -911,9 +911,7 @@ I suggest implementing your semester project in this order to achieve the highes
             self.error = "" # for example, "" or "Not A Number"
     ```
 
-    
-
-    *If this approach interests you (and it should), do some reading on [Primitive Obsession](https://hackernoon.com/what-is-primitive-obsession-and-how-can-we-fix-it-wh2f33ki). It will change the way you design how to return data from a method.*
+    *If this approach interests you (and hopefully it does), do some reading on [Primitive Obsession](https://hackernoon.com/what-is-primitive-obsession-and-how-can-we-fix-it-wh2f33ki). It will change the way you design how to return data from a method.*
 
 3.  Next, complete all CalculatorEngine methods and unit tests.<br>*Consider trying the [Test Driven Development (TDD) testing methodology](https://testdriven.io/test-driven-development/) here. TDD advocates writing your test method before the code it actually tests. This leads to very testable code, tests that express requirements, and tests that document how to call the methods in your project.*
 
