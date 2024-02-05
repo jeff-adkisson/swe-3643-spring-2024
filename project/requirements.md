@@ -442,6 +442,18 @@ All calculator logic will be in its own folder, module, or namespace. See [Appli
 | preq-ENGINE-13 | Tangent of A        | tan A    | A      |                                                       | 360 = 0<br />-360 = 0<br />1=0.0174551                       |                                                              |
 | preq-ENGINE-14 | Reciprocal of A     | 1 / A    | A      | 1 divided by A                                        | 1 / 8 = 0.125<br />1/ -4 = -0.25                             | The following values return return an error:<br />- Values of A equal to 0 |
 
+#### Notes
+
+1.  Implementing these functions will be simple (this is not a math class). Use your language's built-in math library:
+
+    -  [C# System.Math](https://learn.microsoft.com/en-us/dotnet/api/system.math?view=net-8.0)
+
+    -  [java.lang.Math](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html)
+
+    -  [Python math](https://docs.python.org/3/library/math.html)
+
+2.  Review the [Suggested Implementation Order](#suggested-implementation-order) section before implementing all of your math methods. It contains some suggested approaches for structuring how you return the results of a math operation, plus writing unit tests alongside your math methods using the [Test Driven Development methodology](https://testdriven.io/test-driven-development/).
+
 ## Web Application Requirements
 
 **preq-WEB-APPLICATION-1**
