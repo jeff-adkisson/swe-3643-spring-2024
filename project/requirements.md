@@ -428,7 +428,7 @@ All calculator logic will be in its own folder, module, or namespace. See [Appli
 
 **preq-ENGINE-2**
 
-All operations will use floating point math - *not integers*. Input A, Input B, and the calculation result will be floating point values. In C# and Java, use the `double` type.
+All operations will use floating point math - *not integers*. Input A, Input B, and the calculation result will be floating point values. In C# and Java, use the `double` type.
 
 | Requirement #  | Operation           | Button   | Inputs | Returns                                               | Example                                                      | Notes                                                        |
 | -------------- | ------------------- | -------- | ------ | ----------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -845,13 +845,73 @@ I suggest implementing your semester project in this order to achieve the highes
 2.  Create your unit test module and implement the unit tests for Divide. This will help you structure how to return both valid conditions and error conditions. For example, instead of just returning a floating point result, you might return an object with multiple properties, such as:
 
     ```c#
+    //C#
+    
     public class CalculationResult {
-    	public double Result { get; set;} = 0.0;
+      public double Result { get; set;} = 0.0;
       public bool IsSuccess { get; set; }
       public string Operation { get; set; } // for example, "1.25 + 3.8 ="
       public string Error { get; set; } // for example, "" or "Not A Number"
     }
     ```
+
+    ```java
+    //Java
+    
+    public class CalculationResult {
+        private double result = 0.0;
+        private boolean isSuccess;
+        private String operation; 
+        private String error; 
+    
+        public double getResult() {
+            return result;
+        }
+    
+        public void setResult(double result) {
+            this.result = result;
+        }
+    
+        public boolean getIsSuccess() {
+            return isSuccess;
+        }
+    
+        public void setIsSuccess(boolean isSuccess) {
+            this.isSuccess = isSuccess;
+        }
+    
+        public String getOperation() {
+            return operation;
+        }
+    
+        // for example, "1.25 + 3.8 ="
+        public void setOperation(String operation) {
+            this.operation = operation;
+        }
+    
+        public String getError() {
+            return error;
+        }
+       
+        // for example, "" or "Not A Number"
+        public void setError(String error) {
+            this.error = error;
+        }
+    }
+    ```
+
+    ```python
+    # Python
+    
+    class CalculationResult:
+        def __init__(self):
+            self.result = 0.0
+            self.is_success = False
+            self.operation = "" # for example, "1.25 + 3.8 ="
+            self.error = "" # for example, "" or "Not A Number"
+    ```
+
+    
 
     *If this approach interests you (and it should), do some reading on [Primitive Obsession](https://hackernoon.com/what-is-primitive-obsession-and-how-can-we-fix-it-wh2f33ki). It will change the way you design how to return data from a method.*
 
