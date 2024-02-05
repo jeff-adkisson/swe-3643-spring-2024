@@ -3,7 +3,7 @@
 # Table of Contents
 
 -  [Project Overview](#project-overview)
--  [Requirements and Designs](requirements.md)
+-  [Requirements](requirements.md)
 -  [Grading Rubric](grading-rubric.md)
 
 # Project Overview
