@@ -8,6 +8,7 @@
 
 -  [Using This Document](#using-this-document)
 -  [Coding Standard Requirements](#coding-standard-requirements)
+-  [Development Environment Requirements](#development-environment-requirements)
 -  [Source Control Requirements](#source-control-requirements)
 -  [Documentation Requirements](#documentation-requirements)
 -  [Project Architecture Requirements](#project-architecture-requirements)
@@ -17,6 +18,7 @@
 -  [Web Application Requirements](#web-application-requirements)
 -  [Visual Design Requirements](#visual-design-requirements) 
 -  [Unit Test Plan and Coverage Requirements](#unit-test-plan-and-coverage-requirements)
+-  [*5% EXTRA CREDIT:* Static Analysis via SonarQube](#static-analysis-via-SonarQube)
 -  [Final Presentation Requirements](#final-presentation-requirements)
 -  [Suggested Implementation Order](#suggested-implementation-order)
 
@@ -66,6 +68,44 @@ Your Python code will follow the language's published coding standards.
 -  https://peps.python.org/pep-0008/
 -  https://google.github.io/styleguide/pyguide.html
 
+## Development Environment Requirements
+
+**preq-DEV-ENV-1**
+
+You will use the JetBrains IDE related to your language of choice. [JetBrains offers an outstanding education license to students with an active `.edu` email address.](https://www.jetbrains.com/community/education/#students) If you do not have a JetBrains education license, sign up for one immediately. 
+
+All of the JetBrains IDEs are cross-platform.
+
+**preq-DEV-ENV-1.C#**
+
+[You will use JetBrains Rider for C# development.](https://www.jetbrains.com/rider/download)
+
+**preq-DEV-ENV-1.Java**
+
+[You will use JetBrains Intellij for Java development.](https://www.jetbrains.com/idea/download)
+
+**preq-DEV-ENV-1.Python**
+
+[You will use JetBrains PyCharm for Python development.](https://www.jetbrains.com/pycharm/download/)
+
+**preq-DEV-ENV-2**
+
+After installing your JetBrains IDE and activating your education license, open Settings | Plugins and spend some time looking at the various plugins available in the Marketplace.
+
+Plugins enhance your development experience by extending the IDE's capabilities. 
+
+Plugins are generally specific to the language you are using, so look around and see what interests you. 
+
+Some of the plugins I like for C# development include:
+
+-  Cyclomatic Complexity<br>Shows the complexity of a method.
+-  Cognitive Complexity<br>A more advanced form of Cyclomatic Complexity that also considers how difficult your code will be to read.
+-  Heap Allocations Viewer<br>Shows when a line of code is going to allocate an object on the heap. Allocations on the heap increase pressure on the garbage collector.
+
+**preq-DEV-ENV-3**
+
+[Install the **Test Automation** plugin in your JetBrains IDE. This might assist with your Playwright testing requirements.](https://www.jetbrains.com/help/aqua/ui-test-automation.html#test_automation_features)
+
 ## Source Control Requirements
 
 **preq-SOURCE-1**
@@ -83,6 +123,31 @@ Your Team Repository will implement the following folder structure:
 -  **REPOSITORY ROOT**<br>`README.md` and files associated with your documentation, such as screenshots, videos, etc.
    -  **src**<br>All source code and tests will be located under `/src` following the specific requirements in the [Application Structure](#application-structure) section.
 
+**preq-SOURCE-4**
+
+Your Team Repository will add a `.gitignore` file to the root of the repository. 
+
+**preq-SOURCE-4.C#**
+
+[Use this `.gitignore` file for Rider and C# development.](https://github.com/JetBrains/resharper-rider-samples/blob/master/.gitignore)
+
+**preq-SOURCE-4.Java**
+
+[Use this `.gitignore` file for IntelliJ and Java development.](https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore)
+
+**preq-SOURCE-4.Python**
+
+[Use this `.gitignore` file for PyCharm and Python development.](https://gist.github.com/rask004/4c322384aa6012d6c5a7178071d3c8fb)
+
+#### Managing Your `git` Repo
+
+You have several options for managing your `git` repository:
+
+-  [Work from the command line.](https://www.geeksforgeeks.org/using-git-on-commandline/)
+-  [Use GitHub Desktop.](https://desktop.github.com/)
+-  [Use GitKraken.](https://www.gitkraken.com/)
+-  [Use your JetBrains IDE's Git Tool Window.](https://www.jetbrains.com/guide/java/tutorials/creating-a-project-from-github/the-git-tool-window/)
+
 ## Documentation Requirements
 
 **preq-DOCUMENTATION-1**
@@ -95,12 +160,15 @@ Your project's README.md file will contain the following sections:
 
 -  Introduction
 -  Table of Contents
+-  Team Members
 -  Environment
 -  Executing the Web Application
 -  Executing Unit Tests
 -  Reviewing Unit Test Coverage
 -  Executing End-To-End Tests
 -  Final Video Presentation
+
+Order your README.md file according to the section order shown above.
 
 **preq-DOCUMENTATION-3**: Introduction
 
@@ -123,9 +191,13 @@ List all of the sections in your document execept the introduction and Table of 
 
 All of your links will be [*relative*](https://github.blog/2013-01-31-relative-links-in-markup-files/). If you find yourself writing links that include GitHub's address them, you are very likely not writing relative links.
 
-To create an [anchor link (a link that jumps somewhere within the current document)](https://github.blog/2013-01-31-relative-links-in-markup-files/), prefix the title of the section with a # symbol, then write the title lowercase and place a dash in place of all spaces. Always test your anchor links after checking your work into GitHub to verify that they work properly.
+To create an [anchor link (a link that jumps somewhere within the current document)](https://github.blog/2013-01-31-relative-links-in-markup-files/), prefix the title of the section with a # symbol, then write the title lowercase and place a dash in place of all spaces. Always test your anchor links after checking your work into GitHub to verify that they work properly (particularly if you use Typora, which is more forgiving than GitHub).
 
-**preq-DOCUMENTATION-5**: Environment
+**preq-DOCUMENTATION-5**: Team Members
+
+List your team members. You do not need to include any contact information (your repository is public).
+
+**preq-DOCUMENTATION-6**: Environment
 
 Explain how to configure the environment to execute your web application, unit tests, and end-to-end tests. For example:
 
@@ -149,7 +221,7 @@ This is a code block.
 It can contain multiple lines.
 ```
 
-**preq-DOCUMENTATION-6**: Executing the Web Application
+**preq-DOCUMENTATION-7**: Executing the Web Application
 
 Create an H2 section called *Executing the Web Application*. 
 
@@ -172,7 +244,7 @@ If you find certain errors popping up when you run the application (such as port
 -  If you see the following error, something is already running on the application's HTTP port. Free up the port, then try again:<br>`Unhandled IO exception: Failed to bind to https://127.0.0.1:60012: address already in use.`
    
 
-**preq-DOCUMENTATION-7**: Executing Unit Tests
+**preq-DOCUMENTATION-8**: Executing Unit Tests
 
 Create an H2 section called *Executing Unit Tests*. 
 
@@ -191,7 +263,7 @@ A total of 1 test files matched the specified pattern.
 Passed!  - Failed:     0, Passed:   132, Skipped:     0, Total:   132, Duration: 39 ms - HighMatch.Compass.UnitTest.Extensions.dll (net7.0)
 ```
 
-**preq-DOCUMENTATION-8**: Executing End-To-End Tests
+**preq-DOCUMENTATION-9**: Executing End-To-End Tests
 
 Create an H2 section called *Executing End-To-End Tests*. 
 
@@ -205,7 +277,7 @@ $ dotnet test
 TODO / Copy Playwright output here
 ```
 
-**preq-DOCUMENTATION-9**: Final Video Presentation
+**preq-DOCUMENTATION-10**: Final Video Presentation
 
 Create an H2 section called *Final Video Presentation*. 
 
@@ -643,6 +715,46 @@ public void CalculatorWebUi_PageTitle_IsCalculator()
 }
 ```
 
+## Static Analysis via SonarQube
+
+This section is ***optional***. You can complete it for 5% extra credit.
+
+Extra credit criteria:
+
+-  You *must* complete every other section of the project to be eligible for extra credit in this section. Do not skip one section, and plan on making up for the loss with this section.
+-  You must complete all of the Static Analysis requirements to receive the extra credit.
+
+#### What is Static Analysis?
+
+[Static analysis is a Quality Assurance methodology to improve code quality and spot security issues before deployment.](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) Static analysis can reveal security issues, spot code that affects reliability (such as not releasing memory properly), and suggest more maintainable coding patterns.
+
+There are many static analysis tools on the market. My company uses SonarCloud, the hosted version of SonarQube. We have found it helpful because it works with many languages and is aware of changes to your source repository, helping you spot issues before they go to production rather than after. Note that some of the issues these tools identify can be a distraction or even incorrect (false positives). Do not accept the results of a static analyzer without a bit of investigation whether the suggestion is right for your project.
+
+This extra credit section will introduce you to static analysis, but it is not an exhaustive topic exploration. Once you see the type of issues a static analyzer returns, (hopefully) you will appreciate its value and add the technique to your code-quality toolbox.
+
+#### Static Analysis Requirements
+
+**preq-STATIC-ANALYSIS-1**
+
+Install [SonarQube Community Edition](https://www.sonarsource.com/open-source-editions/sonarqube-community-edition/) on your machine. 
+
+-  [Install Docker.](https://docs.docker.com/engine/install/)
+-  [Install SonarQube Community Edition.](https://docs.sonarsource.com/sonarqube/latest/try-out-sonarqube/)
+
+**preq-STATIC-ANALYSIS-2**
+
+Setup a SonarQube project and perform static analysis on your project. Follow the steps in this tutorial.
+
+https://blog.stackademic.com/sonarqube-community-edition-comprehensive-guide-for-a-free-personal-setup-a980c47bd5dc
+
+**preq-STATIC-ANALYIS-3**
+
+Add a short walkthrough of your SonarQube analysis results to your Final Presentation as Section 8. Do you see any value in this type of information?
+
+**preq-STATIC-ANALYSIS-4**
+
+Add a Static Analysis H2 section to your README.md (and Table of Contents) to indicate to me that you are eligible for the 5% extra credit. In the section, include a screenshot of your SonarQube issues page.
+
 ## Final Presentation Requirements
 
 **preq-PRESENTATION-1**
@@ -651,11 +763,15 @@ Watch at least one short tutorial how to make good programming videos. For examp
 
 -  https://realpython.com/how-to-make-programming-videos/
 
-**preq-PRESENTATION-2** Repository overview and structure
+**pre-PRESENTATION-2**
+
+Present the material in your presentation following the Section # order that prefixes each presentation requirement.
+
+**preq-PRESENTATION-3** Section 1, Repository overview and structure
 
 Briefly review your GitHub team repository including the structure/where everything is located.
 
-**preq-PRESENTATION-3** Web app demo
+**preq-PRESENTATION-4** Section 2, Web app demo
 
 Execute your web server application from the command line/terminal (not from your IDE), then switch to a web browser and demonstrate the following:
 
@@ -666,45 +782,45 @@ Execute your web server application from the command line/terminal (not from you
 -  Any operation that creates an **Invalid Input** condition.
 -  Resetting the UI to the default state after an operation by clicking Clear.
 
-**preq-PRESENTATION-4** Execute unit tests
+**preq-PRESENTATION-5* Section 3, Execute unit tests
 
 Switch to your command line/terminal and execute your unit tests (not from your IDE). All unit tests should succeed. 
 
-**preq-PRESENTATION-5** Unit test structure
+**preq-PRESENTATION-6** Section 4, Unit test structure
 
 Switch to your IDE and briefly discuss the structure of two unit tests:
 
 -  A unit test that tests checks for a valid condition, such as a successful Add operation.
 -  A unit test that checks for an error condition, such as division by zero.
 
-**preq-PRESENTATION-6** 100% unit test coverage
+**preq-PRESENTATION-7** Section 5, 100% unit test coverage
 
 Switch to your IDE and demonstrate generating code coverage statistics for your CalculatorEngine project. Your coverage should be 100%. It will look similar to the following example:
 
 <img src="requirements.assets/image-20240204220021325.png" alt="image-20240204220021325" style="zoom: 50%;" />
 
-**preq-PRESENTATION-7** Execute end-to-end tests
+**preq-PRESENTATION-8** Section 6, Execute end-to-end tests
 
 Switch to your command line/terminal and execute your end-to-end tests  (not from your IDE). All end-to-end tests should succeed. 
 
-**preq-PRESENTATION-8** End-to-end test structure
+**preq-PRESENTATION-9** Section 7, End-to-end test structure
 
 Switch to your IDE and briefly discuss the structure of two end-to-end tests:
 
 -  An end-to-end test verifying the page title is "Calculator"
 -  An end-to-end test testing for an error condion, such as division by zero.
 
-**preq-PRESENTATION-9**
+**preq-PRESENTATION-10**
 
 Keep your recorded presentation to 5-to-8 minutes in length.
 
-**preq-PRESENTATION-10**
+**preq-PRESENTATION-11**
 
 Check your video into your GitHub repository (you will likely have to compress it) or host it on YouTube or Vimeo (one of these usually works best for most students since GitHub does not allow giant video files). Link to the video in your README.md file.
 
 ## Suggested Implementation Order
 
-I suggest implementing your semester project in this order.
+I suggest implementing your semester project in this order to achieve the highest score.
 
 1.  Create your CalculatorEngine module and the Divide method.
 
@@ -719,9 +835,9 @@ I suggest implementing your semester project in this order.
     }
     ```
 
-    *If this approach interests you (and it should), do some reading on [Primitive Obsession](https://hackernoon.com/what-is-primitive-obsession-and-how-can-we-fix-it-wh2f33ki). It will change the way you plan how to return data from a method.*
+    *If this approach interests you (and it should), do some reading on [Primitive Obsession](https://hackernoon.com/what-is-primitive-obsession-and-how-can-we-fix-it-wh2f33ki). It will change the way you design how to return data from a method.*
 
-3.  Next, complete all CalculatorEngine methods and unit tests.
+3.  Next, complete all CalculatorEngine methods and unit tests.<br>*Consider trying the [Test Driven Development (TDD) testing methodology](https://testdriven.io/test-driven-development/) here. TDD advocates writing your test method before the code it actually tests. This leads to very testable code, tests that express requirements, and tests that document how to call the methods in your project.*
 
 4.  Create your web server app and reference the CalculatorEngine module.
 
@@ -739,6 +855,7 @@ I suggest implementing your semester project in this order.
 
 11.  Clone your GitHub team repository to an entirely new directory on your computer (or better, a fresh computer such as a friend's machine). Follow the steps to configure the environment and execute the web app and tests. Does everything work? Is anything missing? If not, then you are done. If something was missing, then figure out what was not checked into your repository or you did not document properly in your README.md, then try it again. Repeat until your project is easy to clone and execute with minimal effort.
 
-12.  Open a browser and visit your GitHub repository. Open the README.md file and verify it is formatted properly. Click every link in README.md file. Do they all work? Did you break an anchor link? Did GitHub interpret your Markdown a little different than Typora or VS Code suggested it would look? These are all common issues that need to be corrected to make sure your work is highly polished.
+12.  Open a browser and visit your GitHub repository. Navigate to your README.md file and verify it is appropriately formatted. Look for Markdown that is improperly formatted. Click every link in the README.md file. Do they all work? Did you break an anchor link? Did GitHub interpret your Markdown a little differently than Typora or VS Code suggested it would look? These are common issues that must be corrected to ensure your work is highly polished. If you find an issue, correct the file on your machine, then check in the fix and validate again. You can see this activity in my own GitHub check-in history:![image-20240205105410682](requirements.assets/image-20240205105410682.png)
+     
 
-13.  If you have a teammate, have your teammate review your GitHub submission. Make sure both of you agree that the project is ready. Last semester a team of four got very upset that their grade was lower than expected because the team member they assigned to handle the submission did a poor job and no one checked the work. Teams succeed and fail together. Never let a teammate's lack of motivation, capability, or detail-orientation impact your success, even if that means you have to perhaps do a bit more than you might consider fair.
+13.  Each team member should review your GitHub submission if you are in a Team of Two. Make sure you both agree that the project is ready. In a prior semester, a team of four was upset that their team grade was lower than expected because the team member who handled the submission could have done a better job. Never let a teammate's lack of motivation or capability impact your success, even if that means you must do more work than you consider fair.
