@@ -18,6 +18,7 @@
 -  [Web Application Requirements](#web-application-requirements)
 -  [Visual Design Requirements](#visual-design-requirements) 
 -  [Unit Test Plan and Coverage Requirements](#unit-test-plan-and-coverage-requirements)
+-  [End-To-End Test Plan and Requirements](#end-to-end-test-plan-and-requirements)
 -  [*5% EXTRA CREDIT:* Static Analysis via SonarQube](#static-analysis-via-SonarQube)
 -  [Final Presentation Requirements](#final-presentation-requirements)
 -  [Suggested Implementation Order](#suggested-implementation-order)
@@ -686,6 +687,10 @@ public void Add_TwoFloatingPointValues_ReturnsSum()
 
 All end-to-end Playwright tests will be in their own folder, module, or namespace. See [Application Architecture Requirements](#application-architecture-requirements) for specific instructions how to structure your overall project.
 
+**preq-E2E-TEST-2**
+
+You do *not* need to compute coverage for your end-to-end Playwright tests.
+
 **preq-E2E-TEST-3**
 
 You will use one of the following unit testing frameworks, depending on your language of choice:
@@ -694,7 +699,7 @@ You will use one of the following unit testing frameworks, depending on your lan
 -  [Java : JUnit + Playwright](https://playwright.dev/java/docs/intro)
 -  [Python : `pytest` + Playwright](https://playwright.dev/python/docs/intro)
 
-**preq-E2E-TEST-2**
+**preq-E2E-TEST-4**
 
 Install Playwright according to the instructions for your language and operating system.
 
@@ -717,28 +722,19 @@ Microsoft.Playwright.PlaywrightException : Executable doesn't exist at /Users/je
 
 ```
 
-#### Notes
-
-1.  In a professional environment, we would build test fixtures that automatically start and stop the web server before and after the test. You do not need to do that (though I encourage you to do so if you can, simply for the practice). You can start the web server in your IDE or terminal, then run your tests using the address your web server is running. For example:<br>
-
-    ![image-20240206130253334](requirements.assets/image-20240206130253334.png)
-
-2.  Your Playwright tests will fail if your web server app is not running. You will see an error similar to the following:<br>![image-20240206130023125](requirements.assets/image-20240206130023125.png)
-3.  Failing tests show you what was expected and what the application returned.<br>![image-20240206125613989](requirements.assets/image-20240206125613989.png)
-
 #### End-To-End Test List
 
 You will implement the following end-to-end tests of your calculator user interface via the Playwright testing framework.
 
 | Requirement #   | Test                                                         |
 | --------------- | ------------------------------------------------------------ |
-| preq-E2E-TEST-3 | Verify the page title is "Calculator".                       |
-| preq-E2E-TEST-4 | From the application's default state, put two numeric values into Inputs A and B, then call the Add operation. Verify the sum displayed in the calculator UI matches Input A plus Input B. |
-| preq-E2E-TEST-5 | From the application's default state, put a value into Input A and a zero (0) into Input B, then call the Divide operation. Verify the result is an error state in the calculator UI including a result box containing **"Not a Number"**. |
-| preq-E2E-TEST-6 | From the application's default state, put a numeric values into Input A and a text value (such as `fifteen`) into Input B, then call the Add operation. Verify the result is an error state in the calculator UI including a result box containing **"Invalid Input, Numbers Only"**. Note that your CalculatorEngine methods only accept floating point values, so this error condition will be caught in your web server logic (either in a controller or a model, depending on implementation) - not in your CalculatorEngine. |
-| preq-E2E-TEST-7 | From the application's default state, put two numeric values into Inputs A and B, then call the Add operation. Next, click the Clear button. Verify the application has returned to the default state including a result box containing **"Enter a value(s) below and select an operation."** and a 0 in the Input A and Input B boxes. |
+| preq-E2E-TEST-5 | Verify the page title is "Calculator".                       |
+| preq-E2E-TEST-6 | From the application's default state, put two numeric values into Inputs A and B, then call the Add operation. Verify the sum displayed in the calculator UI matches Input A plus Input B. |
+| preq-E2E-TEST-7 | From the application's default state, put a value into Input A and a zero (0) into Input B, then call the Divide operation. Verify the result is an error state in the calculator UI including a result box containing **"Not a Number"**. |
+| preq-E2E-TEST-8 | From the application's default state, put a numeric values into Input A and a text value (such as `fifteen`) into Input B, then call the Add operation. Verify the result is an error state in the calculator UI including a result box containing **"Invalid Input, Numbers Only"**. Note that your CalculatorEngine methods only accept floating point values, so this error condition will be caught in your web server logic (either in a controller or a model, depending on implementation) - not in your CalculatorEngine. |
+| preq-E2E-TEST-9 | From the application's default state, put two numeric values into Inputs A and B, then call the Add operation. Next, click the Clear button. Verify the application has returned to the default state including a result box containing **"Enter a value(s) below and select an operation."** and a 0 in the Input A and Input B boxes. |
 
-#### Unit Test Naming Conventions and Structure
+#### End to End Test Naming Conventions and Structure
 
 **preq-E2E-TEST-8**
 
@@ -757,9 +753,9 @@ Here are some more examples:
 -  `CalculatorWebUi_DivideFloatingPointValueAndZero_ReturnsNotANumberError`
 -  `CalculatorWebUi_TextInInputBox_ReturnsInvalidInputError`
 
-**preq-E2E-TEST-9**
+**preq-E2E-TEST-10**
 
-Your end-to-end tests do not have to strictly follow the AAA pattern like your unit tests because end-to-end testing is often a linear set of steps and every step or two is doing an assertion. Try to organize your end-to-end tests to be as readable.
+Your end-to-end tests do not have to strictly follow the AAA pattern like your unit tests because end-to-end testing is often a linear set of steps, and every step or two is doing an assertion. Try to organize your end-to-end tests to be as readable.
 
 For example:
 
@@ -774,6 +770,15 @@ public void CalculatorWebUi_PageTitle_IsCalculator()
     await Expect(Page).ToHaveTitleAsync(pageTitle);
 }
 ```
+
+#### End to End Test Notes
+
+1.  In a professional environment, we would build test fixtures that automatically start and stop the web server before and after the test. You do not need to do that (though I encourage you to do so if you can, simply for the practice). You can start the web server in your IDE or terminal, then run your tests using the address your web server is running. For example:<br>
+
+    ![image-20240206130253334](requirements.assets/image-20240206130253334.png)
+
+2.  Your Playwright tests will fail if your web server app is not running. You will see an error similar to the following:<br>![image-20240206130023125](requirements.assets/image-20240206130023125.png)
+3.  Failing tests show you what was expected and what the application returned.<br>![image-20240206125613989](requirements.assets/image-20240206125613989.png)
 
 ## Static Analysis via SonarQube
 
