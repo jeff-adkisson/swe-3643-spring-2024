@@ -719,11 +719,12 @@ Microsoft.Playwright.PlaywrightException : Executable doesn't exist at /Users/je
 
 #### Notes
 
-1.  In a professional environment, we would build test fixtures that automatically start and stop the web server before and after the test. You do not need to do that. You can start the web server, then run your tests using the address at which your web server is running. For example:<br>
+1.  In a professional environment, we would build test fixtures that automatically start and stop the web server before and after the test. You do not need to do that (though I encourage you to do so if you can, simply for the practice). You can start the web server in your IDE or terminal, then run your tests using the address your web server is running. For example:<br>
 
-    ![image-20240206124911420](requirements.assets/image-20240206124911420.png)
+    ![image-20240206130253334](requirements.assets/image-20240206130253334.png)
 
-2.  Failed tests tell show you what was expected and what the application returned.<br>![image-20240206125613989](requirements.assets/image-20240206125613989.png)
+2.  Your Playwright tests will fail if your web server app is not running. You will see an error similar to the following:<br>![image-20240206130023125](requirements.assets/image-20240206130023125.png)
+3.  Failing tests show you what was expected and what the application returned.<br>![image-20240206125613989](requirements.assets/image-20240206125613989.png)
 
 #### End-To-End Test List
 
