@@ -272,9 +272,20 @@ Describe the detailed steps to build and execute all of your end-to-end unit tes
 Finally, include sample output in a code block. For example:
 
 ```bash
-$ dotnet test
+# From /Users/jeff/projects/swe-3643-spring-2024-project/src/Calculator/CalculatorEndToEndTests
 
-TODO / Copy Playwright output here
+❯ dotnet test
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  CalculatorEndToEndTests -> /Users/jeff/projects/swe-3643-spring-2024-project/src/Calculator/CalculatorEndToEndTests/bin/Debug/net8.0/CalculatorEndToEndTests.dll
+Test run for /Users/jeff/projects/swe-3643-spring-2024-project/src/Calculator/CalculatorEndToEndTests/bin/Debug/net8.0/CalculatorEndToEndTests.dll (.NETCoreApp,Version=v8.0)
+Microsoft (R) Test Execution Command Line Tool Version 17.8.0 (arm64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: 2 s - CalculatorEndToEndTests.dll (net8.0)
 ```
 
 **preq-DOCUMENTATION-10**: Final Video Presentation
@@ -387,19 +398,18 @@ Your Java project will follow this application structure using [Maven and `pom.x
          -  **src**
             -  **main**
                -  **java**
-      -  **calculator-engine**<br>Your calculator logic goes here. It does not contain any user interface logic. It is referenced by your web server module.
-         -  **src**
-            -  **main**
-               -  **java**
                -  **resources**
                -  **webapp**
                   -  **WEB-INF**
                      -  [web.xml](https://cloud.google.com/appengine/docs/legacy/standard/java/config/webxml)
+      -  **calculator-engine**<br>Your calculator logic goes here. It does not contain any user interface logic. It is referenced by your web server module.
+         -  **src**
+            -  **main**
+               -  **java**
       -  **tests**<br>This is your JUnit unit test package. It references the `calculator-engine` module. All clear box unit tests to achieve 100% coverage of `calculator-engine` will be in this  module.
          -  **src**
             -  **main**
                -  **java**
-
       -  **e2e**<br>This is your Playwright test module. It references the JUnit and Playwright Maven packages. All end-to-end tests will be in this package. This module will use Playwright and a headless browser to test your web interface.
          -  **src**
             -  **main**
@@ -407,7 +417,7 @@ Your Java project will follow this application structure using [Maven and `pom.x
 
 **preq-APPLICATION-STRUCTURE-3.Python**
 
-Your Python project will follow this application structure:
+Your Python project will follow thiCas application structure:
 
 -  **REPOSITORY ROOT**<br>Your `README.md` file is here.
    -  **src**<br>Place your `requirements.txt` file in `src` to install your application dependencies, such as Flask, pytest, and Playwright.
@@ -676,13 +686,44 @@ public void Add_TwoFloatingPointValues_ReturnsSum()
 
 All end-to-end Playwright tests will be in their own folder, module, or namespace. See [Application Architecture Requirements](#application-architecture-requirements) for specific instructions how to structure your overall project.
 
-**preq-E2E-TEST-2**
+**preq-E2E-TEST-3**
 
 You will use one of the following unit testing frameworks, depending on your language of choice:
 
 -  [C# : NUnit + Playwright](https://playwright.dev/dotnet/docs/intro)
 -  [Java : JUnit + Playwright](https://playwright.dev/java/docs/intro)
 -  [Python : `pytest` + Playwright](https://playwright.dev/python/docs/intro)
+
+**preq-E2E-TEST-2**
+
+Install Playwright according to the instructions for your language and operating system.
+
+-  [C# : NUnit + Playwright](https://playwright.dev/dotnet/docs/intro)
+-  [Java : JUnit + Playwright](https://playwright.dev/java/docs/intro)
+-  [Python : `pytest` + Playwright](https://playwright.dev/python/docs/intro)
+
+If you forget this step, you will see output similar to the following:
+
+```bash
+Microsoft.Playwright.PlaywrightException : Executable doesn't exist at /Users/jeff/Library/Caches/ms-playwright/chromium-1028/chrome-mac/Chromium.app/Contents/MacOS/Chromium
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     pwsh bin/Debug/netX/playwright.ps1 install             ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+
+```
+
+#### Notes
+
+1.  In a professional environment, we would build test fixtures that automatically start and stop the web server before and after the test. You do not need to do that. You can start the web server, then run your tests using the address at which your web server is running. For example:<br>
+
+    ![image-20240206124911420](requirements.assets/image-20240206124911420.png)
+
+2.  Failed tests tell show you what was expected and what the application returned.<br>![image-20240206125613989](requirements.assets/image-20240206125613989.png)
 
 #### End-To-End Test List
 
@@ -727,9 +768,9 @@ public void CalculatorWebUi_PageTitle_IsCalculator()
 {
     const string pageTitle = "Calculator";
 
-    await Page.GotoAsync("http://localhost:5001");
-
-    await Expect(Page).ToHaveTitleAsync(new Regex(pageTitle));
+    await Page.GotoAsync("http://localhost:5054/");
+        
+    await Expect(Page).ToHaveTitleAsync(pageTitle);
 }
 ```
 
