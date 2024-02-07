@@ -41,7 +41,7 @@ The `preq` prefix means "Project Requirement". It is simple convention to help y
 
 Coding standards vary by language. It is a common mistake to apply naming conventions, capitalization, and organization standards from one language to another. For example, the following shows the different naming conventions followed by C#, Java, and Python for method naming:
 
--  C#<br>`public string MakeFullName(string firstName, string lastName)`<br>*Method names following the **SentenceCase** naming convention.
+-  C#<br>`public string MakeFullName(string firstName, string lastName)`<br>*Method names following the **SentenceCase** naming convention.*
 -  Java<br>`public String makeFullName(String firstName, String lastName)`<br>*Method names follow the **pascalCase** naming convention.*
 -  Python<br>`def make_full_name(first_name, last_name):`<br>*Method names follow the **snake_case** naming convention.*
 
@@ -636,7 +636,7 @@ Anywhere you see something in your CalculatorEngine with less than 100% coverage
 
 #### Unit Test Naming Conventions and Structure
 
-**preq-UNIT-TEST-22*
+**preq-UNIT-TEST-22**
 
 You will name all unit tests following this pattern:
 
@@ -846,7 +846,7 @@ Execute your web server application from the command line/terminal (not from you
 -  Any operation that creates an **Invalid Input** condition.
 -  Resetting the UI to the default state after an operation by clicking Clear.
 
-**preq-PRESENTATION-5* Section 3, Execute unit tests
+**preq-PRESENTATION-5** Section 3, Execute unit tests
 
 Switch to your command line/terminal and execute your unit tests (not from your IDE). All unit tests should succeed. 
 
