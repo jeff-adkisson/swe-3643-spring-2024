@@ -501,7 +501,6 @@ When the user clicks the Clear button, it will return the interface to the Start
 Your web application will detect and handle invalid (non-numeric ) input (Error State). Input errors will display "Invalid Input, Numbers Only" to the user. See the [UI mockup](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view/page/ac244bb80?ui=0) for the expected response to invalid input. For example, if the user puts `25` into Input A and `five` into Input B, the result will look like the following:
 
 ```html
-25 / five =
 Invalid Input, Numbers Only
 ```
 
