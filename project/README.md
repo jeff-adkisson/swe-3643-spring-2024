@@ -68,7 +68,7 @@ If you enter invalid data, such as attempting to divide by 0, the result box wil
 
 If you enter text in one of the input boxes, the result box will turn red and display **Invalid Input, Numbers Only**:
 
-[![image-20240129064025364](README.assets/image-20240129064025364.png)](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view?ui=0)
+[![image-20240206233256575](README.assets/image-20240206233256575.png)](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view?ui=0)
 
 Clicking the **Clear** button will reset the result box and the input boxes to their default state.
 
