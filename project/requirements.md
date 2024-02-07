@@ -513,6 +513,10 @@ Your web application will detect and handle numeric input that creates an error 
 Not a Number
 ```
 
+The first line shows the operation that led to the numeric error followed by `=`.
+
+The second line states `Not a Number`.
+
 **preq-WEB-APPLICATION-7**
 
 Your web application will display the operation and result on two lines.  See the [UI mockup](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view/page/ac244bb80?ui=0) for the expected response. For example, if the user puts `123.55` into  Input A and `-15.9` into Input B and clicks `A * B`, the result will look like the following:
@@ -521,6 +525,10 @@ Your web application will display the operation and result on two lines.  See th
 123.55 * -15.9 =
 -1,964.445
 ```
+
+The first line shows the operation followed by `=`.
+
+The second line shows the result of the operation.
 
 **preq-WEB-APPLICATION-8**
 
