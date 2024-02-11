@@ -2,12 +2,12 @@
 
 [**Back to Project Overview**](README.md)
 
-# Requirements
+# Software Requirements Specification
 
 #### Table of Contents
 
 -  [Using This Document](#using-this-document)
--  [Coding Standard Requirements](#coding-standard-requirements)
+-  [Coding Standards Requirements](#coding-standards-requirements)
 -  [Development Environment Requirements](#development-environment-requirements)
 -  [Source Control Requirements](#source-control-requirements)
 -  [Documentation Requirements](#documentation-requirements)
@@ -19,7 +19,7 @@
 -  [Visual Design Requirements](#visual-design-requirements) 
 -  [Unit Test Plan and Coverage Requirements](#unit-test-plan-and-coverage-requirements)
 -  [End-To-End Test Plan and Requirements](#end-to-end-test-plan-and-requirements)
--  [*5% EXTRA CREDIT:* Static Analysis via SonarQube](#static-analysis-via-SonarQube)
+-  [*OPTIONAL EXTRA CREDIT:* Static Analysis via SonarQube](#static-analysis-via-sonarqube)
 -  [Final Presentation Requirements](#final-presentation-requirements)
 -  [Suggested Implementation Order](#suggested-implementation-order)
 
@@ -37,7 +37,7 @@ Before submitting your semester project, search for all `preq-` lines in this do
 
 The `preq` prefix means "Project Requirement". It is simple convention to help you find all of the requirements.
 
-## Coding Standard Requirements
+## Coding Standards Requirements
 
 Coding standards vary by language. It is a common mistake to apply naming conventions, capitalization, and organization standards from one language to another. For example, the following shows the different naming conventions followed by C#, Java, and Python for method naming:
 
@@ -130,15 +130,15 @@ Your Team Repository will add a `.gitignore` file to the root of the repository.
 
 **preq-SOURCE-4.C#**
 
-[Use this `.gitignore` file for Rider and C# development.](https://github.com/JetBrains/resharper-rider-samples/blob/master/.gitignore)
+[Use this `.gitignore` file for Rider and C# development.](https://github.com/JetBrains/resharper-rider-samples/blob/master/.gitignore) Extend the file as necessary to ignore additional file types not needed in your source repository.
 
 **preq-SOURCE-4.Java**
 
-[Use this `.gitignore` file for IntelliJ and Java development.](https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore)
+[Use this `.gitignore` file for IntelliJ and Java development.](https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore) Extend the file as necessary to ignore additional file types not needed in your source repository.
 
 **preq-SOURCE-4.Python**
 
-[Use this `.gitignore` file for PyCharm and Python development.](https://gist.github.com/rask004/4c322384aa6012d6c5a7178071d3c8fb)
+[Use this `.gitignore` file for PyCharm and Python development.](https://gist.github.com/rask004/4c322384aa6012d6c5a7178071d3c8fb) Extend the file as necessary to ignore additional file types not needed in your source repository.
 
 #### Managing Your `git` Repo
 
@@ -162,11 +162,13 @@ Your project's README.md file will contain the following sections:
 -  Introduction
 -  Table of Contents
 -  Team Members
+-  Architecture
 -  Environment
 -  Executing the Web Application
 -  Executing Unit Tests
 -  Reviewing Unit Test Coverage
 -  Executing End-To-End Tests
+-  OPTIONAL EXTRA CREDIT: [Static Analysis](#static-analysis-via-sonarqube)<br>*Do not include if extra credit not performed.*
 -  Final Video Presentation
 
 Order your README.md file according to the section order shown above.
@@ -198,7 +200,69 @@ To create an [anchor link (a link that jumps somewhere within the current docume
 
 List your team members. You do not need to include any contact information (your repository is public).
 
-**preq-DOCUMENTATION-6**: Environment
+**preq-DOCUMENTATION-6**: Architecture
+
+Briefly describe the architecture of your project. [Reference the architecture diagram from this document. Make the diagram an image - not a link.](#project-architecture-requirements) 
+
+You are encouraged to update the architecture diagram to better match your project structure. The original diagram is generic and may not properly describe your specific implementation. [The original diagram uses PlantUML.](https://www.plantuml.com/plantuml/uml/VL9DQzj04BthLmp99IQnstCf9R9II0fnJAsabq9Oxqxa9QDTiHzMGyb_hwQAy1fRteFNmxptTkOzNViWN8WrPOB8jhN-eqsLPOsGhw92E2i4oKWYM0VVJQKDmlAZzGaMeaRV8V4CpabNcx2cYDdV3BeZINWFE_O7kM_okOHSgOiNiYA0DaqC-HKarNpILmd-8MpGbQrzQD09e-unRApo5xFPR98bi9KsUx8ZGXsi8ZocnQ3tB7i_wSAZqG5AzC73LWlumVKLBFeBWvmDdhmX-ygkZ7Z2b5weD-Vo0F7SEULpOTJy-IU6w8nVnVfYCeQ-qLkjy3_Xyq1Os90lOhr6npnU3quCCfr-E-YE6l8Brx12jqK7UTCSVWhzrlTM8VbT_QInJSh2ck0i4JhFewKrJpF03nk3RjePMM0qK3KjxRIxaZoN9DvQnulivmZ7SrIbvPyanRrW7k-I26-qRpfrNrZdK8OdGH4vb8Ga0Z5fFyc1bqPvzAc2j7pr1Q5mNVmUWxyp0TsBaBWB7qRdP-zIBx_0RLak6KvipMy3joWKeVSmTxRrwDXPIJOgE4zSscY58BMJXBrd2G66V_3rn7EiUur6nPh-0G00) You can use any diagramming tool you like (so long as the results look professional), but give PlantUML a try.
+
+```html
+@startuml
+allowmixing
+
+package "Calculator Engine Package / Namespace" #lightblue
+{
+    class CalculatorEngine {
+        + Add(float inputA, float inputB) float
+        + OtherTwoOperandMethods(...)
+
+        + Sin(float inputA) float
+        + OtherSingleOperandMethods(...)
+    }
+
+}
+
+package "Calculator Engine Unit Tests via JUnit, NUnit, etc." #lightyellow
+{
+  class CalculatorEngineUnitTests {
+    + CalculatorEngine_AddsAandB_ReturnsSum()
+    + CalculatorEngine_DividesAand0_ReturnsNotANumber()
+  }
+
+  CalculatorEngineUnitTests --> CalculatorEngine
+
+}
+
+package "Calculator Web Server App" #lightblue
+{
+   class Models
+   class Views
+   class Controllers
+
+   Controllers --> Views
+   Controllers --> Models
+   Controllers --> CalculatorEngine
+}
+
+package "Calculator End-To-End Tests via Playwright" #lightyellow {
+  class CalculatorEndToEndTests {
+     + CalculatorUI_AddsAandB_DisplaysCorrectValue()
+     + CalcuatlorUI_DividesAand0_DisplaysNotANumber()
+     + CalculatorUI_ClicksClear_ResetsInterface()
+  }
+
+    CalculatorEndToEndTests --> Controllers : HTTP Call via\n Headless Browser
+}
+
+cloud #yellow {
+  hide circle
+  class Browser
+  Browser <--> Controllers : HTTP Call
+}
+@enduml
+```
+
+**preq-DOCUMENTATION-7**: Environment
 
 Explain how to configure the environment to execute your web application, unit tests, and end-to-end tests. For example:
 
@@ -222,7 +286,7 @@ This is a code block.
 It can contain multiple lines.
 ```
 
-**preq-DOCUMENTATION-7**: Executing the Web Application
+**preq-DOCUMENTATION-8**: Executing the Web Application
 
 Create an H2 section called *Executing the Web Application*. 
 
@@ -245,7 +309,7 @@ If you find certain errors popping up when you run the application (such as port
 -  If you see the following error, something is already running on the application's HTTP port. Free up the port, then try again:<br>`Unhandled IO exception: Failed to bind to https://127.0.0.1:60012: address already in use.`
    
 
-**preq-DOCUMENTATION-8**: Executing Unit Tests
+**preq-DOCUMENTATION-9**: Executing Unit Tests
 
 Create an H2 section called *Executing Unit Tests*. 
 
@@ -264,7 +328,17 @@ A total of 1 test files matched the specified pattern.
 Passed!  - Failed:     0, Passed:   132, Skipped:     0, Total:   132, Duration: 39 ms - HighMatch.Compass.UnitTest.Extensions.dll (net7.0)
 ```
 
-**preq-DOCUMENTATION-9**: Executing End-To-End Tests
+**preq-DOCUMENTATION-11**: Reviewing Unit Test Coverage
+
+Create an H2 section called *Reviewing Unit Test Coverage*.
+
+Note the coverage achieved in your Calculator Logic module and include a screenshot of your coverage graphic from your JetBrains IDE. Your calculator logic must achieve 100% test coverage of all statements and paths.
+
+Coverage statistics look similar to the following example:
+
+<img src="requirements.assets/image-20240204220021325.png" alt="image-20240204220021325" style="zoom: 50%;" />
+
+**preq-DOCUMENTATION-12**: Executing End-To-End Tests
 
 Create an H2 section called *Executing End-To-End Tests*. 
 
@@ -289,13 +363,13 @@ A total of 1 test files matched the specified pattern.
 Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: 2 s - CalculatorEndToEndTests.dll (net8.0)
 ```
 
-**preq-DOCUMENTATION-10**: Final Video Presentation
+**preq-DOCUMENTATION-13**: Final Video Presentation
 
 Create an H2 section called *Final Video Presentation*. 
 
 Include a link to your final video presentation. If the file is checked into your Team Repository, this will be a relative link. Otherwise, it will be a fully-qualified link to YouTube or Vimeo. For example:
 
-**[Please view our project's presentation here on YouTube](https://www.youtube.com/watch?v=zqLEO5tIuYs).**
+**[Please view our project's presentation here on YouTube](https://www.youtube.com/watch?v=dQw4w9WgXcQ).**
 
 ## Project Architecture Requirements
 
@@ -423,13 +497,17 @@ Your Python project will follow thiCas application structure:
 -  **REPOSITORY ROOT**<br>Your `README.md` file is here.
    -  **src**<br>Place your `requirements.txt` file in `src` to install your application dependencies, such as Flask, pytest, and Playwright.
       -  **web**<br>Contains your Flask web server app. [Follow the Flask conventions for structuring this directory](https://flask.palletsprojects.com/en/2.3.x/tutorial/layout/).
-      -  **calcuator_engine**<br>This folder contains your calculator logic. It does not contain any user interface logic. It is referenced by your web app.
+      -  **calcuator_engine**<br>
+         -  `__init__.py`
+         -  This folder contains your calculator logic. It does not contain any user interface logic. It is referenced by your web app.
       -  **tests**<br>This folder will use `pytest` and reference `calculator-engine` to reach 100% clear box unit test coverage.
          -  `__init__.py`
          -  `pytest` unit test files
       -  **e2e**<br>This folder will use Playwright and a headless browser to test your web interface.
          -  `__init__.py`
          -  Playwright test files. 
+   
+   *[What is the significance of`__init__.py` in a Python project?](https://www.python-engineer.com/posts/init-py-file/)*
 
 ## Calculator Engine Requirements
 
@@ -440,6 +518,18 @@ All calculator logic will be in its own folder, module, or namespace. See [Appli
 **preq-ENGINE-2**
 
 All operations will use floating point math - *not integers*. Input A, Input B, and the calculation result will be floating point values. In C# and Java, use the `double` type.
+
+To simplify requirements tracability (and grading), please include the requirement # as a comment in the first line of the method.
+
+For example:
+
+```html
+public double Add(double inputA, double inputB) {
+	//preq-ENGINE-3
+...
+```
+
+Following are the mathematical operations you must implement:
 
 | Requirement #  | Operation           | Button   | Inputs | Returns                                               | Example                                                      | Notes                                                        |
 | -------------- | ------------------- | -------- | ------ | ----------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -515,7 +605,7 @@ Not a Number
 
 The first line shows the operation that led to the numeric error followed by `=`.
 
-The second line states `Not a Number`.
+The second line states `Not a Number`.
 
 **preq-WEB-APPLICATION-7**
 
@@ -605,6 +695,19 @@ You will use one of the following unit testing frameworks, depending on your lan
 #### Unit Test List
 
 You will implement the following unit tests of your calculator logic to reach 100% statement *and* path coverage (that is why there are multiple tests for some operations).
+
+To simplify requirements tracability (and grading), please include the requirement # above the the `arrange` section as a comment of each unit test.
+
+For example:
+
+```html
+//preq-UNIT-TEST-2
+
+//arrange
+...
+```
+
+Following are the minimum unit tests you must include:
 
 | Requirement #     | Operation                      | Button   | Inputs            | Returns                                               | Example                                                      |
 | ----------------- | ------------------------------ | -------- | ----------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
@@ -733,6 +836,17 @@ Microsoft.Playwright.PlaywrightException : Executable doesn't exist at /Users/je
 
 You will implement the following end-to-end tests of your calculator user interface via the Playwright testing framework.
 
+To simplify requirements tracability (and grading), please include the requirement # as as a comment in the first line of each end-to-end test.
+
+For example:
+
+```html
+//preq-E2E-TEST-5
+... playwright code follows
+```
+
+Following are the minimum end-to-end tests you must include:
+
 | Requirement #   | Test                                                         |
 | --------------- | ------------------------------------------------------------ |
 | preq-E2E-TEST-5 | Verify the page title is "Calculator".                       |
@@ -793,8 +907,8 @@ This section is ***optional***. You can complete it for 5% extra credit.
 
 Extra credit criteria:
 
--  You *must* complete every other section of the project to be eligible for extra credit in this section. Do not skip one section, and plan on making up for the loss with this section.
--  You must complete all of the Static Analysis requirements to receive the extra credit.
+-  You *must* complete every other section of the project to be eligible for extra credit in this section. Do not skip one section with the intention of making up for the loss with this section.
+-  You must complete all Static Analysis requirements to receive extra credit. This section is all or nothing.
 
 #### What is Static Analysis?
 
