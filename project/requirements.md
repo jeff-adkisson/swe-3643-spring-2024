@@ -155,6 +155,10 @@ You have several options for managing your `git` repository:
 
 Your project will contain a README.md file written using Markdown in the root of your Team Repository.
 
+When you visit the root directory of a GitHub repository, GitHub automatically displays the README.md file. It makes it much easier for a consumer of your project to find and understand what is contained in the repository.
+
+[This is an essential document, so its content and structure must be polished and complete.](https://dev.to/yuridevat/how-to-create-a-good-readmemd-file-4pa2)
+
 **preq-DOCUMENTATION-2**
 
 Your project's README.md file will contain the following sections:
