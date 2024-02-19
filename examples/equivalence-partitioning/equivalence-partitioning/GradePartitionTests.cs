@@ -18,8 +18,8 @@ public class GradePartitionTests
         new KeyValuePair<int, string>(60, "D"),
         new KeyValuePair<int, string>(59, "F"),
         new KeyValuePair<int, string>(0, "F"),
-        new KeyValuePair<int, string>(-1, "~"),
-        new KeyValuePair<int, string>(int.MinValue, "~")
+        new KeyValuePair<int, string>(-1, "F"),
+        new KeyValuePair<int, string>(int.MinValue, "F")
     ];
     
     [Theory]

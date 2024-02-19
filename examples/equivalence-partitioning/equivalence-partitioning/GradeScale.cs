@@ -14,7 +14,7 @@ public record GradeScale
         new GradeScale(70, 79, "C"),
         new GradeScale(60, 69, "D"),
         new GradeScale(0, 59, "F"),
-        new GradeScale(int.MinValue, -1, "~")
+        new GradeScale(int.MinValue, -1, "F")
     ];
 
     public GradeScale(int min, int max, string letter)
