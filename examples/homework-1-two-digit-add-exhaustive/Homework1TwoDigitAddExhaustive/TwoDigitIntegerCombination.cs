@@ -1,3 +1,3 @@
-namespace homework_1_two_digit_add_exhaustive;
+namespace Homework1TwoDigitAddExhaustive;
 
 public record TwoDigitIntegerCombination(int Left, int Right, int Expected);

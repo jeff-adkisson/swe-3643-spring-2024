@@ -1,4 +1,4 @@
-namespace homework_1_two_digit_add_exhaustive;
+namespace Homework1TwoDigitAddExhaustive;
 
 [TestFixture]
 public class TwoDigitIntegerPositiveNegativeSumExhaustiveTests

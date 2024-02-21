@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework-1-two-digit-add-exhaustive", "homework-1-two-digit-add-exhaustive\homework-1-two-digit-add-exhaustive.csproj", "{BA18C4C7-516F-4C4B-BD4E-3F8BEEB736BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework1TwoDigitAddExhaustive", "Homework1TwoDigitAddExhaustive\Homework1TwoDigitAddExhaustive.csproj", "{BA18C4C7-516F-4C4B-BD4E-3F8BEEB736BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

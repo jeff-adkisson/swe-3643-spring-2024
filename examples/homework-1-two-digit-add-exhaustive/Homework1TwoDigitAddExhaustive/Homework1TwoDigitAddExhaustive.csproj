@@ -2,12 +2,13 @@
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <RootNamespace>homework_1_two_digit_add_exhaustive</RootNamespace>
+        <RootNamespace>Homework1TwoDigitAddExhaustive</RootNamespace>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
 
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
+        <AssemblyName>Homework1TwoDigitAddExhaustive</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>

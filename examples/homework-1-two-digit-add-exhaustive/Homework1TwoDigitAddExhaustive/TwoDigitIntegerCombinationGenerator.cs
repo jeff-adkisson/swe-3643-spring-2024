@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace homework_1_two_digit_add_exhaustive;
+namespace Homework1TwoDigitAddExhaustive;
 
 public class TwoDigitIntegerCombinationGenerator 
     : IEnumerable<TwoDigitIntegerCombination>
