@@ -1,5 +1,7 @@
 # SWE 3643: Testing and Quality Assurance
 
+[**Textbook PDF for Midterm**](textbook.pdf)
+
 This repository contains project information and code samples for KSU SWE 3643: Software Testing and Quality Assurance, Spring 2024.
 
 #### To Clone This Repository
