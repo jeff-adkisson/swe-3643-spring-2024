@@ -1,5 +1,5 @@
 ﻿PrintPrimes(100);
-//PrintPrimes2(100);
+PrintPrimes2(100);
 return;
 
 //////////
@@ -83,9 +83,10 @@ static int[] GetPrimes(int primesToGet)
     {
         possiblePrime++;
         bool isPrime = true;
+        int stopWhenMoreThanDouble = possiblePrime / 2;
         for (int i = 0; i < primesFound; i++)
         {
-            if (primes[i] > possiblePrime / 2)
+            if (primes[i] > stopWhenMoreThanDouble)
                 break; //cannot be a divisor
 
             isPrime = (possiblePrime % primes[i]) != 0;
