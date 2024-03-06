@@ -4,8 +4,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.fail;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MyCustomStringTest {
 
@@ -32,6 +31,20 @@ public class MyCustomStringTest {
         //assert
         assertEquals(9,
                 countOfNumbers);
+    }
+
+    @Test
+    public void MyCustomString_NullString_ReverseNCharactersThrowsNullPointerException_EXAMPLE() {
+        //arrange
+        mycustomstring.setString(null);
+
+        //act
+        Exception exception = assertThrows(NullPointerException.class, () -> {
+            mycustomstring.reverseNCharacters(0, false);
+        });
+
+        //assert
+        assertInstanceOf(NullPointerException.class, exception);
     }
 
     @Test
