@@ -15,7 +15,7 @@ public class AllBenchmarks
     [GlobalSetup]
     public void Setup()
     {
-        var rand = new Random();
+        var rand = new Random(19700101);
         _primesToGet = new int[Operations];
         for (int i = 0; i < Operations; i++)
         {
