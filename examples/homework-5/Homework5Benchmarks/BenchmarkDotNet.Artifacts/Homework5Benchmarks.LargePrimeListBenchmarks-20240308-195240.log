@@ -1,0 +1,314 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 3 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in /Users/jeff/projects/swe-3643-spring-2024/examples/homework-5/Homework5Benchmarks/bin/Release/net8.0/baad4644-9df1-4974-885a-aa26d5c15569
+// command took 0.58 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in /Users/jeff/projects/swe-3643-spring-2024/examples/homework-5/Homework5Benchmarks/bin/Release/net8.0/baad4644-9df1-4974-885a-aa26d5c15569
+// command took 1.48 sec and exited with 0
+// ***** Done, took 00:00:02 (2.09 sec)   *****
+// Found 3 benchmarks:
+//   LargePrimeListBenchmarks.Homework5Original_GetLargePrimeList: DefaultJob
+//   LargePrimeListBenchmarks.Homework5Refactored_GetLargePrimeList: DefaultJob
+//   LargePrimeListBenchmarks.Homework5RefactoredSingleResponsibility_GetLargePrimeList: DefaultJob
+
+// **************************
+// Benchmark: LargePrimeListBenchmarks.Homework5Original_GetLargePrimeList: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet baad4644-9df1-4974-885a-aa26d5c15569.dll --anonymousPipes 105 106 --benchmarkName Homework5Benchmarks.LargePrimeListBenchmarks.Homework5Original_GetLargePrimeList --job Default --benchmarkId 0 in /Users/jeff/projects/swe-3643-spring-2024/examples/homework-5/Homework5Benchmarks/bin/Release/net8.0/baad4644-9df1-4974-885a-aa26d5c15569/bin/Release/net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.0 (8.0.23.53103), Arm64 RyuJIT AdvSIMD
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AdvSIMD,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 115041.00 ns, 115.0410 us/op
+WorkloadJitting  1: 1 op, 3811213458.00 ns, 3.8112 s/op
+
+OverheadJitting  2: 1 op, 167.00 ns, 167.0000 ns/op
+WorkloadJitting  2: 1 op, 3796450666.00 ns, 3.7965 s/op
+
+WorkloadWarmup   1: 1 op, 3807201708.00 ns, 3.8072 s/op
+WorkloadWarmup   2: 1 op, 3805991583.00 ns, 3.8060 s/op
+WorkloadWarmup   3: 1 op, 3802754125.00 ns, 3.8028 s/op
+WorkloadWarmup   4: 1 op, 3797158000.00 ns, 3.7972 s/op
+WorkloadWarmup   5: 1 op, 3805418041.00 ns, 3.8054 s/op
+WorkloadWarmup   6: 1 op, 3803033791.00 ns, 3.8030 s/op
+WorkloadWarmup   7: 1 op, 3800082375.00 ns, 3.8001 s/op
+WorkloadWarmup   8: 1 op, 3788782500.00 ns, 3.7888 s/op
+WorkloadWarmup   9: 1 op, 3813925667.00 ns, 3.8139 s/op
+WorkloadWarmup  10: 1 op, 3799708584.00 ns, 3.7997 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 3804941750.00 ns, 3.8049 s/op
+WorkloadActual   2: 1 op, 3805971500.00 ns, 3.8060 s/op
+WorkloadActual   3: 1 op, 3808860792.00 ns, 3.8089 s/op
+WorkloadActual   4: 1 op, 3831792917.00 ns, 3.8318 s/op
+WorkloadActual   5: 1 op, 3809598500.00 ns, 3.8096 s/op
+WorkloadActual   6: 1 op, 3802910125.00 ns, 3.8029 s/op
+WorkloadActual   7: 1 op, 3809896542.00 ns, 3.8099 s/op
+WorkloadActual   8: 1 op, 3808511791.00 ns, 3.8085 s/op
+WorkloadActual   9: 1 op, 3806795833.00 ns, 3.8068 s/op
+WorkloadActual  10: 1 op, 3803616500.00 ns, 3.8036 s/op
+WorkloadActual  11: 1 op, 3810634958.00 ns, 3.8106 s/op
+WorkloadActual  12: 1 op, 3814492625.00 ns, 3.8145 s/op
+WorkloadActual  13: 1 op, 3829651041.00 ns, 3.8297 s/op
+WorkloadActual  14: 1 op, 3864763833.00 ns, 3.8648 s/op
+WorkloadActual  15: 1 op, 3825043209.00 ns, 3.8250 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 3804941750.00 ns, 3.8049 s/op
+WorkloadResult   2: 1 op, 3805971500.00 ns, 3.8060 s/op
+WorkloadResult   3: 1 op, 3808860792.00 ns, 3.8089 s/op
+WorkloadResult   4: 1 op, 3831792917.00 ns, 3.8318 s/op
+WorkloadResult   5: 1 op, 3809598500.00 ns, 3.8096 s/op
+WorkloadResult   6: 1 op, 3802910125.00 ns, 3.8029 s/op
+WorkloadResult   7: 1 op, 3809896542.00 ns, 3.8099 s/op
+WorkloadResult   8: 1 op, 3808511791.00 ns, 3.8085 s/op
+WorkloadResult   9: 1 op, 3806795833.00 ns, 3.8068 s/op
+WorkloadResult  10: 1 op, 3803616500.00 ns, 3.8036 s/op
+WorkloadResult  11: 1 op, 3810634958.00 ns, 3.8106 s/op
+WorkloadResult  12: 1 op, 3814492625.00 ns, 3.8145 s/op
+WorkloadResult  13: 1 op, 3829651041.00 ns, 3.8297 s/op
+WorkloadResult  14: 1 op, 3825043209.00 ns, 3.8250 s/op
+// GC:  0 0 0 400760 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 41565 has exited with code 0.
+
+Mean = 3.812 s, StdErr = 0.003 s (0.07%), N = 14, StdDev = 0.010 s
+Min = 3.803 s, Q1 = 3.806 s, Median = 3.809 s, Q3 = 3.814 s, Max = 3.832 s
+IQR = 0.007 s, LowerFence = 3.795 s, UpperFence = 3.825 s
+ConfidenceInterval = [3.802 s; 3.823 s] (CI 99.9%), Margin = 0.011 s (0.28% of Mean)
+Skewness = 1.01, Kurtosis = 2.43, MValue = 2
+
+// ** Remained 2 (66.7%) benchmark(s) to run. Estimated finish 2024-03-08 19:58 (0h 3m from now) **
+// **************************
+// Benchmark: LargePrimeListBenchmarks.Homework5Refactored_GetLargePrimeList: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet baad4644-9df1-4974-885a-aa26d5c15569.dll --anonymousPipes 107 108 --benchmarkName Homework5Benchmarks.LargePrimeListBenchmarks.Homework5Refactored_GetLargePrimeList --job Default --benchmarkId 1 in /Users/jeff/projects/swe-3643-spring-2024/examples/homework-5/Homework5Benchmarks/bin/Release/net8.0/baad4644-9df1-4974-885a-aa26d5c15569/bin/Release/net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.0 (8.0.23.53103), Arm64 RyuJIT AdvSIMD
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AdvSIMD,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 119917.00 ns, 119.9170 us/op
+WorkloadJitting  1: 1 op, 2391185291.00 ns, 2.3912 s/op
+
+OverheadJitting  2: 1 op, 375.00 ns, 375.0000 ns/op
+WorkloadJitting  2: 1 op, 2392125917.00 ns, 2.3921 s/op
+
+WorkloadWarmup   1: 1 op, 2387448208.00 ns, 2.3874 s/op
+WorkloadWarmup   2: 1 op, 2396218416.00 ns, 2.3962 s/op
+WorkloadWarmup   3: 1 op, 2430358375.00 ns, 2.4304 s/op
+WorkloadWarmup   4: 1 op, 2393452250.00 ns, 2.3935 s/op
+WorkloadWarmup   5: 1 op, 2389306500.00 ns, 2.3893 s/op
+WorkloadWarmup   6: 1 op, 2391257292.00 ns, 2.3913 s/op
+WorkloadWarmup   7: 1 op, 2401201792.00 ns, 2.4012 s/op
+WorkloadWarmup   8: 1 op, 2398510333.00 ns, 2.3985 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 2398919875.00 ns, 2.3989 s/op
+WorkloadActual   2: 1 op, 2394979583.00 ns, 2.3950 s/op
+WorkloadActual   3: 1 op, 2395273834.00 ns, 2.3953 s/op
+WorkloadActual   4: 1 op, 2391825500.00 ns, 2.3918 s/op
+WorkloadActual   5: 1 op, 2394199083.00 ns, 2.3942 s/op
+WorkloadActual   6: 1 op, 2390734458.00 ns, 2.3907 s/op
+WorkloadActual   7: 1 op, 2394904708.00 ns, 2.3949 s/op
+WorkloadActual   8: 1 op, 2395847000.00 ns, 2.3958 s/op
+WorkloadActual   9: 1 op, 2396043041.00 ns, 2.3960 s/op
+WorkloadActual  10: 1 op, 2393496125.00 ns, 2.3935 s/op
+WorkloadActual  11: 1 op, 2393053209.00 ns, 2.3931 s/op
+WorkloadActual  12: 1 op, 2400579209.00 ns, 2.4006 s/op
+WorkloadActual  13: 1 op, 2399976167.00 ns, 2.4000 s/op
+WorkloadActual  14: 1 op, 2402194291.00 ns, 2.4022 s/op
+WorkloadActual  15: 1 op, 2415329250.00 ns, 2.4153 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 2398919875.00 ns, 2.3989 s/op
+WorkloadResult   2: 1 op, 2394979583.00 ns, 2.3950 s/op
+WorkloadResult   3: 1 op, 2395273834.00 ns, 2.3953 s/op
+WorkloadResult   4: 1 op, 2391825500.00 ns, 2.3918 s/op
+WorkloadResult   5: 1 op, 2394199083.00 ns, 2.3942 s/op
+WorkloadResult   6: 1 op, 2390734458.00 ns, 2.3907 s/op
+WorkloadResult   7: 1 op, 2394904708.00 ns, 2.3949 s/op
+WorkloadResult   8: 1 op, 2395847000.00 ns, 2.3958 s/op
+WorkloadResult   9: 1 op, 2396043041.00 ns, 2.3960 s/op
+WorkloadResult  10: 1 op, 2393496125.00 ns, 2.3935 s/op
+WorkloadResult  11: 1 op, 2393053209.00 ns, 2.3931 s/op
+WorkloadResult  12: 1 op, 2400579209.00 ns, 2.4006 s/op
+WorkloadResult  13: 1 op, 2399976167.00 ns, 2.4000 s/op
+WorkloadResult  14: 1 op, 2402194291.00 ns, 2.4022 s/op
+// GC:  0 0 0 400760 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 41764 has exited with code 0.
+
+Mean = 2.396 s, StdErr = 0.001 s (0.04%), N = 14, StdDev = 0.003 s
+Min = 2.391 s, Q1 = 2.394 s, Median = 2.395 s, Q3 = 2.398 s, Max = 2.402 s
+IQR = 0.005 s, LowerFence = 2.387 s, UpperFence = 2.405 s
+ConfidenceInterval = [2.392 s; 2.400 s] (CI 99.9%), Margin = 0.004 s (0.16% of Mean)
+Skewness = 0.4, Kurtosis = 1.91, MValue = 2
+
+// ** Remained 1 (33.3%) benchmark(s) to run. Estimated finish 2024-03-08 19:56 (0h 1m from now) **
+// **************************
+// Benchmark: LargePrimeListBenchmarks.Homework5RefactoredSingleResponsibility_GetLargePrimeList: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet baad4644-9df1-4974-885a-aa26d5c15569.dll --anonymousPipes 107 108 --benchmarkName Homework5Benchmarks.LargePrimeListBenchmarks.Homework5RefactoredSingleResponsibility_GetLargePrimeList --job Default --benchmarkId 2 in /Users/jeff/projects/swe-3643-spring-2024/examples/homework-5/Homework5Benchmarks/bin/Release/net8.0/baad4644-9df1-4974-885a-aa26d5c15569/bin/Release/net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.0 (8.0.23.53103), Arm64 RyuJIT AdvSIMD
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AdvSIMD,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 122667.00 ns, 122.6670 us/op
+WorkloadJitting  1: 1 op, 2447656792.00 ns, 2.4477 s/op
+
+OverheadJitting  2: 1 op, 292.00 ns, 292.0000 ns/op
+WorkloadJitting  2: 1 op, 2425355375.00 ns, 2.4254 s/op
+
+WorkloadWarmup   1: 1 op, 2398271167.00 ns, 2.3983 s/op
+WorkloadWarmup   2: 1 op, 2403780000.00 ns, 2.4038 s/op
+WorkloadWarmup   3: 1 op, 2398190417.00 ns, 2.3982 s/op
+WorkloadWarmup   4: 1 op, 2448132750.00 ns, 2.4481 s/op
+WorkloadWarmup   5: 1 op, 2431472000.00 ns, 2.4315 s/op
+WorkloadWarmup   6: 1 op, 2389804333.00 ns, 2.3898 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 2395640209.00 ns, 2.3956 s/op
+WorkloadActual   2: 1 op, 2395358292.00 ns, 2.3954 s/op
+WorkloadActual   3: 1 op, 2389135583.00 ns, 2.3891 s/op
+WorkloadActual   4: 1 op, 2404453709.00 ns, 2.4045 s/op
+WorkloadActual   5: 1 op, 2395888375.00 ns, 2.3959 s/op
+WorkloadActual   6: 1 op, 2399719208.00 ns, 2.3997 s/op
+WorkloadActual   7: 1 op, 2409196334.00 ns, 2.4092 s/op
+WorkloadActual   8: 1 op, 2394361416.00 ns, 2.3944 s/op
+WorkloadActual   9: 1 op, 2397759916.00 ns, 2.3978 s/op
+WorkloadActual  10: 1 op, 2407073250.00 ns, 2.4071 s/op
+WorkloadActual  11: 1 op, 2431948458.00 ns, 2.4319 s/op
+WorkloadActual  12: 1 op, 2382449625.00 ns, 2.3824 s/op
+WorkloadActual  13: 1 op, 2392160667.00 ns, 2.3922 s/op
+WorkloadActual  14: 1 op, 2396540292.00 ns, 2.3965 s/op
+WorkloadActual  15: 1 op, 2408833208.00 ns, 2.4088 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 2395640209.00 ns, 2.3956 s/op
+WorkloadResult   2: 1 op, 2395358292.00 ns, 2.3954 s/op
+WorkloadResult   3: 1 op, 2389135583.00 ns, 2.3891 s/op
+WorkloadResult   4: 1 op, 2404453709.00 ns, 2.4045 s/op
+WorkloadResult   5: 1 op, 2395888375.00 ns, 2.3959 s/op
+WorkloadResult   6: 1 op, 2399719208.00 ns, 2.3997 s/op
+WorkloadResult   7: 1 op, 2409196334.00 ns, 2.4092 s/op
+WorkloadResult   8: 1 op, 2394361416.00 ns, 2.3944 s/op
+WorkloadResult   9: 1 op, 2397759916.00 ns, 2.3978 s/op
+WorkloadResult  10: 1 op, 2407073250.00 ns, 2.4071 s/op
+WorkloadResult  11: 1 op, 2382449625.00 ns, 2.3824 s/op
+WorkloadResult  12: 1 op, 2392160667.00 ns, 2.3922 s/op
+WorkloadResult  13: 1 op, 2396540292.00 ns, 2.3965 s/op
+WorkloadResult  14: 1 op, 2408833208.00 ns, 2.4088 s/op
+// GC:  0 0 0 400760 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 41876 has exited with code 0.
+
+Mean = 2.398 s, StdErr = 0.002 s (0.08%), N = 14, StdDev = 0.008 s
+Min = 2.382 s, Q1 = 2.395 s, Median = 2.396 s, Q3 = 2.403 s, Max = 2.409 s
+IQR = 0.009 s, LowerFence = 2.382 s, UpperFence = 2.416 s
+ConfidenceInterval = [2.389 s; 2.406 s] (CI 99.9%), Margin = 0.009 s (0.36% of Mean)
+Skewness = -0.08, Kurtosis = 2.18, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2024-03-08 19:56 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/Homework5Benchmarks.LargePrimeListBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts/results/Homework5Benchmarks.LargePrimeListBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts/results/Homework5Benchmarks.LargePrimeListBenchmarks-report.html
+
+// * Detailed results *
+LargePrimeListBenchmarks.Homework5Original_GetLargePrimeList: DefaultJob
+Runtime = .NET 8.0.0 (8.0.23.53103), Arm64 RyuJIT AdvSIMD; GC = Concurrent Workstation
+Mean = 3.812 s, StdErr = 0.003 s (0.07%), N = 14, StdDev = 0.010 s
+Min = 3.803 s, Q1 = 3.806 s, Median = 3.809 s, Q3 = 3.814 s, Max = 3.832 s
+IQR = 0.007 s, LowerFence = 3.795 s, UpperFence = 3.825 s
+ConfidenceInterval = [3.802 s; 3.823 s] (CI 99.9%), Margin = 0.011 s (0.28% of Mean)
+Skewness = 1.01, Kurtosis = 2.43, MValue = 2
+-------------------- Histogram --------------------
+[3.798 s ; 3.837 s) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+LargePrimeListBenchmarks.Homework5Refactored_GetLargePrimeList: DefaultJob
+Runtime = .NET 8.0.0 (8.0.23.53103), Arm64 RyuJIT AdvSIMD; GC = Concurrent Workstation
+Mean = 2.396 s, StdErr = 0.001 s (0.04%), N = 14, StdDev = 0.003 s
+Min = 2.391 s, Q1 = 2.394 s, Median = 2.395 s, Q3 = 2.398 s, Max = 2.402 s
+IQR = 0.005 s, LowerFence = 2.387 s, UpperFence = 2.405 s
+ConfidenceInterval = [2.392 s; 2.400 s] (CI 99.9%), Margin = 0.004 s (0.16% of Mean)
+Skewness = 0.4, Kurtosis = 1.91, MValue = 2
+-------------------- Histogram --------------------
+[2.389 s ; 2.404 s) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+LargePrimeListBenchmarks.Homework5RefactoredSingleResponsibility_GetLargePrimeList: DefaultJob
+Runtime = .NET 8.0.0 (8.0.23.53103), Arm64 RyuJIT AdvSIMD; GC = Concurrent Workstation
+Mean = 2.398 s, StdErr = 0.002 s (0.08%), N = 14, StdDev = 0.008 s
+Min = 2.382 s, Q1 = 2.395 s, Median = 2.396 s, Q3 = 2.403 s, Max = 2.409 s
+IQR = 0.009 s, LowerFence = 2.382 s, UpperFence = 2.416 s
+ConfidenceInterval = [2.389 s; 2.406 s] (CI 99.9%), Margin = 0.009 s (0.36% of Mean)
+Skewness = -0.08, Kurtosis = 2.18, MValue = 2
+-------------------- Histogram --------------------
+[2.378 s ; 2.413 s) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.13.12, macOS Sonoma 14.2.1 (23C71) [Darwin 23.2.0]
+Apple M2 Max, 1 CPU, 12 logical and 12 physical cores
+.NET SDK 8.0.100
+  [Host]     : .NET 8.0.0 (8.0.23.53103), Arm64 RyuJIT AdvSIMD
+  DefaultJob : .NET 8.0.0 (8.0.23.53103), Arm64 RyuJIT AdvSIMD
+
+
+| Method                                                    | Mean    | Error    | StdDev   | Allocated |
+|---------------------------------------------------------- |--------:|---------:|---------:|----------:|
+| Homework5Original_GetLargePrimeList                       | 3.812 s | 0.0107 s | 0.0095 s | 391.37 KB |
+| Homework5Refactored_GetLargePrimeList                     | 2.396 s | 0.0038 s | 0.0034 s | 391.37 KB |
+| Homework5RefactoredSingleResponsibility_GetLargePrimeList | 2.398 s | 0.0086 s | 0.0076 s | 391.37 KB |
+
+// * Hints *
+Outliers
+  LargePrimeListBenchmarks.Homework5Original_GetLargePrimeList: Default                       -> 1 outlier  was  removed (3.86 s)
+  LargePrimeListBenchmarks.Homework5Refactored_GetLargePrimeList: Default                     -> 1 outlier  was  removed (2.42 s)
+  LargePrimeListBenchmarks.Homework5RefactoredSingleResponsibility_GetLargePrimeList: Default -> 1 outlier  was  removed (2.43 s)
+
+// * Legends *
+  Mean      : Arithmetic mean of all measurements
+  Error     : Half of 99.9% confidence interval
+  StdDev    : Standard deviation of all measurements
+  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 s       : 1 Second (1 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:03:47 (227.13 sec), executed benchmarks: 3
+
+Global total time: 00:03:49 (229.4 sec), executed benchmarks: 3
+// * Artifacts cleanup *
+Artifacts cleanup is finished
