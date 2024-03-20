@@ -7,6 +7,6 @@ using Homework5Benchmarks;
 
 Console.WriteLine("Copy results to https://chartbenchmark.net/ to visualize.");
 
-// BenchmarkRunner.Run<Benchmark100Primes>();
+BenchmarkRunner.Run<Benchmark100Primes>();
 // BenchmarkRunner.Run<Benchmark1PrimeString>();
-BenchmarkRunner.Run<LargePrimeListBenchmarks>();
+// BenchmarkRunner.Run<LargePrimeListBenchmarks>();

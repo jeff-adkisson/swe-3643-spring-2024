@@ -1,9 +1,9 @@
 ### Copy results to https://chartbenchmark.net/ to visualize
 
-| Method                                            | Mean     | Error   | StdDev  | Gen0     | Allocated  |
-|-------------------------------------------------- |---------:|--------:|--------:|---------:|-----------:|
-| Homework5Original_GetPrimesString                 | 248.4 us | 2.59 us | 2.43 us | 145.0195 | 1185.47 KB |
-| Homework5Original_GetPrimesStringViaStringBuilder | 220.3 us | 1.78 us | 1.57 us |  34.4238 |  283.05 KB |
-| Homework5Original_GetPrimesArray                  | 173.0 us | 0.96 us | 0.90 us |   4.8828 |   41.41 KB |
-| Homework5Refactored_GetPrimes                     | 113.4 us | 0.32 us | 0.28 us |   2.4414 |   20.47 KB |
-| Homework5RefactoredSingleResponsibility_GetPrimes | 112.0 us | 0.90 us | 0.84 us |   2.4414 |   20.47 KB |
+|-------------------------------------------------- |----------:|---------:|---------:|---------:|-----------:|
+| Homework5Original_GetPrimesString                 | 246.93 us | 3.145 us | 2.941 us | 145.0195 | 1185.47 KB |
+| Homework5Original_GetPrimesStringViaStringBuilder | 217.34 us | 1.032 us | 0.915 us |  34.4238 |  283.05 KB |
+| Homework5Original_GetPrimesArray                  | 174.25 us | 0.442 us | 0.392 us |   4.8828 |   41.41 KB |
+| Homework5Refactored_GetPrimes                     |  44.10 us | 0.162 us | 0.135 us |   2.5024 |   20.47 KB |
+| Homework5RefactoredSingleResponsibility_GetPrimes |  40.22 us | 0.072 us | 0.060 us |   2.5024 |   20.47 KB |
+

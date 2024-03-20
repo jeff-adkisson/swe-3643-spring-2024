@@ -34,10 +34,10 @@ public static class Homework5Refactored
         {
             possiblePrime += 2;
             var isPrime = true;
-            var stopWhenMoreThanDouble = possiblePrime / 2;
+            var stopWhenMoreThan = Math.Sqrt(possiblePrime);
             for (var i = 0; i < primesFound; i++)
             {
-                if (primes[i] > stopWhenMoreThanDouble)
+                if (primes[i] > stopWhenMoreThan)
                     break; //cannot be a divisor
 
                 isPrime = possiblePrime % primes[i] != 0;

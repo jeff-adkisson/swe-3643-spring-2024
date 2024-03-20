@@ -18,11 +18,11 @@ public static class Homework5RefactoredSingleResponsibility
         {
             mostRecentPrime += 2;
             var isPrime = true;
-            var stopWhenMoreThanDouble = mostRecentPrime / 2;
+            var stopWhenMoreThan = Math.Sqrt(mostRecentPrime);
             for (var index = 0; index < priorPrimes.Length; index++)
             {
                 var priorPrime = priorPrimes[index];
-                if (priorPrime > stopWhenMoreThanDouble)
+                if (priorPrime > stopWhenMoreThan)
                     break; //cannot be a divisor
 
                 isPrime = mostRecentPrime % priorPrime != 0;
