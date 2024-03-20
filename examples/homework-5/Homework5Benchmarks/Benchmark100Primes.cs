@@ -4,7 +4,7 @@ using Homework5;
 namespace Homework5Benchmarks;
 
 [MemoryDiagnoser]
-public class AllBenchmarks
+public class Benchmark100Primes
 {
     private const int Operations = 100;
     private const int Min = 1;
@@ -49,7 +49,7 @@ public class AllBenchmarks
             var primesArray = Homework5Original.GetPrimesArray(primesToGet);
         }
     }
-
+    
     [Benchmark]
     public void Homework5Refactored_GetPrimes()
     {

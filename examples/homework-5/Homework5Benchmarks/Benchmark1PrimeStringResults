@@ -1,0 +1,4 @@
+| Method                                    | Mean      | Error     | StdDev    | Gen0   | Allocated |
+|------------------------------------------ |----------:|----------:|----------:|-------:|----------:|
+| Homework5Original_GetSinglePrime_String   | 18.625 ns | 0.0642 ns | 0.0569 ns | 0.0545 |     456 B |
+| Homework5Refactored_GetSinglePrime_String |  9.855 ns | 0.0662 ns | 0.0619 ns | 0.0076 |      64 B |

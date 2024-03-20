@@ -6,10 +6,18 @@ public static class Homework5Refactored
 {
     public static void PrintPrimes(int primesToGet)
     {
+        Console.WriteLine(GetPrimesAsString(primesToGet));
+    }
+    
+    public static string GetPrimesAsString(int primesToGet)
+    {
         var primes = GetPrimesArray(primesToGet);
-        var output = new StringBuilder();
-        foreach (var prime in primes) output.Append($" {prime}");
-        Console.WriteLine(output);
+        string output = "";
+        for (int i = 0; i < primes.Length; i++)
+        {
+            output += primes[i] + " ";
+        }
+        return output;
     }
 
     public static int[] GetPrimesArray(int primesToGet)

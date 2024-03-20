@@ -1,0 +1,5 @@
+| Method                                                    | Mean    | Error    | StdDev   | Allocated |
+|---------------------------------------------------------- |--------:|---------:|---------:|----------:|
+| Homework5Original_GetLargePrimeList                       | 3.737 s | 0.0069 s | 0.0064 s | 391.37 KB |
+| Homework5Refactored_GetLargePrimeList                     | 2.351 s | 0.0041 s | 0.0037 s | 391.37 KB |
+| Homework5RefactoredSingleResponsibility_GetLargePrimeList | 2.349 s | 0.0040 s | 0.0036 s | 391.37 KB |
