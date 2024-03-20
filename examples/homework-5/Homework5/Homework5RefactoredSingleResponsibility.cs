@@ -16,7 +16,7 @@ public static class Homework5RefactoredSingleResponsibility
     {
         while (true)
         {
-            mostRecentPrime++;
+            mostRecentPrime += 2;
             var isPrime = true;
             var stopWhenMoreThanDouble = mostRecentPrime / 2;
             for (var index = 0; index < priorPrimes.Length; index++)
@@ -39,8 +39,8 @@ public static class Homework5RefactoredSingleResponsibility
             throw new ArgumentException("Value must be 1 or greater", nameof(primesToGet));
         
         int[] primes = new int[primesToGet];
-        int mostRecentPrime = 2;
-        primes[0] = mostRecentPrime;
+        int mostRecentPrime = 1;
+        primes[0] = 2;
         
         for (int i = 1; i < primesToGet; i++)
         {

@@ -26,13 +26,13 @@ public static class Homework5Refactored
 
         //init
         var primes = new int[primesToGet];
-        var possiblePrime = 2;
+        var possiblePrime = 1;
         var primesFound = 1;
-        primes[primesFound - 1] = possiblePrime;
+        primes[primesFound - 1] = 2;
 
         while (primesFound < primesToGet)
         {
-            possiblePrime++;
+            possiblePrime += 2;
             var isPrime = true;
             var stopWhenMoreThanDouble = possiblePrime / 2;
             for (var i = 0; i < primesFound; i++)

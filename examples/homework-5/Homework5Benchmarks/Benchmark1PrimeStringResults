@@ -1,4 +1,6 @@
-| Method                                    | Mean      | Error     | StdDev    | Gen0   | Allocated |
-|------------------------------------------ |----------:|----------:|----------:|-------:|----------:|
-| Homework5Original_GetSinglePrime_String   | 18.625 ns | 0.0642 ns | 0.0569 ns | 0.0545 |     456 B |
-| Homework5Refactored_GetSinglePrime_String |  9.855 ns | 0.0662 ns | 0.0619 ns | 0.0076 |      64 B |
+### Copy results to https://chartbenchmark.net/ to visualize
+
+| Method                                    | Mean     | Error    | StdDev   | Gen0   | Allocated |
+|------------------------------------------ |---------:|---------:|---------:|-------:|----------:|
+| Homework5Original_GetSinglePrime_String   | 18.43 ns | 0.112 ns | 0.105 ns | 0.0545 |     456 B |
+| Homework5Refactored_GetSinglePrime_String | 10.34 ns | 0.022 ns | 0.020 ns | 0.0076 |      65 B |
